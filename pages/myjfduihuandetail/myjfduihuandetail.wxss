@@ -1,0 +1,495 @@
+@import "/wxParse/wxParse.wxss";
+.contain{
+    height: 100%;
+    background: #f1f1ef;
+    padding-bottom: 100rpx;
+}
+.sec_style{
+    padding:20rpx;
+    width: 710rpx;
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.text1{
+    display: block;
+    font-size: 26rpx;
+    color: #444444; 
+    line-height: 36rpx;
+}
+.text2{
+    line-height: 32rpx;
+    font-size: 32rpx;
+    color: #f25824;
+    
+}
+.text3{ 
+      line-height: 28rpx;
+    font-size: 28rpx;
+    color: #999999;
+}
+.rule_style{
+    position: relative;
+    display: flex;
+    background: white;
+    margin-top: 20rpx;
+    font-size: 35rpx;
+    padding: 20rpx;
+    
+    width: 710rpx;
+}
+.image1_style{
+    float: right;
+    margin-right: 20rpx;
+    width: 20px;
+    height: 20px;
+}
+.shoper_detail_style{
+    margin-top: 20rpx;
+    width: 745rpx;
+    background: white;
+    padding: 20rpx 0rpx;
+}
+.shoper_detail_style:active{
+  background: #eeeeee;
+}
+.shoper_detail_first_style{
+    width: 745rpx;
+    /*background: white;*/
+    display: flex;
+}
+.image2_style{
+    border-radius: 5rpx;
+    margin-left: 10px;
+    height: 100rpx;
+    width: 100rpx;
+    background: white;
+}
+.title_address_style{
+    margin-left: 10px;
+    
+}
+/*.text1{
+    display: block;
+    margin: 20rpx 0rpx 0rpx 20rpx;
+    color: #444444;
+    font-size: 32rpx;
+}
+.text2{
+      display: block;
+     margin: 10rpx;
+    color: #999999;
+    font-size: 28rpx;
+}*/
+
+.shoper_detail_second_style{
+    margin-top: 20rpx;
+    width: 100%;
+    /*height: 150rpx;*/
+    background: white;
+    display: flex;
+}
+.shoper_detail_second_single_style{
+    width: 25%;
+    /*height: 160rpx;*/
+    text-align: center;
+    position: relative;
+    background: white;
+
+}
+
+.score_up_style{
+    width: 100%;
+    height: 60rpx;
+    font-size: 32rpx;
+    color: #999999;
+}
+.shoper_detail_second_single_style image{
+    width: 60rpx;
+    height: 60rpx;
+    margin: 20rpx;
+}
+
+
+.score_style{
+    position: absolute;
+    top: 70rpx;
+    left: 0rpx;
+    height: 55rpx;
+    line-height: 55rpx;
+    width: 100%;
+    font-size: 30rpx;
+    color: white;
+}
+
+.shoper_detail_third_style{
+    width: 50%;
+    background: white;
+    padding: 20rpx;
+    position: relative;
+}
+.text11{
+    margin-left: 5px;
+    font-size: 32rpx;
+    color: #999999;
+}
+.text12{
+    margin-left: 15px;
+    font-size: 32rpx;
+    color: #444444;
+}
+.text13{
+    margin-left: 5px;
+    font-size: 32rpx;
+    color: red;
+}
+.arrow_right_third{
+    position: absolute;
+    right: -300rpx;
+    top: 30rpx;
+    width: 32rpx;
+    height: 32rpx;
+}
+
+
+
+.four_style{
+    margin-top: 20rpx;
+    width: 100%;
+    background: white;
+}
+.four_head_style{
+    padding: 20rpx;
+    width: 710rpx;
+}
+.text41{
+  display: block;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+    color: #444444;
+}
+.line_style{
+    background: #eeeeee;
+    width: 100%;
+    height: 0.5px;
+  
+}
+.bottom_view_style{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 100rpx;
+    background: white;
+    border-top: 0.5px solid #eeeeee;
+    display: flex;
+}
+.bottom_view_style1{
+    position: relative;
+    width: 15%;
+    height: 100%;
+    background: white;
+    text-align: center;
+}
+.bottom_view_style1:active{
+  background: #eeeeee;
+}
+.bottom_view_style1 image{
+    display: flex;
+    margin-top: 20rpx;
+    margin-left: 40rpx;
+    height: 40rpx;
+    width: 40rpx;
+}
+.kefu_style{
+  position: absolute;
+  top: 45rpx;
+  left: 2rpx;
+  width: 80%;
+  background: clear;
+  text-align: center;
+  line-height: 30rpx;
+  color: #999999;
+  border:1rpx solid white;
+  font-size:24rpx;
+  margin-top: 0rpx;
+}
+/*
+.kefu_style:focus{
+    outline: 0;
+}*/
+.bottom_view_style1 text{
+    display: block;
+    line-height: 30rpx;
+    margin-top: 5rpx;
+    font-size: 30rpx;
+}
+.bottom_view_style2{
+    width: 27.5%;
+    height: 100%;
+    background: #ff9229;
+    text-align: center;
+}
+.bottom_view_style3{
+    width: 27.5%;
+    height: 100%;
+    background: #fc544b;
+    text-align: center;
+}
+.bottom_view_style2 text{
+    display: block;
+    height: 100%;
+    line-height: 100rpx;
+        font-size: 35rpx;
+    color: white;
+}
+.bottom_view_style3 text{
+    display: block;
+    height: 100%;
+    line-height: 100rpx;
+    font-size: 35rpx;
+    color: white;
+}
+
+
+.select_rule_style{
+    position: fixed;
+    bottom: -1rpx;
+    width: 100%;
+    /*height: 665rpx;*/
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.select_first_style{
+    height: 220rpx;
+    width: 100%;
+    background: white;
+    display: flex;
+    margin-top: 20rpx;
+     border-bottom: 1rpx solid #eeeeee; 
+}
+.select_first_style_image{
+    height: 80%;
+    width: 30%;
+    margin-left: 20rpx;
+    /*margin-top: 15rpx;*/
+}
+.select_first_right_style{ 
+    background: white; 
+    margin-top: 15rpx;  
+    width: 65%;
+    padding-left: 10rpx;
+}
+select_first_right_closeimg_style{
+  display: flex;
+    width: 54rpx;
+    height: 54rpx;
+}
+
+.select_second_style{
+    height: 149rpx;
+    width: 710rpx;
+    padding: 0rpx 20rpx;
+    background: white;
+    border-bottom: 1rpx solid #eee;
+}
+.select_second_row_style{
+    height: 149rpx;
+    width: 710rpx;
+    background: white;
+    line-height: 149rpx;
+    display: flex;
+}
+
+
+.select_third_style{
+    /*display: flex;*/
+    height: 150rpx;
+    width: 750rpx;
+    background: white;
+    line-height: 150rpx;
+}
+
+
+.select_forth_style{
+    height: 120rpx;
+    width: 100%;
+    background: white;
+    display: flex;
+    text-align: center;
+    line-height: 120rpx;
+}
+
+.select_forth_left_btn_style{
+    height: 120rpx;
+    width: 50%;
+    background: #ff9229;
+    color: white;
+}
+.select_forth_right_btn_style{
+    height: 120rpx;
+    width: 50%;
+    background: #fc544b;
+        color: white;
+}
+.delete_rule_style{
+    border-radius: 25rpx;
+    width: 40rpx;
+    height: 40rpx;
+    color: #999999;
+}
+
+
+.addstyle{
+    position: relative;
+    margin-right: 0rpx;
+    width: 200rpx;
+    height: 70rpx;
+    display: flex;
+    background: white;
+    flex-direction: row;
+}
+.plus{
+    position: absolute;
+    left: 18rpx;
+    width: 58rpx;
+    height: 58rpx;
+}
+.add{   
+    position: absolute;
+    right: 0rpx;
+    width: 58rpx;
+    height: 58rpx;
+}
+.numstyle{
+    position: absolute;
+    margin-top: 20rpx;
+    right: 82rpx;
+    color: black;
+    line-height: 25rpx;
+    text-align: center;
+}
+.sharder_style{
+  position: fixed;
+  top: 0;
+  bottom: 650rpx;
+  height: 525rpx;
+  background: rgba(0,0,0,0.5);
+  width: 750rpx;
+}
+.comment_num_style{
+  margin-top: 20rpx;
+  background: white;
+  height: 100rpx;
+  width: 749rpx;
+  display: flex;
+}
+.comment_text_left_style{
+  display: block;
+  color: #969ea9;
+  width: 350rpx;
+  height: 100rpx;
+  font-size: 24rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+  text-align: left;
+}
+.rules_select_style{
+  width: 750rpx;
+  height: 500rpx;
+}
+.rule_big_style{
+  /* border: 1rpx solid #eeeeee; */
+  width: 750rpx;
+  /*padding-bottom: 0rpx;*/
+}
+.rule_head_style{
+  width: 750rpx;
+  background: white;
+}
+.rule_head_text_style{
+  color: #444444;
+  font-size: 24rpx;
+  display: block;
+  width: 710rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  padding: 0rpx 20rpx;
+}
+.rule_bottom_style{
+  width: 750rpx;
+  background: white;
+  padding-bottom: 20rpx;
+}
+.rules_text_style{
+  display: block;
+  float: left;
+  background: #eeeeee;
+  color: #444444;
+  text-align: center;
+  margin: 10rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+  line-height: 15rpx;
+  min-width: 90rpx;
+  font-size: 32rpx;
+}
+.clear{
+  clear: both;
+}
+.rich_style{
+  width: 710rpx;
+  padding: 20rpx;
+}
+
+.bottom_phone_call{
+    width: 69%;
+    height: 100%;
+    color: white;
+    line-height: 2.5;
+    text-align: center;
+}
+
+.sec_new_style{
+  position: relative;
+  display: flex;
+  height: 80rpx;
+  width: 748rpx;
+  background: white;
+ 
+}
+
+
+.duihuan_left_text_style{
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.duihuan_middle_text_style{
+  font-size: 32rpx;
+  color: #ff0000;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.duihuan_btn{
+  float: right;
+  position: absolute;
+  right: 20rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 40rpx;
+  margin-top: 15rpx;
+  width: 240rpx;
+  background: red;
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+
+
+

@@ -1,0 +1,27 @@
+<view class="contain">
+
+<text class="tuikuan_text_style">{{tuikuanstate}}</text>
+
+      <view class="sec_style" wx:for="{{dataAy}}">
+            <image src="{{item.productIcon}}" class="sec_image_style"></image>
+
+            <view>
+              <text class="sec_text_style">{{item.productTitle}}</text>
+              <text class="sec_text_num">x{{item.num}}  {{item.standName}}</text>
+              <text style="margin-top: 10rpx;" class="sec_text_style">¥{{item.unitPrice}}</text>
+            </view>
+
+          
+            <image bindtap="selectRow" id="{{item.id}}" class="right_img_style" src="../../Asset/shopcar_select.png" wx:if="{{item.select&&stype==103}}"></image>
+
+            <image bindtap="selectRow" id="{{item.id}}" class="right_img_style" src="../../Asset/shopcar_unselect.png" wx:elif="{{stype==103}}" ></image>
+
+
+
+      </view>
+
+</view>
+
+<view bindtap="confirm" hidden="{{show}}" wx:if="{{stype==103}}" class="tijiao_style" style='background:{{maincolor}};'>
+确认退款
+</view>

@@ -1,0 +1,33 @@
+<view class="contain">
+  <view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+
+
+<view class="second">
+    <!-- <view class="sec_left">
+        <image src="../../Asset/f_location.png"></image>
+        <text bindtap="changcity">{{city}}</text>
+    </view> -->
+    <view class="sec_right">
+        <image src="../../Asset/f_search.png"></image>
+        <input value="{{searchText}}" bindinput="bindKeyInput" placeholder="输入搜索"/>
+    </view>
+     <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+            disabled="{{disabled}}" bindtap="jumptosearch" hover-class="other-button-hover" style="color:#444444;line-height:2;font-size:35rpx;margin-top:25rpx;height:70rpx;" >搜索</button>
+</view>
+
+
+
+    <block wx:for="{{shops}}">
+        <view class="client_row_style" bindtap="jumptoshopdetail" id="{{item.partnerId}}">
+            <image class="client_icon_style" src="{{item.img}}">
+            </image>
+            <view class="text_style">
+                <text class="client_title_style">{{item.title}}</text>
+                <text class="client_address_style">{{item.address}}</text>
+            </view>
+        </view>
+    </block>
+</view>

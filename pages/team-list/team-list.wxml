@@ -1,0 +1,13 @@
+<!-- 团购列表 -->
+<block wx:for="{{list}}">
+  <view  class="list">
+    <image src="{{item.icon}}"></image>
+    <view class="title">{{item.name}}</view>
+    <view class="price">
+      <image style="width:30rpx;height:30rpx;" src="../../Asset/addteam.png"></image>
+      <text style="font-size:24rpx;line-height:35rpx;"> \r\r {{item.teamnum}}人团 \r</text>
+      <text style="font-size:30rpx;color:#FD0001;"> \r\r ￥{{item.teamprice}}</text>
+    </view>
+    <button id="{{item.id}}" bindtap="lookTeamDetail" >去拼单</button>
+  </view>
+</block>

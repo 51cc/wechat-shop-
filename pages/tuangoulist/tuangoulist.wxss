@@ -1,0 +1,89 @@
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.forth_style{
+   margin-top: 10rpx;
+    width: 100%;
+    background: white;
+}
+.product_single{
+    float: left;
+    margin: 10rpx;
+    height: 485rpx;
+    width: 350rpx;
+    background: white;
+    border: 1px solid #ededed;
+
+}
+.product_single image{
+    width: 330rpx;
+    margin: 10rpx;
+    height: 330rpx;
+    background: white;
+}
+.product_single text{
+    display: flex;
+    border: 5rpx;
+    height: 45rpx;
+}
+
+
+.text1{
+    margin-left: 15rpx;
+    font-size: 32rpx;
+    overflow: hidden;
+    width: 320rpx;
+    line-height: 40rpx;
+    height: 40rpx;
+    color: #444444; 
+    white-space: nowrap;
+    background: white;  
+}
+.text2{
+    margin-left: 15rpx;
+    margin-top: 10rpx;
+    font-size: 30rpx;
+    width: 135rxp;
+    overflow: hidden;
+        white-space: nowrap;
+    line-height: 40rpx;
+    height: 40rpx;
+    color: #999999;
+}
+.text3{
+    display: block;
+    width: 150rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 15rpx;
+    font-size: 32rpx;
+    background: white;
+    color: #f25824;
+    
+}
+.buttom_text_style{
+  display: flex;
+  height: 40rpx;
+  width: 350rpx;
+  margin-top: 10rpx;
+  line-height: 40rpx;
+}
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}

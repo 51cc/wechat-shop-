@@ -1,0 +1,52 @@
+<view class="client_detail_head_style">
+    <image class="client_icon_style" src="{{img}}"></image>
+    <view class="client_head_text_view">
+        <text style="width:500rpx;height:40rpx;font-size:28rpx;color:#444444;background:white;overflow:hidden;">{{title}}</text>
+        <!--<text  style="width:500rpx;font-size:32rpx;color:#999999;">{{address}}</text>-->
+        <!--<text style="margin-top: 10rpx;font-size:32rpx;color:#999999;">{{phone}}</text>-->
+    </view>
+</view>
+
+
+
+<view class="row_style" bindtap="jumptomap">
+  <image class="row_left_style" src="../../Asset/f_client_address.png"></image>
+  <text style="color:#999999;" class="row_text_style">{{address}}</text>
+  <image class="row_right_style" src="../../Asset/arrow_right.png"></image>
+</view>
+
+<view class="row_style" style="background:white;border-top:0; margin-top: 0rpx;margin-bottom: 20rpx;" bindtap="callTheClient">
+  <image class="row_left_style" src="../../Asset/f_client_phone.png"></image>
+  <text style="color:#999999;" class="row_text_style">{{phone}}</text>
+  <image class="row_right_style" src="../../Asset/arrow_right.png"></image>
+</view>
+
+<view hidden="{{yuyueOk}}" class="onekey_phone_style center_head_style" bindtap="yuyue" style='background:{{maincolor}};'>
+  <text>预约商家</text>
+</view>
+
+<view class="four_head_style">
+      <text style="color:#444444;" class="text41">公司简介</text>
+      <view class="line_style"></view>
+      <import src="../../wxParse/wxParse.wxml"/> 
+        <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+      <!-- <text class="content_text_style">{{content}}</text> -->
+</view>
+
+
+
+
+<view class="forth_style" wx:for="{{products}}" wx:for-index="idx">
+                        <view class="product_single" bindtap="jumptodetail" id="{{item.productId}}">
+                             <image src="{{item.icon}}"></image>
+                            <text class="text1">{{item.fullName}}</text>
+                            <view class="bottom_text_style">
+                             <text class="text3">¥{{item.price}}</text>
+                              <text style="text-decoration:line-through;color:rgb(150, 158, 169);font-size:20rpx;width:150rpx;margin-top:13rpx;margin-left:13rpx" class="text3">¥{{item.oldPrice}}</text>
+                             <text  class="text3" style="position: absolute;right:10rpx;font-size:20rpx;text-align:right;color:rgb(150, 158, 169);">销量{{item.saleCount}}</text>
+                            </view>
+
+                        </view>
+    </view>

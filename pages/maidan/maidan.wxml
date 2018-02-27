@@ -1,0 +1,81 @@
+<view class="contain">
+    <view style='width:750rpx;background:white;padding:20rpx 0;'>
+        <view class='rows_style'>
+            <view class='rows_left_style'>商家</view>
+            <view bindtap='showClient' class='rows_right_style'>
+                <text>{{selectDic.parentName}}</text>
+                <image src='../../Asset/arrow_down.png'></image>
+            </view>
+        </view>
+
+        <view class='rows_style'>
+            <view class='rows_left_style'>消费总额</view>
+            <view class='rows_right_style'>
+              <input type='digit' bindinput='bindinput' id="zongjia" class='rows_right_input_style'  placeholder='咨询服务员后输入'></input>
+            </view>
+        </view>
+
+        <view class='rows_style'>
+            <view class='rows_left_style'>不参与优惠金额</view>
+            <view class='rows_right_style'>
+                <input type='digit' bindinput='bindinput' id="bukeyouhui" class='rows_right_input_style'  placeholder='咨询服务员后输入'></input>
+              </view>
+        </view>
+    </view>
+
+
+    <block wx:if="{{setting==1}}">
+       <view style='display:flex;'> 
+        <text class="biaoti_style">商家优惠</text>
+        <block wx:if="{{selectDic.uplimit>0}}">
+              <text style='display:block;height:88rpx;line-height:88rpx; margin:0rpx 20rpx;font-size:24rpx;color:#999999;'>最高可减免{{selectDic.uplimit}}元</text>
+        </block>
+        <block wx:else>
+              <text style='display:block;height:88rpx;line-height:88rpx; margin:0rpx 20rpx;font-size:24rpx;color:#999999;'>消费越多减的越多</text>
+        </block>
+      </view>
+      <view class="bottom_row_style">
+        <text class="bottom_left_style">满{{selectDic.full}}减{{selectDic.minus}}</text>
+        <text class="bottom_left_style" style='margin-left: 0rpx;color:red;text-align:right;'>-¥{{jianMoney}}</text>
+      </view>
+    </block>
+    <block wx:elif="{{setting==2}}">
+      
+      <view style='display:flex;'> 
+        <text class="biaoti_style">商家优惠</text>
+        <block wx:if="{{selectDic.uplimit>0}}">
+              <text style='display:block;height:88rpx;line-height:88rpx; margin:0rpx 20rpx;font-size:24rpx;color:#999999;'>最高可减免{{selectDic.uplimit}}元</text>
+        </block>
+        <block wx:else>
+              <text style='display:block;height:88rpx;line-height:88rpx; margin:0rpx 20rpx;font-size:24rpx;color:#999999;'>消费越多减的越多</text>
+        </block>
+      </view>
+
+      <view class="bottom_row_style">
+        <text class="bottom_left_style">{{selectDic.rate}}折</text>
+        <text class="bottom_left_style" style='margin-left:0rpx;color:red;text-align:right;'>-¥{{jianMoney}}</text>
+      </view>
+    </block>
+    
+      <view class="bottom_row_style" style='margin-top:20rpx;background:none;'>
+        <text style="font-size:28rpx;" class="bottom_left_style">实付款</text>
+        <text style="font-size:28rpx;" class="bottom_left_style" style='margin-left:0rpx;color:red;text-align:right;'>¥{{shijifukuan}}</text>
+      </view>
+
+    <view class="yy_btn_style" bindtap='confirmOrder'>确认买单</view>
+
+    <block wx:if="{{show}}">
+        <view bindtap='close' class='mask_style' style='height:{{sheight}}px;width:{{swidth}}px;'>
+        
+        
+        </view>
+        <view class='select_client_style'>
+            <scroll-view scroll-y style='width:750rpx;height:300px;'>
+                <block wx:for="{{clients}}" wx:for-index="idx">
+                    <text bindtap='selectClient' id="{{idx}}" class="row_text_style">{{item.parentName}}</text>
+                </block>
+            </scroll-view>
+        </view>
+    </block>
+
+</view>

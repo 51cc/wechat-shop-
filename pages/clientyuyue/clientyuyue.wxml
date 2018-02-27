@@ -1,0 +1,28 @@
+<view class="contain">
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2217-09-01" bindchange="bindDateChange" id="1">
+
+      <view class="row_style">
+            <text class="row_left_style">日期</text>
+            <text class="row_right_style">{{time}}</text>
+      </view>
+  </picker>
+
+
+    <view class="row_style">
+        <text class="row_left_style">手机号</text>
+        <input bindinput="bindKeyInput" id="2" placeholder="请输入手机号" class="row_right_style" />
+    </view>
+
+
+    <view class="row_style">
+        <text class="row_left_style">姓名</text>
+        <input bindinput="bindKeyInput" id="3" placeholder="请输入姓名" class="row_right_style" />
+    </view>
+
+    <view class="rows_style" style="min-height:300rpx;margin-bottom:20rpx;">
+            <textarea bindblur="bindTextAreaBlur" class="textarea_style"  maxlength="-1" placeholder="请输入备注" auto-height="true"/>
+      </view>
+  <view class="button_style center_head_style" bindtap="selectCar" style='background:{{maincolor}};'>
+    立即预约
+  </view>
+</view>

@@ -1,0 +1,24 @@
+/* pages/mymaidanjilu/mymaidanjilu.wxss */
+page{
+  height: 100%;
+  background: #f5f5f5;
+}
+.jilu_style{
+  width: 710rpx;
+  padding: 20rpx;
+  display: flex;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.jilu_column_style{
+  width: 355rpx;
+  height: 100rpx;
+}
+.jl_up_style{
+  font-size: 32rpx;
+  text-align: left;
+  color: #444444;
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+}

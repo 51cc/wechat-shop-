@@ -1,0 +1,42 @@
+<view class="contain">
+  <image src='../../Asset/kj_bg.png' class="kanjia_head_style">
+  </image>
+  <!-- <scroll-view scroll-y class="kanjia_list_style" style="height:{{sheight-110}}px;"> -->
+  <view class="kanjia_list_style">
+
+      <block wx:for="{{dataAy}}">
+          <view class="kanjia_cell_style">
+              <image id="{{item.id}}" src='{{item.icon}}' class="kanjia_product_style" bindtap="jumptodetail">
+              
+              </image>
+
+        
+                  <image wx:if="{{item.totalCount==0}}" class="kanjia_ing_style" src='../../Asset/kj_end.png'>
+              </image>
+
+                  <image wx:else class="kanjia_ing_style" src='../../Asset/kj_ing.png'>
+
+              </image>
+              <text class="kanjia_title_style">
+              {{item.name}}
+              </text>
+              <view class="kanjia_bottom_style">
+                <text class="kanjia_left_style">底价：</text>
+                <text class="kanjia_jiage_style">¥{{item.lowestPrice}}</text>   
+                <text class="kanjia_left_style" style="position: absolute;right: 190rpx;color:#999999;">{{item.countPeoele}}人参与</text>  
+
+                <block wx:if="{{item.totalCount==0}}">
+                     <text style='background:#f5f5f5;' class="kanjia_play_style">我也要玩</text>        
+
+                </block>
+
+                <block wx:else>
+                    <text id="{{item.id}}" bindtap="jumptodetail" class="kanjia_play_style">我也要玩</text>        
+                </block>
+              </view>
+          </view>
+      </block>
+  <!-- </scroll-view> -->
+</view>
+
+</view>

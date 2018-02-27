@@ -1,0 +1,68 @@
+/* pages/wuliu/wuliu.wxss */
+page{
+  height: 100%;
+  background: #f6f6f6;
+}
+.head_style{
+  width: 750rpx;
+  height: 190rpx;
+  background: white;
+  display: flex;
+}
+.pro_ico_style{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+  /* background: red; */
+}
+.head_right{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  height: 150rpx;
+  width: 540rpx;
+}
+.up_text{
+  display: block;
+  text-align: left;
+  color: #ff8726;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+.down_text{
+  display: block;
+  text-align: left;
+  color: #444444;
+  height: 45rpx;
+  line-height: 45rpx;
+  font-size: 28rpx;
+}
+.shunxun_style{
+  margin-top: 20rpx;
+  width: 750rpx;
+  background: white;
+  padding: 20rpx 0;
+}
+.shunxun_up_text{
+  display: block;
+  margin-left: 90rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  width: 620rpx;
+}
+.dian_style{
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.xian_style{
+  position: absolute;
+  left: 40rpx;
+  top: 0rpx;
+  width: 1rpx;
+  bottom: 0;
+  background: #eeeeee;
+}

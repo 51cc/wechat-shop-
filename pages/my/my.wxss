@@ -1,0 +1,220 @@
+.contain{
+    background: #eeeeee;
+    height: 100%;
+}
+.rows_style{
+    position: relative;
+    display: flex;
+    height: 110rpx;
+    background: white;
+    font-size: 30rpx;
+    border-bottom: 0.5rpx solid #eeeeee;
+}
+.rows_style text{
+    position: absolute;
+    left: 70rpx;
+    height: 110rpx;
+    width: 300rpx;
+    line-height: 110rpx;
+    font-size: 30rpx;
+    text-align: left;
+}
+.arrow_style{
+    position: absolute;
+    right: 20rpx;
+    top: 37rpx;
+    width: 35rpx;
+    height: 35rpx;
+}
+.icon_left_style{
+    position: absolute;
+    left: 20rpx;
+    top: 32rpx;
+    width: 45rpx;
+    height: 45rpx;
+}
+.cenert_head_bg_style{
+    display: block;
+    width: 100%;
+    height: 300rpx;
+    position: relative;
+    text-align: center;
+     
+}
+
+.my_center_head_style{
+    width: 100%;
+    height: 100%;
+}
+.my_center_headicon_style{
+    position: absolute;
+    top: 50rpx;
+    left: 320rpx;
+    height: 120rpx;
+    width: 120rpx;
+    border: 0.5rpx solid white;
+    border-radius: 60rpx;
+}
+.text_style{
+    position: absolute;
+    top: 190rpx;
+    left: 0;
+    width: 100%;
+    height: 30rpx;
+    color: white;
+    font-size: 30rpx;
+}
+
+.my_second_style{
+    width: 100%;
+    display: flex;
+    height: 200rpx;
+    background: white;
+}
+.my_second_single_style{
+    width: 24.9%;
+    height: 95%;
+    background: white;
+    text-align: center;
+}
+.order_icon_style{
+    display: block;
+    height: 46rpx;
+    width: 46rpx;
+    margin: 45rpx 45rpx 15rpx 50rpx;
+}
+.order_text_style{
+    font-size: 30rpx;
+    color: #444444;
+}
+
+
+.line_style{
+    background: #eeeeee;
+    height: 20rpx;
+    width: 100%;
+}
+.rows_style:active{
+  background: #eeeeee;
+}
+.my_second_single_style:active{
+  background: #eeeeee;
+}
+.my_all_order_style{
+  display: flex;
+  height: 80rpx;
+  width: 750rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.my_all_order_style:active{
+  background: #eeeeee;
+}
+.all_left_text_style{
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 300rpx;
+  font-size: 28rpx;
+  color: #444444;
+  padding-left: 20rpx;
+  text-align: left;
+  display: block;
+}
+.all_righe_text_style{
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 370rpx;
+  font-size: 24rpx;
+  color: #999999;
+  padding-right: 20rpx;
+  text-align: right;
+}
+.all_arrow_style{
+  width: 35rpx;
+  height: 35rpx;
+  margin-top: 22rpx;
+  margin-right: 20rpx;
+}
+.version-style{
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  width: 750rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+
+
+
+.cenert_sec_bg_style{
+  width: 750rpx;
+  height: 230rpx;
+  position: relative;
+}
+.cenert_icon_style{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  position: absolute;
+  top:55rpx;
+  left: 20rpx;
+}
+.cenert_text_style{
+  position: absolute;
+  top:90rpx;
+  left: 160rpx;
+  height: 50rpx;
+  line-height:50rpx;
+  color: white;
+  font-size: 30rpx;
+}
+.qiandao_style{
+  display: flex;
+  position: absolute;
+  right: 20rpx;
+  height: 60rpx;
+  width: 180rpx;
+  top: 85rpx;
+  border: 1rpx solid #ffffff;
+  border-radius: 60rpx;
+}
+.qiandao_style>image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 25rpx;
+  margin-top: 13rpx;
+}
+.qiandao_style>text{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  height: 40rpx;
+  width: 120rpx;
+  text-align: left;
+  font-size: 32rpx;
+  color: white;
+  line-height: 40rpx;
+}
+
+
+.yi_qiandao_style{
+  position: absolute;
+  right: 20rpx;
+  height: 60rpx;
+  width: 180rpx;
+  top: 85rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.5);
+  border-radius: 60rpx;
+}
+.yi_qiandao_style>text{
+  margin-top: 10rpx;
+  height: 40rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 40rpx;
+  display: block;
+  width: 180rpx;
+}

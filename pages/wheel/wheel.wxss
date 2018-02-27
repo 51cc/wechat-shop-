@@ -1,0 +1,115 @@
+@import '../../components/wheel/wheel.wxss'
+.index-hd {
+  padding: 80rpx;
+  text-align: center;
+  padding: 20rpx 26rpx 40rpx;
+}
+.title_style{
+  position: absolute;
+  font-size: 24rpx;
+  color: #9a2f00;
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin-top: -95rpx;
+}
+.yy_style{
+  position: fixed;
+  top: 860rpx;
+  left: 125rpx;
+  width: 500rpx;
+  height: 50rpx;
+}
+.lingqu_style{
+  position: fixed;
+  top: 750rpx;
+  left: 245rpx;
+  width: 260rpx;
+  height: 70rpx;
+}
+.lingqu_content_style{
+  /* display: block; */
+  text-align: left;
+  position: fixed;
+  font-size: 32rpx;
+  top: 600rpx;
+  left: 180rpx;
+   width: 390rpx;
+  height: 80rpx;
+  line-height: 40rpx; 
+    color: #444444;
+}
+.lingqu_explain_style{
+  color: #cea0dc;
+  display: block;
+  text-align: center;
+  position: fixed;
+  font-size: 24rpx;
+  font-weight: normal;
+  bottom: 50rpx;
+  left: 30rpx;
+  width: 690rpx;
+  height: 50rpx;
+}
+.lingqu_title_style{
+  color: #444444;
+  display: block;
+  text-align: center;
+  position: fixed;
+  font-size: 40rpx;
+  font-weight: normal;
+  top: 510rpx;
+  left: 45rpx;
+  width: 660rpx;
+  height: 50rpx;
+}
+.mask_style{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.index-desc {
+  margin-top: 20rpx;
+  color: #888;
+  font-size: 28rpx;
+}
+
+.index-tip{
+  color: #888;
+  font-size: 28rpx;
+  text-align: center;
+  margin: 20rpx 0;
+}
+.index-mod{
+  margin: 30rpx 80rpx 60rpx 60rpx;
+  color: #888;
+}
+.index-mod text{
+  display: inline-block;
+  line-height: 20px;
+}
+.index-mod-btn{
+  display: inline-block;
+  flex: 1;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #666;
+  border-radius: 6rpx;
+  font-size: 12px;
+  padding: 0 20rpx;
+}
+.index-mod-btn.on{
+  color: #3985ff;
+  border: 1px solid #3985ff;
+}
+.index-mod-btn:last-child{
+  margin-left: 20rpx;
+}
+
+.huoqujifen_style{
+  color: white;
+  text-align: center;
+  
+}

@@ -1,0 +1,23 @@
+<view class="contain">
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view> 
+
+  <block wx:for="{{products}}">
+      <view class="pro_row_style">
+          <image class="pro_img_style"></image>
+          <view class="pro_right_style">
+                <text class="pro_up_text_style">锄禾日当午哈迪喝下迪喝下迪喝下迪喝下迪喝下迪喝下图</text>
+                <text class="pro_up_text_style pro_sec_text_style">味多美</text>
+                <text class="pro_youhui_style">立减10元</text>
+                <view class="bottom_text_style">
+                
+                <text class="pro_yuanjia_style">¥1289</text>
+                <text class="pro_xianjia_style">¥789</text>
+                <view bindtap="qianggou" class="pro_qianggou_style">抢购</view>
+                </view>
+          </view>
+      </view>
+  </block>
+</view>

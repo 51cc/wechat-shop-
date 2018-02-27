@@ -1,0 +1,334 @@
+/* pages/huatidetail/huatidetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+page{
+  height: 100%;
+  position: relative;
+  /* padding-bottom: 100rpx; */
+}
+
+
+.huatilist{
+  width: 100%;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+
+  /* border-bottom: 1rpx solid #f5f5f5;  */
+}
+.huatitop{
+  width: 100%;
+  height: 80rpx;
+}
+.huatitop > .left{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+}
+.huatitop > .center{
+  width: 460rpx;
+  height: 80rpx;
+  display: inline-block;
+}
+.huatitop > .center >.top{
+  height: 40rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #333;
+  line-height: 35rpx;
+  overflow: hidden;
+}
+.huatitop > .center >.bottom{
+  font-size: 24rpx;
+  overflow: hidden;
+  height: 40rpx;
+  color: #999;
+  line-height: 45rpx;
+}
+.huatitext{
+  margin-top: 20rpx;
+  color: #333;
+  height: auto;
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+/* .huatiimg{
+  margin-top: 20rpx;
+} */
+
+.huatiaddress{
+  padding:0 20rpx ;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #9ab9d1;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.pingl{
+  height: 100rpx;
+  background: #f5f5f5;
+  color: #9a9a9a;
+  font-size: 24rpx;
+  text-align: left;
+  overflow: hidden;
+  padding:0 20rpx ;
+  box-sizing: border-box;
+  line-height: 100rpx;
+}
+
+
+
+
+.caozuo{
+  width: 750rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #999;
+  text-align: center;
+  font-size: 24rpx;
+  border-top: 1rpx solid #eee;
+  background: #fff;
+}
+.caozuo>view{
+  border-top: 1rpx solid #fff;
+  width: 187.5rpx;
+  height: 100rpx;
+  display: inline-block;
+  line-height: 100rpx;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.caozuo>view>button{
+  width: 187.5rpx;
+  height: 100rpx;
+  display: inline-block;
+  line-height: 100rpx;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  border: none !important;
+  font-size: 24rpx;
+  color: #999;
+  position: static;
+  z-index: 0;
+}
+.caozuo>view>button::after{
+  content: none;
+}
+.caozuo>.lianxi{
+  background: #e71f19;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+}
+
+
+
+.mianze{
+  width: 600rpx;
+  padding: 25rpx 50rpx 25rpx 50rpx;
+  box-sizing: border-box;
+  height: 900rpx;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  background: #fff;
+  z-index: 11;
+  transform:translate(-50%,-50%);
+}
+.mianze>.top{
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #444;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.mianze>.center{
+  height: 320rpx;
+  line-height: 40rpx;
+  text-align: left;
+  color: #444;
+  font-size: 24rpx;
+  margin:25rpx 0 25rpx 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.mianze>.bottom{
+  margin-top: 50rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+.mianze>.bottom>button{
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  background: #e71f19;
+}
+
+
+.fabupl{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+}
+.reply_center{
+  width: 100%;
+  height:100rpx;
+  padding: 20rpx 20rpx;
+  background: #eee;
+  box-sizing: border-box;
+}
+.reply_center>input{
+  width: 530rpx;
+  height:60rpx;
+  float: left;
+  background: #fff;
+}
+.reply_center>button{
+  width: 150rpx;
+  height:60rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #e71f19;
+  color: #fff;
+  padding: 0;
+  float: right;
+}
+
+
+/* 删除评论 */
+.delpl{
+  height: 320rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.delpl>.tip{
+  height: 109rpx;
+  border-bottom: 1rpx solid #eee;
+  text-align: center;
+  line-height: 109rpx;
+  color: #828282;
+}
+.delpl>.del{
+  height: 100rpx;
+  background: #fff;
+}
+.delpl>.del>button{
+  border-radius: 0;
+  background: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: red;
+}
+.delpl>.quxiao{
+  height: 100rpx;
+  background: #fff;
+}
+.delpl>.quxiao>button{
+  border-radius: none;
+  background: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #444;
+}
+
+/* 遮罩 */
+.shade{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+
+
+
+
+.huifuc{
+  width: 100%;
+  padding: 0 20 120rpx;
+  /* margin-bottom: 100rpx; */
+}
+.menu{
+  width: 100%;
+}
+.menu>.toux{
+  float: left; 
+  width: 80rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.menu>.neirong{
+  margin-right: 20rpx;
+  margin-top: 35rpx;
+  float: right; 
+  width: 630rpx;
+}
+.tip{
+  width: 630rpx;
+  height: 65rpx;
+}
+.tip>.tipleft{
+  display: inline-block;
+  width: 590rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  text-align: left;
+  color: #444;
+  font-weight: bold;
+  padding-left: 15rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.tip>.tipleft>text{
+  font-size: 24rpx;
+  color: #999;
+  font-weight: normal;
+}
+.tip>.tipright{
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+}
+.cententc{
+  width: 100%;
+  font-size: 28rpx;
+  color: #444;
+  text-align: left;
+  line-height: 40rpx;
+  padding-left: 15rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  padding-bottom: 15rpx;
+}
+.information_conter{
+  width: 95%;
+  padding: 15rpx;
+  background: #F1F1F1;
+}
+.fengeline{
+  border-bottom: 1rpx solid #eeeeee;
+}

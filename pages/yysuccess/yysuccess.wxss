@@ -1,0 +1,38 @@
+/* pages/yysuccess/yysuccess.wxss */
+@import "../aaafirst/aaafirst.wxss";
+
+.contain{
+  background: #f6f6f6;
+}
+.order_num{
+  margin-left: 20rpx;
+  width: 710rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #444444;
+  text-align: left;
+  display: block;
+}
+.yy_success{
+  height: 520rpx;
+  width: 750rpx;
+  background: white;
+  margin-bottom: 20rpx;
+}
+.yy_success >image{
+  width: 194rpx;
+  height: 200rpx;
+  margin-top: 65rpx;
+  margin-left: 278rpx;
+}
+.yy_success_text_style{
+  display: block;
+  font-size: 36rpx;
+  text-align: center;
+  width: 750rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  height: 40rpx;
+  color: #444444;
+}

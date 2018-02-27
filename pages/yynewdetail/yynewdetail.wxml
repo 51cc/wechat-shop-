@@ -1,0 +1,62 @@
+<view class="contain">
+    <swiper style="width:750rpx;height:562rpx;" indicator-dots="{{indicatorDots}}"
+                        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                        <block  wx:for="{{imgUrls}}">
+                            <swiper-item>
+                            <image src="{{item.img}}" class="slide-image" mode="aspectFit" style="width:100%;height:100%;"/>
+                            </swiper-item>
+                        </block>
+        </swiper>
+
+      <view class="kanjia_detail_head_style">
+          <text class="kanjia_detail_title_style">{{mDic.data.title}}</text>
+
+          <view style="width:710rpx;display:flex;margin-top:20rpx;margin-bottom:20rpx;">
+              <text style="width:355rpx;height:30rpx;font-size:24rpx;color:#ff4a4a;text-align:left;">¥{{mDic.data.price}}</text>
+              <text style="width:355rpx;height:30rpx;font-size:24rpx;color:#bbbbbb;text-align:right;">服务人次：{{mDic.data.basenum}}人</text>
+          </view>
+        </view>
+
+      <view style="margin-top:20rpx;background:white;">
+        <view class='dianming_style'>
+          <text style='display:block;height:50rpx;'>{{mDic.data.parent_name}}</text>
+        </view>
+        <view class='dianming_style' style='border:0;'>
+
+          <view class='dianming_left_style' bindtap='jumptoclientmap'>
+              <image src='../../Asset/yy_address.png'></image>
+              <text style='width:520rpx;display:block;text-overflow:ellipsis;white-space: nowrap;overflow:hidden;font-size:24rpx;color:#444444; line-height: 50rpx;height: 50rpx;'>{{mDic.data.ADDRESS}}</text>
+          </view>
+
+          <view class='dianming_right_style' bindtap='makePhone'>
+              <image src='../../Asset/yy_phone.png'></image>
+          </view>
+
+        </view>
+      </view>
+
+      <view class='yy_pj_style' bindtap='jumptocommentlist'>
+         <text class='yy_pj_left'>服务评价</text>
+          <view class='yy_pj_right_style'>
+            <text>共{{mDic.count}}条</text>
+            <image src='../../Asset/yy_pj.png'></image>
+          </view>
+      </view>
+
+
+      <view style='margin-top:20rpx;width:750rpx;background:white;'>
+         <text style='margin-left:20rpx;' class='yy_pj_left'>服务详情</text>
+
+          <view>    
+            <import src="../../wxParse/wxParse.wxml"/> 
+            <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+          </view>
+      </view>
+        
+</view>
+
+<view class="yy_bottom_style">
+  <view class="yy_btn_style" style='background:{{maincolor}}' bindtap='jumptosubmite'>立即预约</view>
+</view>

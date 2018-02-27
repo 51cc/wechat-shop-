@@ -1,0 +1,91 @@
+/* kaquan.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.rows_style{
+  width: 750rpx;
+  height: 180rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+  display: flex;
+}
+.row_left_img_style{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+  background: red;
+}
+.row_middle_style{
+  margin-left: 10rpx;
+  width: 440rpx;
+  height: 120rpx;
+  margin-top: 30rpx;
+}
+.row_right_style{
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  margin-left: 15rpx;
+  width: 120rpx;
+  height: 50rpx;
+  background: #e20c26;
+  border-radius: 7.5rpx;
+  color: white;
+}
+
+
+.row_middle_up_style{
+  margin: 0rpx;
+}
+.row_middle_uptext_style{
+  display: block; 
+  line-height: 30rpx; 
+  background: white;
+  color: #444444;
+  font-size: 24rpx;
+  text-align: left;
+  margin-top: -10rpx;
+}
+.row_middle_down_style{
+  margin-top: 30rpx;
+  height: 50rpx;
+  width: 440rpx;
+  display: flex;
+}
+.row_middle_down_left_style{
+  width: 220rpx;
+  height: 50rpx;
+  display: flex;
+}
+
+.m_img_style{
+  height: 24rpx;
+  width: 24rpx;
+  background: white;
+}
+.m_text_style{
+  font-size: 20rpx;
+  color: #999999;
+  text-align: left;
+  margin-top: -20rpx;
+  margin-left: 7.5rpx;
+}
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}

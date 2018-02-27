@@ -1,0 +1,64 @@
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.tuikuan_text_style{
+
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: red;
+}
+
+.sec_style{
+    display: flex;
+    width: 100%;
+    background: white;
+    border-bottom: 0.5rpx solid #eeeeee;
+}
+.sec_image_style{
+    margin: 25rpx;
+    height: 120rpx;
+    width: 120rpx;
+    background: red;
+}
+.sec_text_style{
+    display: block;
+    overflow: hidden;
+    width: 500rpx;
+    height: 40rpx;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+}
+.sec_text_num
+{
+    display: block;
+    color: #999999;
+    margin-top: 10rpx;
+    font-size: 30rpx; 
+}
+
+.tijiao_style{
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  background: red;
+  color: white;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  width: 710rpx;
+}
+.right_img_style{
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 10rpx;
+  margin-top: 50rpx;
+}
+

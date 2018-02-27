@@ -1,0 +1,25 @@
+<view class='contain'>
+  <block wx:for="{{dataAy}}">
+      <view style='margin-bottom:20rpx;'>
+          <view class='head_style'>
+              <text class='head_style_lefttext'>{{item.parentId}}</text>
+              <text class='head_style_lefttext' style='margin-left: 0rpx;text-align:right;color:red;'>{{item.stateName}}</text>
+          </view>
+          <view class='bottom_style'>
+            <image src='{{item.img}}' class='bottom_img_style'></image>
+            <view class='bottom_right_style'>
+                <text class='bottom_str1_style'>{{item.themeTitle}}</text>
+                <text class='bottom_str2_style'>报名时间：{{item.startTime}}-{{item.endTime}}</text>
+                <text class='bottom_str2_style'>{{item.countNum}}人参与</text>
+            </view>
+          </view>
+          <block wx:if="{{item.state==0}}">
+           <view class="forth_style">
+                 <view id="{{item.orderNo}}" bindtap="quxaio" style='position: absolute;right: 260rpx;' class="left_forth_style">取消</view>  
+                 <view bindtap="payNow" id="{{item.orderNo}}" style='position: absolute;right: 20rpx;border: 1px solid #ff0000;color: #ff0000;' class="right_forth_style">付款</view>
+            </view>
+          </block>
+      </view>
+     
+  </block>
+</view>

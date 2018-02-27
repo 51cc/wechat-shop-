@@ -1,0 +1,110 @@
+
+<view class='contain1'>
+
+  <view class="head_style" style='background:{{maincolor}};'>
+        <block wx:if="{{mDic.state==0}}">
+          <text class="head_up_text_style">
+          待付款</text>
+        </block>
+        <block wx:elif="{{mDic.state==1}}">
+          <text class="head_up_text_style">
+          已预约</text>
+        </block>
+        <block wx:elif="{{mDic.state==2}}">
+          <text class="head_up_text_style">
+          已完成</text>
+        </block>
+        <block wx:elif="{{mDic.state==3}}">
+          <text class="head_up_text_style">
+          已取消</text>
+        </block>
+        <block wx:elif="{{mDic.state==4}}">
+          <text class="head_up_text_style">
+          已过期</text>
+        </block>
+        <block wx:elif="{{mDic.state==5}}">
+          <text class="head_up_text_style">
+          退款中</text>
+        </block>
+        <block wx:elif="{{mDic.state==6}}">
+          <text class="head_up_text_style">
+          退款成功</text>
+        </block>
+        <block wx:elif="{{mDic.state==7}}">
+          <text class="head_up_text_style">
+          已评价完成</text>
+        </block>
+
+          <text style="margin-top:20rpx;font-size:24rpx;" class="head_up_text_style">
+          订单编号：{{mDic.order_no}}</text>
+          <text style="margin-top:10rpx;font-size:24rpx;" class="head_up_text_style">
+          下单时间：{{mDic.createDate}}</text>
+  </view>
+   <view class='yy_cell_style'>
+              <view class='yy_left_style'>
+                  <image src='{{mDic.img}}' class='yy_ico_style'></image>
+              </view>
+
+              <view class='yy_right_style'>
+                  <text class='yy_title_style'>{{mDic.service_name}}</text>
+                  <view style='display:flex;'>
+                      <text style='text-align:left;' class='yy_renshu_style'>预约数量：{{mDic.service_num}}人</text>
+                      <text style='text-align:right;' class='yy_price_style'>¥{{mDic.total_price}}</text>
+                  </view>
+              </view>
+    </view>
+
+
+    <view style='margin-top:20rpx;background:white;padding:30rpx 0;'>
+      <text style='font-size:28rpx;line-height:50rpx;height:50rpx;' class='order_num'>预约日期:{{mDic.assess_time}}</text> 
+      <text style='margin-top:10rpx;font-size:28rpx;line-height:50rpx;height:50rpx;' class='order_num'>预约人:{{mDic.link_man}}</text>
+      <text style='margin-top:10rpx;font-size:28rpx;line-height:50rpx;height:50rpx;' class='order_num'>手机号:{{mDic.tel}}</text>   
+    </view>
+
+
+    <view style="margin-top:20rpx;background:white;">
+        <view class='dianming_style'>
+          <text style='display:block;height:40rpx;'>{{mDic.TITLE}}</text>
+        </view>
+        <view class='dianming_style' style='border:0;'>
+
+          <view class='dianming_left_style' bindtap='jumptoclientmap'>
+              <image src='../../Asset/yy_address.png'></image>
+              <text style='width:520rpx;display:block;text-overflow:ellipsis;white-space: nowrap;overflow:hidden;font-size:24rpx;color:#444444; line-height: 50rpx;height: 50rpx;'>{{mDic.ADDRESS}}</text>
+          </view>
+
+          <view class='dianming_right_style' bindtap='makePhone'>
+              <image src='../../Asset/yy_phone.png'></image>
+          </view>
+
+        </view>
+      </view>
+    
+  <block wx:if="{{mDic.isline==1}}">
+      <view class='rows_cell_style' style="margin-top:20rpx;">
+          <text class='rows_text_style'>优惠券</text>
+          <block wx:if="{{mDic.coupon_id.length>0}}">
+             <text class='rows_right_text_style'>已选{{mDic.coupon_price}}元</text>
+          </block>
+          <block wx:else>
+             <text class='rows_right_text_style'>无可用优惠券</text>
+          </block>
+      </view>
+      <view class='rows_cell_style' style="margin-top:0rpx;">
+          <text wx:if="{{mDic.state==0}}" class='rows_text_style'>合计</text>
+          <text wx:else class='rows_text_style'>实付款</text>
+
+          <text class='rows_right_text_style'>¥{{mDic.total_price}}</text>
+      </view>
+      <view class='rows_cell_style' style="min-height: 100rpx;margin-top:0rpx;">
+          <text style='width:70rpx;' class='rows_text_style'>备注:</text>
+          <text style='width:650rpx; min-height: 100rpx;color:#999999;text-align:left;' class='rows_right_text_style'>{{mDic.remark}}</text>
+      </view>
+
+      <view class='bottom_style' wx:if="{{mDic.state==0}}">
+          <text bindtap='paynow' class='bottom_right_btn'>付款</text>
+          <text bindtap='quxiao' style='background:#ffffff; color:#999999;right: 270rpx;' class='bottom_right_btn'>取消</text>
+      </view>
+  </block>
+
+</view>

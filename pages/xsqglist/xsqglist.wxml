@@ -1,0 +1,34 @@
+<view class="contain">
+
+<view hidden="{{hasContent}}">
+    <import src="../template/quesheng" />
+    <template is = "quesheng" data="{{...item}}"/> 
+  </view>
+
+ <view class="xsq_bg_style"> 
+        <!-- <view style="font-size:32rpx;font-weight:bolder;" class="m_style">限时抢购</view> -->
+          <block wx:for="{{dataAy}}">
+            <view class="xsq_single_style">
+                <image src="{{item.icon}}" class="xsq_img_style"></image>
+                <view class="xsq_right_style">
+                    <text class="xsq_up_text_style">{{item.name}}</text>
+                    <view class="xsq_middle_style" style="position:relative;">
+                        <text wx:if="{{item.isStart==1}}" class="xsq_up_text_style" style="display:block;margin-top:25rpx;line-height: 26rpx;width:220rpx;text-aligh:left;color:rgb(255,77,77);">仅剩 {{item.time}}</text>
+                        <text wx:else class="xsq_up_text_style" style="display:block;margin-top:25rpx;line-height: 26rpx;width:220rpx;text-aligh:left;color:rgb(255,77,77);">{{item.startDate}}开抢</text>
+
+                        <text wx:if="{{item.isStart==1}}" class="xsq_up_text_style" style="display:block;margin-top:25rpx;position:absolute;right:0;line-height: 26rpx;width:160rpx;text-align: center;color:rgb(150,158,169);" >{{item.buyNum}}人抢购</text>
+                    </view>
+                    <view style="position:relative;padding-top:10rpx;" class="xsq_middle_style">
+                        <text class="xsq_up_text_style" style="margin-top:25rpx;line-height: 26rpx;text-aligh:left;color:rgb(255,77,77);">¥{{item.price}}</text>
+                        <text class="xsq_up_text_style" style="text-decoration:line-through;margin-top:25rpx;margin-left:10rpx;line-height: 26rpx;text-align:left;color:rgb(150,158,169);" >¥{{item.oldPrice}}</text>
+                        <view  wx:if="{{item.isStart==1}}" id="{{item.productId}}" bindtap="jumptoxsqgDetail" style="position:absolute;right:0;" class="xsq_btn_style">立即抢购</view>
+                        <view  wx:else id="{{item.productId}}"  style="position:absolute;right:0;background:#eeeeee;" class="xsq_btn_style">未开始</view>
+
+                    </view>
+                </view>
+            </view>
+          </block>
+        <!-- <view bindtap="jumptoallproduct" class="m_style">更多限时抢购</view> -->
+    </view>
+
+</view>

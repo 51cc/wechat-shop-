@@ -1,0 +1,28 @@
+<view class="huodong-wraper">
+         <block wx:for="{{huodongAy}}">
+           <view style='border:0;margin-bottom:20rpx;' class='huodong_cell_style' bindtap='jumptohuodongdetail' id="{{item.id}}">
+              <block wx:if="{{item.state==0}}">
+                <view class='huodong_state_style'>即将开始</view>
+              </block>
+              <block wx:elif="{{item.state==1}}">
+                <view class='huodong_state_style'>进行中</view>
+              </block>
+              <block wx:elif="{{item.state==2}}">
+                <view class='huodong_state_style'>已满员</view>
+              </block>
+              <block wx:elif="{{item.state==3}}">
+                <view style="background:#c7c7c7;color:#979090;" class='huodong_state_style'>已结束</view>
+              </block>
+
+              <image src='{{item.img}}' class='huodong_img_style'>
+              </image>
+              <view class='huodong_bottom_style'>
+                  <text class='huodong_title_style'>{{item.themeTitle}}</text>
+                  <view class='huodong_bottom_str_style'>
+                      <text>报名时间:{{item.startTime}}-{{item.endTime}}</text>
+                      <text style='text-align: right;'>名额：{{item.peopleNum}}人</text>
+                  </view>
+              </view>
+           </view>
+        </block>
+</view>

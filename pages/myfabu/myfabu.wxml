@@ -1,0 +1,64 @@
+<!--pages/myfabu/myfabu.wxml-->
+  <block wx:for="{{htAy}}">
+
+<view class='huatilist'>
+
+  <view class='huatitop' style='padding-top:20rpx;'>
+    <view class='left'>
+      <image style='width:80rpx;height:80rpx;border-radius:40rpx;' src='{{item.usrerImg}}'></image>
+    </view>
+    <view class='center'>
+      <view class='top'>{{item.userName}} <image style='width:30rpx;height:30rpx;vertical-align:middle;margin-top:-3rpx;' src='../../Asset/zding.png' wx:if="{{item.isTop==1}}"></image></view>
+      <view class='bottom'>{{item.strTime}}</view>
+    </view>
+    <!-- <view class='right'>
+      <button>联系TA</button>
+    </view> -->
+  </view>
+  <view bindtap='jumptodetail' id="{{item.id}}" class='huatitext'>{{item.content}}</view>
+  <view bindtap='jumptodetail' id="{{item.id}}" class='huatiimg'>
+    <block wx:for="{{item.topicImages}}" wx:for-index='idx'>
+      <block wx:if="{{idx<3}}">
+          <image mode='aspectFill' style='width:220rpx;height:220rpx;border-radius:10rpx;margin:0 8rpx;' src='{{item.image}}'></image>
+      </block>
+
+    </block>
+  </view>
+
+ <view class='huatiaddress' bindtap='lookaddress' data-lan="{{item.lan}}" data-lon='{{item.lon}}' data-address='{{item.address}}' wx:if="{{item.address.length>0}}">
+    <image style='width:30rpx;height:30rpx;margin:-3rpx 5rpx 0 0;vertical-align:middle;' src='../../Asset/quan_address.png'></image>
+    <text>{{item.address}}</text>
+  </view>
+  
+  <view class='huatibottom' >
+    <view>
+      <image style='width:40rpx;height:40rpx;margin:0 5rpx 0 0;vertical-align:middle;' src='../../Asset/lll.png'></image>
+      <text style='color:#9a9a9a;font-size:24rpx;'>{{item.lookNum}}</text>
+    </view>
+    <view bindtap='jumptodetail' id="{{item.id}}">
+      <image style='width:40rpx;height:40rpx;margin:0 5rpx 0 0;vertical-align:middle;' src='../../Asset/pl.png'></image>
+      <text style='color:#9a9a9a;font-size:24rpx;'>{{item.commentNum}}</text>
+    </view>
+    <view>
+      <image id="{{item.id}}" bindtap='zan'  wx:if="{{item.isCollect!=1}}" style='width:40rpx;height:40rpx;margin:0 5rpx 0 0;vertical-align:middle;' src='../../Asset/dz.png'></image>
+       <image id="{{item.id}}" bindtap='zan'  wx:else style='width:40rpx;height:40rpx;margin-right:5rpx;vertical-align:middle;' src='../../Asset/ydz.png'></image> 
+      <text style='color:#9a9a9a;font-size:24rpx;'>{{item.collect}}</text>
+    </view>
+    <view>
+      <button class='fxs' id="{{item.id}}" open-type='share'>
+        <image style='width:40rpx;height:40rpx;margin:0 5rpx 0 0;vertical-align:middle;' src='../../Asset/fx.png'></image>
+        <text style='color:#9a9a9a;font-size:24rpx;'>分享</text>
+      </button>
+    </view>
+  </view>
+</view>
+<!--<text>￥1.0</text>  -->
+<view class='caozuo'>
+  <view wx:if="{{item.isTop==1}}">置顶：{{item.topDays}}天，<text>￥{{item.totleMoney}}</text></view>
+  <button class='del' id='{{item.id}}' bindtap='shanchu' >删除</button>
+  <button class='zhifu' wx:if="{{item.state==1}}" id='{{item.orderNo}}' bindtap='payNow'>支付</button>
+</view>
+<view class='kongge'></view>
+</block>
+
+<!--  -->

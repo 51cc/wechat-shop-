@@ -1,0 +1,43 @@
+<view class="contain">
+    <view class='back_style' style="padding-bottom:80rpx;">
+        <image src='../../Asset/zhifuchenggong.png' class='succss_style'></image>
+        <text class='up1_style'>支付成功</text>
+        <!-- <text style="color:#999999;font-size:28rpx;margin-top:40rpx;" class='up1_style'>山东宝乐科技</text> -->
+        <text style="font-weight:bold;font-size:50rpx;line-height: 60rpx;height: 60rpx;margin-top:20rpx;" class='up1_style'>¥{{mDic.totalPrice}}</text>
+    </view>
+
+    <block wx:if="{{mDic.setting==1}}">
+      <view class='success-row'>
+          <view class="success-left">
+              <text style="color:#444444;font-size:28rpx;">商家优惠：</text>
+              <text style="color:#ff0000;font-size:28rpx;">满{{mDic.full}}减{{mDic.minus}}</text>
+          </view>
+          <view class="success-left">
+              <text style="display:block;width:355rpx;color:#ff0000;font-size:28rpx;text-align:right;">-¥{{jMoney}}</text>
+          </view>
+      </view>
+    </block>
+    <block wx:elif="{{mDic.setting==2}}">
+      <view class='success-row'>
+          <view class="success-left">
+              <text style="color:#444444;font-size:28rpx;">商家优惠：</text>
+              <text style="color:#ff0000;font-size:28rpx;">{{mDic.rate}}折</text>
+          </view>
+          <view class="success-left">
+              <text style="display:block;width:355rpx;color:#ff0000;font-size:28rpx;text-align:right;">-¥{{jMoney}}</text>
+          </view>
+      </view>
+    </block>
+
+    <view class='success-row'>
+        <view class="success-left">
+            <text style="color:#444444;font-size:28rpx;">实付款</text>
+        </view>
+        <view class="success-left">
+            <text style="display:block;width:355rpx;color:#444444;font-size:28rpx;text-align:right;">¥{{mDic.totalPrice}}</text>
+        </view>
+    </view>
+
+
+    <view bindtap='back' class="back_first_style">返回首页</view>
+</view>

@@ -1,0 +1,206 @@
+@import '../../components/shake/shake.wxss'
+ .index-hd {
+  padding: 80rpx;
+  text-align: center;
+  padding: 20rpx 26rpx 40rpx;
+}
+
+.index-desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+button{
+  margin-top: 40rpx;
+  width: 400rpx; 
+} 
+.di_quan_style{
+  width: 618rpx;
+  height: 618rpx;
+  margin-top: 30rpx;
+  margin-left: 66rpx;
+}
+.di_title_style{
+  width: 542rpx;
+  height: 55rpx;
+  margin-left: 104rpx;
+  margin-top: 30rpx;
+}
+.di_title_text{
+  font-size: 24rpx;
+  color: #b96719;
+  text-align: center;
+  width: 750rpx;
+  display: block;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 30rpx;
+}
+.di_first_style{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  height: 190rpx;
+  width: 710rpx;
+  background: white;
+  display: flex;
+}
+.di_first_left_style{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  width: 200rpx;
+  height: 150rpx;
+}
+.di_first_right_style{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  height: 150rpx;
+  width: 450rpx;
+  padding: 10rpx 0;
+}
+.di_first_right_up_text{
+  display: block;
+  font-size: 24rpx;
+  color: #444444;
+  line-height: 30rpx;
+  height: 60rpx;
+}
+.di_first_right_down_text{
+  display: block;
+  font-size: 24rpx;
+  color: #ff4d4d;
+  line-height: 30rpx;
+  height: 30rpx;
+  margin-top: 50rpx;
+}
+.di_bottom_style{
+  margin-top: 30rpx;
+  width: 750rpx;
+  height: 88rpx;
+  display: flex;
+}
+.di_bottom_left_style{
+  margin-left: 75rpx;
+  height: 88rpx;
+  width: 600rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+  line-height: 88rpx;
+  color: white;
+}
+.di_bottom_left_style:active{
+  box-shadow: 2px 2px 2px 2px #eeeeee;
+}
+
+.fz_style{
+  position: fixed;
+  top: 460rpx;
+  left: 165rpx;
+}
+.kanjia_share_style{
+  position: absolute;
+  left: 50rpx;
+  height: 88rpx;
+  width: 300rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+  line-height: 88rpx;
+  color: white;
+  top: 1020rpx;
+  background: clear;
+  opacity: 0;
+
+}
+.bang_share_style{
+  position: absolute;
+  left: 400rpx;
+  height: 88rpx;
+  width: 300rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+  line-height: 88rpx;
+  color: white;
+  top: 1020rpx;
+  background: clear;
+  opacity: 0;
+
+}
+.kanjia_lingqu_style{
+  position: fixed;
+  top: 420rpx;
+  left: 150rpx;
+  width: 450rpx;
+  height: 70rpx;
+  text-align: center;
+  background: #ff4a4a;
+  color: white;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+   background: clear;
+  opacity: 0; 
+}
+
+.mask_style{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.lingqu_style{
+  position: fixed;
+  top: 550rpx;
+  left: 150rpx;
+  width: 450rpx;
+  height: 70rpx;
+  text-align: center;
+  background: #ff4a4a;
+  color: white;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+}
+.lingqu_content_style{
+  text-align: center;
+  position: fixed;
+  font-size: 32rpx;
+  top: 400rpx;
+  left: 150rpx;
+
+  width: 450rpx;
+  height: 80rpx;
+  line-height: 40rpx; 
+  color: #444444;
+}
+.lingqu_explain_style{
+  color: #cea0dc;
+  display: block;
+  text-align: center;
+  position: fixed;
+  font-size: 24rpx;
+  font-weight: normal;
+  top: 250rpx;
+  left: 30rpx;
+  width: 690rpx;
+  height: 50rpx;
+}
+.lingqu_title_style{
+  color: #444444;
+  display: block;
+  text-align: center;
+  position: fixed;
+  font-size: 40rpx;
+  font-weight: normal;
+  top: 300rpx;
+  left: 45rpx;
+  width: 660rpx;
+  height: 50rpx;
+}
+.lingqu_bg_style{
+  background: white;
+  width: 560rpx;
+  height: 430rpx;
+  border-radius: 20rpx;
+  margin:250rpx 95rpx 0 95rpx;
+}

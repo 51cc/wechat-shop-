@@ -1,0 +1,6 @@
+/* pages/mymaidandetail/mymaidandetail.wxss */
+@import "../maidansuccess/maidansuccess.wxss";
+page{
+  height: 100%;
+  background: #f5f5f5;
+}

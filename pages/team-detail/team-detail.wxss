@@ -1,0 +1,161 @@
+/* team-detail.wxss */
+
+  @import "../../wxParse/wxParse.wxss";  
+page{
+  background: #f5f5f5;
+}
+.topimage{
+  width: 100%;
+  height: 560rpx;
+}
+.topimage image{
+  width: 100%;
+  height: 560rpx;
+}
+
+
+.title{
+  width: 100%;
+  height: 150rpx;
+  padding: 25rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+.title .toptitle{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #444;
+  overflow: hidden;
+}
+.title .bottomtitle{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.title .bottomtitle .left{
+  width: 75%;
+  height: 50rpx;
+  text-align: left;
+  overflow: hidden;
+}
+.title .bottomtitle .right{
+  width: 25%;
+  height: 50rpx;
+  text-align: right;
+  overflow: hidden;
+  font-size:30rpx;
+  color:#9A9A9A;
+  line-height: 50rpx;
+}
+
+
+
+.team-list{
+  width: 100%;
+  background: #fff;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+} 
+.row{
+  width: 100%;
+  height: 121rpx;
+  border-top: 1rpx solid #eee;
+  box-sizing: border-box;
+  background: #fff;
+  padding:20rpx 0;
+  display: flex;
+  flex-direction: row;
+}
+.row .left{
+  width: 80rpx;
+  height: 100%;
+}
+.row .left>image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.row .center{
+  width: 440rpx;
+  height: 100%;
+  margin: 0 25rpx;
+}
+.row .center>.top{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  color: #444;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+.row .center>.bottom{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  color: #999;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+.row .rigtht{
+  width: 130rpx;
+  height: 100%;
+}
+.row .rigtht>button{
+  width: 130rpx;
+  height: 50rpx;
+  color: #FF9D1E;
+  line-height: 50rpx;
+  text-align: center;
+  background: #fff;
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  padding-left: 0;
+  padding-right: 0;
+  border:1rpx solid #FF9D1E;
+}
+.title-name{
+  border: none;
+}
+.center{
+  text-align: center;
+  color: #999999;
+  border: none;
+}
+.border{
+  border: 1rpx solid #eee;
+}
+
+
+
+/* 底部按钮 */
+.btn{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+}
+.btn>.left{
+  width: 50%;
+  height: 100rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background: #FF9D1E;
+}
+.btn>.right{
+  width: 50%;
+  height: 100rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background: #FC544B;
+}

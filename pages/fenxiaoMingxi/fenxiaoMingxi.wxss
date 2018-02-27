@@ -1,0 +1,27 @@
+/* fenxiaoMingxi.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.rows_single_style{
+  background: white;
+  width: 750rpx;
+  height: 120rpx;
+  display: flex;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.rows_left_style{
+  width: 335rpx;
+  height: 120rpx;
+  padding: 0rpx 20rpx;
+}
+.rows_left_text_style{
+  display: block;
+  font-size: 28rpx;
+  color: #444444;
+  line-height: 60rpx;
+  height: 60rpx; 
+}

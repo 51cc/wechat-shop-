@@ -1,0 +1,33 @@
+/* pages/yyaddcomment/yyaddcomment.wxss */
+.bg{
+  background: #f5f5f5;
+  width: 710rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  min-height: 300rpx;
+}
+.rows_input_detail_style{
+  margin-top: 20rpx; 
+  margin-left: 20rpx;
+  width: 670rpx;
+  min-height: 70rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  text-align: left;
+  background: #f5f5f5;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+}
+
+.yy_btn_style{
+  margin-left: 25rpx;
+  width: 700rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #7986cb;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}

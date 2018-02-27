@@ -1,0 +1,110 @@
+.cotain{
+    height: 100%;
+    background: #f1f1ef;
+}
+.second{
+   height:  120rpx;
+   width: 100%;
+   background: white;
+   display: flex;
+}
+.second button{
+    color: red;
+    font-size: 35rpx;
+    margin: 20rpx auto;
+}
+.sec_left{
+    margin: 25rpx;
+    height: 70rpx;
+    width: 160rpx;
+    background: #f1f1ef;
+    border-radius: 10rpx;
+    display: flex;
+}
+.sec_left image{
+    width: 35rpx;
+    height: 35rpx;
+    margin-top: 17.5rpx;
+    margin-left: 12.5rpx;
+}
+.sec_left text{
+    font-size: 30rpx;
+    color: 0x444444;
+    margin-top: 17.5rpx;
+}
+.sec_right{
+    margin:25rpx 15rpx 25rpx 0rpx;
+    height: 70rpx;
+    width: 370rpx;
+    border-radius: 10rpx;
+    border: 1rpx solid #d6d2d1;
+    display: flex;
+
+}
+.sec_right image{
+    width: 35rpx;
+    height: 35rpx;
+    margin-top: 17.5rpx;
+    margin-left: 12.5rpx;
+}
+
+.sec_right input{
+    font-size: 35rpx;
+    margin-top: 10rpx;
+    width: 280rpx;
+}
+.category_style{
+  margin-top: 20rpx;
+}
+
+.forth_style{
+    width: 100%;
+    background: white;
+}
+
+.product_single{
+    float: left;
+    margin: 10rpx;
+    height: 525rpx;
+    width: 350rpx;
+    background: white;
+    border: 1px solid #ededed;
+
+}
+.product_single image{
+    width: 330rpx;
+    margin: 10rpx;
+    height: 330rpx;
+    background: white;
+}
+.product_single text{
+    display: flex;
+    border: 5rpx;
+    height: 45rpx;
+}
+
+
+.text1{
+    margin-left: 15rpx;
+    font-size: 32rpx;
+    color: #444444;
+    width: 300rxp;
+    overflow: hidden;
+   
+}
+.text2{
+  width: 300rxp;
+    overflow: hidden;
+    margin-left: 15rpx;
+    margin-top: 10rpx;
+    font-size: 30rpx;
+    color: #999999;
+}
+.text3{
+  width: 300rxp;
+    overflow: hidden;
+    margin-left: 15rpx;
+    font-size: 40rpx;
+    margin-top: 10rpx;
+    color: #f25824;
+}

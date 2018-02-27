@@ -1,0 +1,17 @@
+<view class="contain">
+  <view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+
+    <block wx:for="{{shops}}">
+        <view class="client_row_style" bindtap="jumptoshopdetail" id="{{item.partnerId}}">
+            <image class="client_icon_style" src="{{item.img}}">
+            </image>
+            <view class="text_style">
+                <text class="client_title_style">{{item.title}}</text>
+                <text class="client_address_style">{{item.address}}</text>
+            </view>
+        </view>
+    </block>
+</view>

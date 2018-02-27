@@ -1,0 +1,9 @@
+<view class='bg'>
+
+
+<textarea id='300' bindinput='bindinput' class='rows_input_detail_style' placeholder='输入评价信息'></textarea>
+
+
+</view>
+
+  <view style='background:{{maincolor}};' class="yy_btn_style" bindtap='submite'>立即评价</view>

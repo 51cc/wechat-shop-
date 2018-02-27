@@ -1,0 +1,83 @@
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.rows_style{
+  width: 750rpx;
+  /* height: 340rpx; */
+  background: white;
+  margin-bottom: 20rpx;
+}
+.rows_m_style{
+  display: flex;
+}
+.icon_style{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 20rpx;
+  background: red;
+  border-radius: 35rpx;
+}
+.t_style{
+  font-size: 30rpx;
+  color: #444444;
+  text-align: left;
+  height: 110rpx;
+  line-height: 110rpx;
+}
+.t_left_style{
+  display: block;
+    width: 100rpx;
+    font-size: 25rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #999999;
+    margin-left: 20rpx;
+    text-align: left;
+}
+.t_right_style{
+  display: block;
+  text-align: left;
+    width: 400rpx;
+    font-size: 25rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #444444;
+    margin-left: 20rpx;
+}
+.t_1_left_style{
+  display: block;
+    font-size: 25rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    margin-left: 20rpx;
+    text-align: left;
+    color:#ff7978;
+    width:200rpx;
+}
+.t_2_right_style{
+  display: block;
+  text-align: right;
+    width: 490rpx;
+    font-size: 25rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #444444;
+    margin-left: 20rpx;
+}
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}

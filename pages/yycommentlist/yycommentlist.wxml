@@ -1,0 +1,19 @@
+<view class="contain">
+  <!-- <view hidden="{{hasContent}}">
+    <import src="../template/quesheng" />
+    <template is = "quesheng" data="{{...item}}"/> 
+  </view> -->
+
+
+  <block wx:for="{{dataAy}}">
+    <view class="comment_rows_style">
+        <view class="comment_rows_head_style">
+              <image class="comment_rows_icon_style" src="{{item.img}}"></image>
+              <text class="comment_nickname_style">{{item.nickname}}</text>
+              <text class="comment_time_style">{{item.assess_date}}</text>
+        </view>
+        <text class="comment_content_style">{{item.assess}}
+        </text>
+    </view>
+  </block>
+</view>

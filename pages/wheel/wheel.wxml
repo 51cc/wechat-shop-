@@ -1,0 +1,26 @@
+
+<view style="position: fixed;top:0;left:0;height:{{sheight}}px;width:{{swidth}}px">
+ 
+  <image style='width:100%;height:100%;' src='bg.png'></image> 
+
+</view>
+
+<text class="title_style">每次抽奖仅消耗{{lucksign}}积分哦!</text>
+
+ <import src="../../components/wheel/wheel.wxml" />
+  <view class="index">
+    <template is = "wheel" data="{{...wheel}}"></template> 
+  </view> 
+
+  <image src='da_ty.png' class='yy_style'></image>
+
+  <view bindtap='hiddenTheMask' hidden='{{showMask}}' style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style'>
+    <image style='width:100%;height:100%;' src='da_pop.png'></image> 
+    <text class='lingqu_title_style'>恭喜您抽中</text>
+    <text class='lingqu_content_style'>{{contentStr}}</text>
+    <image bindtap='lingqu' src='da_lingqu.png' class='lingqu_style'></image>
+  </view>
+
+  <!-- <text class='huoqujifen_style'>去签到，获取积分玩抽奖</text> -->
+  <text class='lingqu_explain_style'>最终解释权归活动主办方所有</text>
+

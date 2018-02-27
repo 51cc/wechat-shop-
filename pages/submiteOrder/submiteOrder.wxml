@@ -1,0 +1,118 @@
+<view class="contain">
+
+<view class="row_style" bindtap="jumpToAddress">
+    <text style="width:710rpx;height:40rpx;" class="text1">{{shoujianrenName}} {{shoujianrenPhone}}</text>
+    <text style="font-size:28rpx;" class="text2">{{shoujianrenAddress}}</text>        
+</view>
+<image class="color_line_style" src="../../Asset/line.jpg"></image>
+<!-- <block wx:for="{{rowsData}}">
+        <view class="rows">
+            <text style="width:80rpx;font-size:30rpx;">{{item.title}}</text>
+<input class="rows_input_style" id="{{item.id}}" bindinput="bindKeyInput" placeholder="{{item.placeName}}"/>
+
+        </view>
+</block> -->
+
+
+
+<view wx:if="{{single}}">
+    <text class="client_text_style">{{clientName}}</text>
+    <view class="select_first_style">
+        <image src="{{imgUrl}}"></image>
+        <view class="select_first_right_style">
+            <view style="display:flex;">
+              <text style="width:400rpx;" class="text1">{{title}}</text>
+              <text style="width:100rpx;text-align:right;"  class="text1">¥{{price}}</text>
+          </view>
+          <view style="display:flex;">
+              <text style="color:#999999;width:400rpx;" class="text1">{{standName}}</text>
+              <text style="width:100rpx;text-align:right;"  class="text1">x{{num}}</text>
+          </view>
+        </view>
+    </view>
+    <view wx:if="{{xsqg!=1989}}" class="third_row_style" bindtap="huoqukeyongyouhuiquan">
+      <text style="font-size:24rpx;color:#444444;">快递运费：</text>
+      <text style="font-size:24rpx;color:#444444; float:right;">{{youfei}}元</text>
+    </view>
+
+
+    <view wx:if="{{xsqg!=1989}}" class="third_row_style" bindtap="huoqukeyongyouhuiquan">
+      <text style="font-size:24rpx;color:#444444;">优惠券</text>
+      <text  style="font-size:24rpx;color:red; float:right;">已选优惠券{{youhuiMoney.jMoney}}元</text>
+    </view>
+
+    <view style="margin-bottom:0rpx;" class="third_row_style">
+      <text style="font-size:24rpx;color:#444444;">合计</text>
+      <text style="font-size:24rpx;color:red; float:right;">{{shifufei}}</text>
+    </view>
+
+    <view  class="third_row_style">
+      <input style="font-size:24rpx;background:#f5f5f5;" class="rows_input_style" id="1989" bindinput="bindKeyInput" placeholder="输入备注"/>
+    </view>
+</view>
+
+<view wx:else>
+  <block wx:for="{{clients}}" wx:for-index="idx">
+    <view style="margin-top:20rpx;">
+    <text class="client_text_style">{{item.clientName}}</text>
+    <view style="border-bottom:1rpx solid #eeeeee;" class="select_first_style" wx:for="{{item.ay}}">
+          <image src="{{item.imgUrl}}"></image>
+          <view class="select_first_right_style">
+              <view style="display:flex;">
+                  <text style="width:400rpx;" class="text1">{{item.title}}</text>
+                  <text style="width:100rpx;text-align:right;"  class="text1">¥{{item.price}}</text>
+              </view>
+              <view style="display:flex;">
+                  <text style="color:#999999;width:400rpx;" class="text1">{{item.standName}}</text>
+                  <text style="width:100rpx;text-align:right;"  class="text1">x{{item.num}}</text>
+              </view>
+          </view>
+    </view>
+    <view wx:if="{{xsqg!=1989}}" class="third_row_style" bindtap="huoqukeyongyouhuiquan">
+      <text style="font-size:24rpx;color:#444444;">快递运费：</text>
+      <text style="font-size:24rpx;color:#444444; float:right;">{{item.yunfei}}元</text>
+    </view>
+
+
+    <view wx:if="{{xsqg!=1989}}" class="third_row_style" data-id="{{idx}}" id='666' bindtap="huoqukeyongyouhuiquan">
+      <text style="font-size:24rpx;color:#444444;">优惠券</text>
+      <text style="font-size:24rpx;color:red; float:right;">已选优惠券{{item.youhuiMoney.jMoney}}元</text>
+    </view>
+
+    <view class="third_row_style">
+      <text style="font-size:24rpx;color:#444444;">合计</text>
+      <text style="font-size:24rpx;color:red; float:right;">{{item.sMoney}}</text>
+    </view>
+
+    <view  class="third_row_style">
+      <input style="font-size:24rpx;background:#f5f5f5;" class="rows_input_style" id="1988" data-id="{{idx}}" bindinput="bindKeyInput" placeholder="输入备注"/>
+    </view>
+    </view>    
+  </block>
+
+</view>
+
+
+
+
+
+
+</view>
+
+
+<view class="select_forth_style">
+    <view style="line-height:120rpx;padding-left:20rpx;text-align:left;width:480rpx;">实付款 ¥{{shifufei}}</view>
+    <view style="line-height:120rpx;width:250rpx;background:#fd554a;color:white;" bindtap="submiteTheOrder">提交订单</view>
+</view>
+
+<view wx:if="{{showAddressList}}" class="selectAddress">
+  <scroll-view style="height:670rpx;" scroll-y>
+    <block wx:for="{{addressAy}}">
+      <view class="add_address_row_style">
+      
+      </view>
+    </block>
+  </scroll-view>
+
+  <view bindtap="addAddress" class="add_btn_style">添加地址</view>
+</view>

@@ -1,0 +1,31 @@
+<view class="contain">
+  <view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view> 
+    <view hidden="{{!hasContent}}" class="head_style">
+        <text class="head_left_style">您最近收藏了{{num}}款商品</text>
+        <text bindtap="change" class="head_edite_style">{{bianJi}}</text>
+    </view>
+    <block wx:for="{{favs}}" wx:for-index="idx">
+        <view class="fav_row_style">
+            <block wx:if="{{!isEdite}}">
+            <image style="margin-top: 80rpx;margin-left: 10rpx;" data-id="{{idx}}" bindtap="selectSingle" class="select_style" wx:if="{{item.select}}" src="../../Asset/shopcar_unselect.png"></image>
+            <image style="margin-top: 80rpx;margin-left: 10rpx;" data-id="{{idx}}" bindtap="selectSingle" class="select_style" wx:else src="../../Asset/shopcar_select.png"></image>
+            </block>
+            <image class="client_icon_style" src="{{item.targetIcon}}">
+            </image>
+            <view class="text_style" bindtap="jumptodetail" id="{{item.targetId}}">
+                <text class="client_up_style">{{item.targetTitle}}</text>
+                <text class="client_middle_style">¥{{item.targetPrice}}</text>
+                <text class="client_down_style">库存 {{item.targetTotal}}</text>
+            </view>
+        </view>
+    </block>
+    <view hidden="{{isEdite}}" class="bottom_style">
+        <image bindtap="select" class="select_style" wx:if="{{isAll}}" src="../../Asset/shopcar_unselect.png"></image>
+        <image bindtap="select" class="select_style" wx:else src="../../Asset/shopcar_select.png"></image>
+        <text class="select_all">全选</text>
+        <view bindtap="deleteThing" class="delete_style">移除</view>
+    </view>
+</view>

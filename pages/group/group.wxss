@@ -1,0 +1,126 @@
+/* group.wxss */
+
+page{
+  background: #eeeeee;
+}
+.group-top{
+  width: 100%;
+  /* height: 290rpx; */
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  clear: both;
+  margin-bottom: 20rpx;
+}
+.group-top .left{
+  /* width: 300rpx; */
+  /* height: 230rpx; */
+  /* float: left; */
+  /* margin-right: -300rpx; */
+}
+.group-top .left>image{
+  width: 708rpx;
+  height: 322rpx;
+}
+.group-top .right{
+  width: 100%;
+  /* height: 230rpx; */
+  /* float: right; */
+  /* padding-left: 320rpx; */
+  box-sizing: border-box;
+}
+.group-top .right .top{
+  width: 100%;
+  height: 80rpx;
+  color: #444;
+  overflow: hidden;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  padding-left: 9rpx;
+  box-sizing: border-box;
+}
+.group-top .right .center,.bottom{
+  width: 100%;
+  height: 30rpx;
+  color: #999;
+  overflow: hidden;
+  font-size: 24rpx;
+  line-height: 30rpx;
+}
+.group-top .right .right_bottom .bottom{
+  color: #FF1200;
+  font-size: 30rpx;
+}
+.group-top .right .right_bottom .center{
+  padding-left: 9rpx;
+  box-sizing: border-box;
+}
+.group-people{
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.head-img{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.img{
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  margin: 6rpx;
+}
+.img .toux{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.img .teamhead{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: -5rpx;
+  top: -10rpx;
+}
+.time{
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  overflow: hidden;
+  color: #444;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.group-people>button{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background: #FF9D1E;
+  font-size: 32rpx;
+}
+
+
+
+
+.title-name{
+  border: none;
+  padding-bottom: 0rpx;
+  height: 80rpx;
+}
+.content{
+  width: 100%;
+  padding: 0 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.content text{
+  width: 100%;
+  color: #999;
+  font-size: 24rpx;
+}

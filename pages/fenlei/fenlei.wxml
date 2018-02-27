@@ -1,0 +1,62 @@
+<!-- <view class="contain"> -->
+
+<block wx:if="{{stype=='101'}}">
+    <view  style="position: fixed;top:0;left:0;height:100%;" class="left_style">
+       <scroll-view style="height:{{sheight}}px;" scroll-y>
+          <block wx:for="{{categorys}}">
+              <view wx:if="{{item.selected}}" bindtap="selectOtherCategory" class="left_single_style" id="{{item.categoryId}}" style="background:white;border-right: 0rpx solid #eeeeee;">
+                  <text>{{item.name}}</text>
+              </view>
+
+              <view wx:else bindtap="selectOtherCategory" class="left_single_style" id="{{item.categoryId}}">
+                  <text>{{item.name}}</text>
+              </view>
+          </block>
+        </scroll-view>
+    </view>
+
+
+
+    <view style="position: fixed;top:0;left:225rpx;height:100%;" class="right_style">
+        <scroll-view style="height:{{sheight}}px;" scroll-y>
+          <view wx:for="{{products}}" wx:for-index="idx" class="product_single" bindtap="jumptodetail" id="{{item.productId}}">
+            <image src="{{item.icon}}"></image>
+            <text class="text1">{{item.fullName}}</text>
+            <view class="bottom_text_style">
+              <text class="text3" style='width:100rpx'>¥{{item.price}}</text>
+              <text style="text-decoration:line-through;color:rgb(150, 158, 169);font-size:20rpx;width:150rpx;" class="text3">¥{{item.oldPrice}}</text>
+              <!-- <text  class="text3" style="position: absolute;right:10rpx;font-size:20rpx;text-align:right;color:rgb(150, 158, 169);">销量{{item.saleCount}}</text> -->
+            </view>
+            
+        </view>
+        </scroll-view>
+    </view>
+</block>
+
+
+<block wx:else>
+
+
+<view class="left_style1">
+        <block wx:for="{{categorys}}">
+            <view wx:if="{{item.selected}}" bindtap="selectOtherCategory" class="left_single_style1" id="{{item.categoryId}}" style="background:white;border-right: 0rpx solid #eeeeee;">
+                <text>{{item.name}}</text>
+            </view>
+
+            <view wx:else bindtap="selectOtherCategory" class="left_single_style1" id="{{item.categoryId}}">
+                <text>{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+
+    <view class="right_style1">
+        <view class="right_imgtext_style1"  wx:for="{{products}}">
+            <image bindtap="jumptodetail" src="{{item.image}}" id="{{item.categoryId}}"></image>
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+
+
+</block>
+
+<!-- </view> -->

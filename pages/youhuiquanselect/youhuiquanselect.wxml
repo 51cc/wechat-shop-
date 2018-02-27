@@ -1,0 +1,42 @@
+<view class="contain">
+  <view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+
+  <view class="yhq_list_style">
+       <block wx:for="{{dataAy}}">
+    <view class="row_style">
+        <image class="youhuiquan_bg_style" src="../../Asset/my_youhuiquan_bg.png">
+        </image>
+
+        <view class="left_price_style">
+          <text class="rmb_style">¥</text>
+          <text class="price_style">{{item.money}}</text>
+        </view>
+
+        <!-- <view class="middle_style"> -->
+        <view class="middle_style" bindtap="jumptodetail" id="{{item.id}}">
+          <text class="youhuiquan_title_style">{{item.title}}</text>
+          <text class="instr_style">{{item.isAll}}</text>
+          <text class="time_style">{{item.startDate}}-{{item.endDate}}</text>
+        </view>
+
+
+        <view class="right_style">
+
+          <image wx:if="{{!item.select}}" class="right_img_style" src="../../Asset/shopcar_unselect.png" bindtap="selectTheYouHuiQuan" id="{{item.id}}"></image>
+
+          <image wx:else class="right_img_style" src="../../Asset/shopcar_select.png" bindtap="selectTheYouHuiQuan" id="{{item.id}}"></image>
+          
+        </view>
+    </view>
+  </block>
+  </view>
+
+
+  <view hidden="{{!hasContent}}" class="addaddress_style" bindtap="confirm">
+    确定
+  </view>
+
+</view>

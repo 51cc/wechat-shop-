@@ -1,0 +1,35 @@
+<view class="row_style" bindtap="jumpToAddress">
+    <text style="width:710rpx;height:40rpx;" class="text1">{{shoujianrenName}} {{shoujianrenPhone}}</text>
+    <text style="font-size:28rpx;" class="text2">{{shoujianrenAddress}}</text>        
+</view>
+<image class="color_line_style" src="../../Asset/line.jpg"></image>
+
+
+<view class='product_row'>
+    <image class='product_icon' src='{{mDic.icon}}'></image>
+    <view class='product_right'>
+      <text class='product_title'>{{mDic.name}}</text>
+      <block wx:if="{{stype==1}}">
+        <!-- <text class='product_bottom'>{{mDic.integral}}积分x{{num}}</text> -->
+      </block>
+       <block wx:elif="{{stype==2}}">
+        <text class='product_bottom'>{{mDic.integral}}积分x{{mDic.num}}</text>
+      </block>
+    </view>
+</view>
+
+
+
+<view class="select_forth_style">
+    <block wx:if="{{stype==1}}">
+<view style=" position: absolute;right:0;line-height:120rpx;width:750rpx;background:#fd554a;color:white;" bindtap="submiteTheOrder">立即领取</view>
+    </block>
+
+    <block wx:elif="{{stype==2}}">
+      <text class='duihuan_left_text_style'>总计：</text>
+      <text class='duihuan_middle_text_style'>{{mDic.sumJiFen}}</text>
+      <text style='margin-left: 0rpx;' class='duihuan_middle_text_style'>积分</text>
+      <view style=" position: absolute;right:0;line-height:120rpx;width:250rpx;background:#fd554a;color:white;" bindtap="submiteTheOrder">提交订单</view>
+    </block>
+    
+</view>

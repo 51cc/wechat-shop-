@@ -1,0 +1,106 @@
+<block wx:for="{{dataAy}}" wx:for-index="idx">
+
+  <view style='  margin-top: 20rpx;'>
+      <view class='up_row'>
+
+        <block wx:if="{{item.orderType==1}}">
+          <text class='up_left_style'>积分抽奖</text>
+        </block>
+
+         <block wx:elif="{{item.orderType==0}}">
+          <text class='up_left_style'>积分兑换</text>
+        </block>
+        
+
+        <block wx:if="{{item.state==1&&item.orderType==1}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>待开奖</text>
+          </block>
+          <block wx:elif="{{item.state==2&&item.orderType==1}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>未中奖</text>
+          </block>
+          <block wx:elif="{{item.state==3&&item.orderType==1}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>已中奖待发货</text>
+          </block>
+          <block wx:elif="{{item.state==4&&item.orderType==1}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>待收货</text>
+          </block>
+          <block wx:elif="{{item.state==5&&item.orderType==1}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>完成</text>
+          </block>
+           <block wx:elif="{{item.state==6&&item.orderType==1}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>已中奖待领取</text>
+          </block>
+
+
+
+
+
+        <block wx:if="{{item.state==1&&item.orderType==0}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>待开奖</text>
+          </block>
+          <block wx:elif="{{item.state==2&&item.orderType==0}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>未中奖</text>
+          </block>
+          <block wx:elif="{{item.state==3&&item.orderType==0}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>待发货</text>
+          </block>
+          <block wx:elif="{{item.state==4&&item.orderType==0}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>待收货</text>
+          </block>
+          <block wx:elif="{{item.state==5&&item.orderType==0}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>完成</text>
+          </block>
+           <block wx:elif="{{item.state==6&&item.orderType==0}}">
+              <text class='up_left_style' style='text-align: right;color:#ff0000;'>已中奖待领取</text>
+          </block>
+
+
+
+
+      </view>
+
+      <view class='product_row'>
+          <image src='{{item.icon}}' class='product_icon'></image>
+          <view class='product_right' id="{{item.id}}" bindtap='jumptojifendetail'>
+            <text class='product_title'>{{item.name}}</text>
+            <text class='product_bottom'>{{item.integral}}积分</text>
+          </view>
+      </view>
+
+      <view style='background:white;padding:20rpx;'>          
+            <text class='product_bottom1'>共{{item.num}}件商品 实付：{{item.payMoney}}积分</text>
+      </view>
+
+          <block wx:if="{{item.state==4}}">
+              <view class='up_row' style='position: relative; border-top: 1rpx solid #eeeeee;'>
+                  <text id="{{item.id}}" bindtap='chakanwuliu' class='chakan-wuliu'>查看物流</text>
+                  <text id="{{item.id}}" bindtap='querenshouhuo' class='quere-btn'>确认收货</text>
+              </view>
+          </block>
+          <block wx:elif="{{item.state==5}}">
+              <view class='up_row' style='position: relative; border-top: 1rpx solid #eeeeee;'>
+                  <text id="{{item.id}}" bindtap='shanchu' class='chakan-wuliu' style='right: 15rpx;'>删除</text>        
+               </view>
+          </block>
+          <block wx:elif="{{item.state==6}}">
+              <view class='up_row' style='position: relative; border-top: 1rpx solid #eeeeee;'>
+                  <text data-id='{{idx}}' id="{{item.id}}" bindtap='lingqujiangpin' class='chakan-wuliu' style='right: 15rpx;'>领取</text>        
+               </view>
+          </block>
+        
+
+
+     
+
+  </view>
+
+</block>
+
+<view bindtap="hiddenmask" class="mask_style" hidden="{{show}}">
+      
+</view>
+
+<view class="wuliu_bg_style" hidden="{{show}}">
+  <text class="wuliu_style">物流公司:{{wuliuCompany}}</text> 
+  <text class="wuliu_style">物流单号:{{wuliuNum}}</text>           
+</view>

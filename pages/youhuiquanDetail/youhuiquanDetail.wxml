@@ -1,0 +1,15 @@
+<view class="contain">
+    <view class="bg_style">
+        <text class="head_title_style">{{dic.isAll}}</text>
+        <text style="font-weight:100;color:#fc544b;font-size:80rpx;" class="head_title_style">¥{{dic.money}}</text>
+        <text style="height: 40rpx;line-height: 40rpx;font-weight:100;color:#fc544b;font-size:36rpx;" class="head_title_style">{{dic.title}}</text>
+        <text style="height: 40rpx;line-height: 60rpx;font-weight:100;color:#999999;font-size:20rpx;" class="head_title_style">有效期：{{dic.startDate}}-{{dic.endDate}}</text>
+        <view class="line"></view>
+
+        <text style=" text-align: left;width:560rpx;padding:20rpx 20rpx 0 20rpx;height: 40rpx;line-height: 40rpx;font-weight:100;color:#444444;font-size:24rpx;" class="head_title_style">优惠详情</text>
+        <text style=" text-align: left;width:560rpx;padding:0rpx 20rpx;min-height:40rpx;line-height: 40rpx;font-weight:100;color:#444444;font-size:20rpx;" class="head_title_style">{{dic.remark}}</text>
+
+        <!-- <view bindtap="jumptolist" class="btn_style">立即使用</view> -->
+
+    </view>
+</view>

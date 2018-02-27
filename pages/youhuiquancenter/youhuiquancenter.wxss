@@ -1,0 +1,123 @@
+/* youhuiquancenter.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.row_style{
+  position: relative;
+  width: 710rpx;
+  height: 180rpx;
+  margin: 20rpx 20rpx 0rpx 20rpx;
+}
+.youhuiquan_bg_style{
+  display: block;
+  width: 710rpx;
+  height: 180rpx;
+}
+.left_price_style{
+  position: absolute;
+  display: flex;
+  top: 10rpx;
+  left: 10rpx;
+  width: 160rpx;
+  background: white;
+  height: 160rpx; 
+}
+.rmb_style{
+  color: red;
+  display: block;
+  font-size: 32rpx;
+  margin-top: 55rpx;
+  margin-left: 15rpx;
+  height: 50rpx;
+  background: white;
+}
+.price_style{
+  color: red;
+  display: block;
+  font-size: 48rpx;
+  margin-left: 0rpx;
+  margin-top: 40rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: left;
+  background: white;
+  white-space: nowrap;
+  /* overflow: hidden;
+  text-overflow:ellipsis; */
+}
+
+.middle_style{
+  position: absolute;
+  top: 10rpx;
+  left: 170rpx;
+  width: 320rpx;
+  height: 160rpx; 
+}
+.youhuiquan_title_style{
+  /* display: block; */
+  padding: 5rpx;
+  margin-top: 20rpx;
+  min-width: 120rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: left;
+  font-size: 24rpx;
+  background: red;
+  color: white;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis; */
+}
+.instr_style{
+  display: block;
+  text-align: left;
+  font-size: 24rpx;
+  color: #444444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin-top: 10rpx;
+}
+.time_style{
+  display: block;
+  text-align: left;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  color: #999999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.right_style{
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  height: 160rpx;
+  width: 170rpx;
+}
+.lingqu_btn{
+  font-size: 32rpx;
+  line-height: 60rpx;
+  margin-top: 50rpx;
+  height: 60rpx;
+  width: 160rpx;
+  text-align: center;
+  color: white;
+}
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}

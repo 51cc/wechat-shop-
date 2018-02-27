@@ -1,0 +1,4 @@
+<template name="quesheng">
+    <image  class="quesheng_image_style" src="{{icon}}"></image>
+    <text class="quesheng_text_style">{{title}}</text>
+</template>

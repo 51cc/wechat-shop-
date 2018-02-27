@@ -1,0 +1,21 @@
+<view class="contain">
+  <block wx:for="{{dataAy}}">
+
+      <view class="rows_single_style">
+          <view class="rows_left_style">
+              <text class="rows_left_text_style">提交提现申请</text>
+              <text class="rows_left_text_style">2017-08-08 19:08</text>
+          </view>
+
+
+<view class="rows_left_style">
+              
+  <text style="text-align:right;line-height:120rpx;" class="rows_left_text_style">100</text>
+      </view>
+
+      </view>
+      
+      
+
+  </block>
+</view>

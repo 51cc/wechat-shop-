@@ -1,0 +1,33 @@
+<!-- <template name="wheel" >
+  <view class="wheel_wp">
+  	<block	wx:if = "{{mode == 1}}">
+	    <image src = "../../components/wheel/images/dial_bg.png"/>
+	    <view class="wheel_pointer" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{deg}}deg) translateZ(0)" bindtap="start"><image src = "../../components/wheel/images/dial_pointer.png" /></view>
+	</block>
+  
+	<block	wx:if = "{{mode == 2}}">
+	    <image src = "../../components/wheel/images/dial_bg.png" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{ deg}}deg) translateZ(0)"/>
+	    <view class="wheel_pointer" bindtap="start"><image src = "../../components/wheel/images/dial_pointer.png" /></view>		
+	</block>
+  </view>
+</template>  -->
+
+<template name="wheel" >
+
+  <view class="wheel_wp">
+  	<block	wx:if = "{{mode == 1}}">
+	    <image src = "../../components/wheel/images/dial_bg1.png">
+      </image>
+      <image style='position: absolute;left:300rpx;top:90rpx;width:90rpx;height:90rpx;' src='{{imgAy[0].icon}}'>
+      </image>
+       <image style='position: absolute;left:400rpx;top:300rpx;width:90rpx;height:90rpx;' src='{{imgAy[1].icon}}'>
+      </image>
+       <image style='position: absolute;left:190rpx;top:410rpx;width:90rpx;height:90rpx;' src='{{imgAy[2].icon}}'>
+      </image>
+       <image style='position: absolute;left:90rpx;top:190rpx;width:90rpx;height:90rpx;' src='{{imgAy[3].icon}}'>
+      </image>
+      
+	    <view class="wheel_pointer" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{deg}}deg) translateZ(0)" bindtap="start"><image src = "../../components/wheel/images/dial_pointer.png" /></view>
+	</block>
+  </view>
+</template> 

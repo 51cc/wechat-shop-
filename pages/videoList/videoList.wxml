@@ -1,0 +1,17 @@
+<view class="contain">
+  
+  <view class="rows_bg_style">
+    <block wx:for="{{videos}}">
+        <view class="news_single_style" bindtap="jumptovideodetail" id="{{item.id}}">
+          <image src="{{item.img}}"></image>
+          <view class="news_single_right_style">
+            <text class="news_single_right_up_text_style">{{item.name}}</text>
+            <view class="single_bottom_style">
+                <text class="news_single_right_down_text_style">{{item.createTime}}</text>
+                <text style="text-align: right;" class="news_single_right_down_text_style">浏览{{item.lookNum}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+  </view>
+</view>

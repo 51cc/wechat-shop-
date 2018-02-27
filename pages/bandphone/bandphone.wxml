@@ -1,0 +1,13 @@
+<view class="contain">
+    <!--<image class="ruzhu_image_style" src="../../Asset/m_ruzhu.jpg"></image>-->
+    <block wx:for="{{rowsData}}">
+        <view class="rows">
+            <text style="font-size:30rpx;">{{item.title}}</text>
+<input class="rows_input_style"  id="{{item.id}}" bindinput="bindKeyInput" placeholder="{{item.placeName}}"/>
+
+        </view>
+    </block>
+</view>
+<view class="addaddress_style center_head_style" style='background:{{maincolor}};' bindtap="addNewAddress">
+    绑定
+</view>

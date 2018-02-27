@@ -1,0 +1,71 @@
+<view class='contain'>
+  <block wx:for="{{dataAy}}" wx:for-index="idx">
+      <view style='margin-bottom:20rpx;'>
+           <view class="first_style" id="{{item.id}}" data-id="{{item.state}}">
+                <text style='font-size:28rpx;' class="first_text_left">{{item.TITLE}}</text>
+                <block wx:if="{{item.state==0}}">
+                   <text style='font-size:28rpx;' class="first_text_right">待付款</text> 
+                </block>
+                <block wx:elif="{{item.state==1}}">
+                   <text style='font-size:28rpx;' class="first_text_right">已预约</text> 
+                </block>
+                <block wx:elif="{{item.state==2}}">
+                   <text style='font-size:28rpx;' class="first_text_right">已完成</text> 
+                </block>
+                <block wx:elif="{{item.state==3}}">
+                   <text style='font-size:28rpx;' class="first_text_right">已取消</text> 
+                </block>
+                <block wx:elif="{{item.state==4}}">
+                   <text style='font-size:28rpx;' class="first_text_right">已过期</text> 
+                </block>
+                <block wx:elif="{{item.state==5}}">
+                   <text style='font-size:28rpx;' class="first_text_right">退款中</text> 
+                </block>
+                 <block wx:elif="{{item.state==6}}">
+                   <text style='font-size:28rpx;' class="first_text_right">退款成功</text> 
+                </block>
+                <block wx:elif="{{item.state==7}}">
+                   <text style='font-size:28rpx;' class="first_text_right">已评价完成</text> 
+                </block>
+            </view>
+
+          <view class='yy_cell_style' id="{{item.id}}" bindtap='jumptoyuyueorderdetail'>
+              <view class='yy_left_style'>
+                  <image src='{{item.img}}' class='yy_ico_style'></image>
+              </view>
+
+              <view class='yy_right_style'>
+                  <text class='yy_title_style'>{{item.service_name}}</text>
+                  <view style='display:flex;'>
+                      <text style='text-align:left;' class='yy_renshu_style'>预约数量：{{item.service_num}}人</text>
+                      <text style='text-align:right;' class='yy_price_style'>¥{{item.total_price}}</text>
+                  </view>
+              </view>
+           </view>
+
+           <view class="first_style" id="{{item.id}}" data-id="{{item.state}}">
+                <text style='font-size:28rpx;' class="first_text_left">预约日期:{{item.assess_time}}</text>
+          </view>
+
+          <block wx:if="{{item.state==0&&item.isline==1}}">
+            <view class="forth_style">
+                 <view id="{{item.id}}" bindtap="quxaio" style='position: absolute;right: 260rpx;' class="left_forth_style">取消</view>  
+                 <view bindtap="payNow" id="{{item.order_no}}" style='position: absolute;right: 20rpx;border: 1px solid #ff0000;color: #ff0000;' class="right_forth_style">付款</view>
+            </view>
+          </block>
+          <block wx:elif="{{item.state==2}}">
+            <view class="forth_style">
+                 <view  id="{{item.id}}" bindtap="deleteOrder" style='position: absolute;right: 260rpx;' class="left_forth_style">删除</view>  
+                 <view bindtap="pingjia" id="{{item.service_id}}" data-oid="{{item.id}}" style='position: absolute;right: 20rpx;border: 1px solid #ff0000;color: #ff0000;' class="right_forth_style">评价</view>
+            </view>
+          </block>
+           <block wx:elif="{{item.state==3||item.state==4||item.state==7}}">
+            <view class="forth_style">
+                 <view  id="{{item.id}}" bindtap="deleteOrder" style='position: absolute;right: 20rpx;' class="left_forth_style">删除</view>  
+            </view>
+          </block>
+
+      </view>
+
+  </block>
+</view>

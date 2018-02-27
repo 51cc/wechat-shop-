@@ -1,0 +1,70 @@
+<!--my-group.wxml-->
+<!-- <view class="category_view_style" wx:if="{{all}}">
+  <block wx:for="{{classifys}}">
+    <view class="{{item.style}}" bindtap="changeToTrue" id="{{item.id}}">
+      {{item.name}}
+    </view>
+  </block>
+</view> -->
+
+<view hidden="{{quesheng.isHidden}}">
+  <import src="../template/quesheng" />
+  <template is="quesheng" data="{{...quesheng}}" />
+</view>
+
+<view class="order_list_view_style">
+  <block wx:for="{{orders}}">
+    <view class="order_cell_style">
+      <view class="first_style">
+        <text class="first_text_left">订单编号:{{item.orderNo}}</text>
+        <text wx:if="{{item.state==0 && item.orderState==0}}" class="first_text_right">待付款</text>
+        <text wx:if="{{item.state==0 && item.orderState==1}}" class="first_text_right">拼团中,差{{item.teamNum-item.tuangounum}}人</text>
+        <text wx:if="{{item.state==0 && item.orderState==101}}" class="first_text_right">退款中</text>
+        <text wx:if="{{item.state==0 && item.orderState==102}}" class="first_text_right">退款失败</text>
+        <text wx:if="{{item.state==0 && item.orderState==2}}" class="first_text_right">交易取消</text>
+        <text wx:if="{{item.state==1&&item.orderState==1}}" class="first_text_right">待发货</text>
+        <text wx:if="{{item.state==1&&item.orderState==4}}" class="first_text_right">待收货</text>
+        <text wx:if="{{item.state==1&&item.orderState==5}}" class="first_text_right">完成</text>
+
+          <text wx:if="{{item.state==2 && item.orderState==0}}" class="first_text_right">未成团，未付款</text> 
+        <!-- <text wx:if="{{item.state==2 && item.orderState==1}}" class="first_text_right">未成团</text>  -->
+        <text wx:if="{{item.state==2 && item.orderState==101}}" class="first_text_right">未成团，退款中</text>
+        <text wx:if="{{item.state==2 && item.orderState==102}}" class="first_text_right">未成团，退款失败</text>
+        <text wx:if="{{item.state==2 && item.orderState==2}}" class="first_text_right">未成团，退款成功</text>
+      </view>
+      <!-- <view class="sec_style" wx:for="{{item.productList}}"> -->
+       <view class="sec_style"> 
+        <image src="{{item.img}}" class="sec_image_style"></image>
+        <view style="position: relative;">
+          <text class="sec_text_style">{{item.name}}</text>
+          <text class="sec_text_style">{{item.teamNum}}人团</text>
+          <text class="sec_text_num">X1</text>
+        </view>
+       </view> 
+      <!-- </view> -->
+      <view class="third_style">
+        <text class="third_text_style">实付款：￥{{item.totalPrice}}</text>
+      </view>
+      <view class="forth_style">
+        <!-- <view wx:if="{{item.state==0 && item.orderState==0}}" bindtap="deleteOrder" id="{{item.orderId}}" class="right_forth_style color">删除</view> -->
+        <view wx:if="{{item.state==0 && item.orderState==0}}" bindtap="payNow" id="{{item.orderNo}}" class="right_forth_style">付款</view>
+
+        <!-- item.teamNum > item.tuangounum-->
+        <button wx:if="{{item.state==0 && item.orderState==1 }}" id="{{item.id}}"  class="right_forth_style shrea" bindtap='yaoqing'>邀请好友拼团</button>
+<!--open-type="share"  -->
+        <!-- 取消应该包括退款 只有在团购未完成的时候进行取消 || item.orderState==2 -->
+        <!-- <view wx:if="{{item.state==0 && item.orderState==1}}" bindtap="quxiao" id="{{item.orderId}}" class="right_forth_style">取消</view> -->
+        <view wx:if="{{item.state==0 && item.orderState==2}}" bindtap="goumaiagin" id="{{item.id}}" class="right_forth_style">再次购买</view>
+        
+        <view wx:if="{{item.state==1&&item.orderState==5}}" bindtap="deleteOrder" id="{{item.orderId}}" class="right_forth_style color">删除</view>
+        <!-- <view wx:if="{{item.state==1}}" bindtap="deleteOrder" id="{{item.orderId}}" class="right_forth_style color">删除</view> -->
+        <view wx:if="{{item.state==1&&item.orderState==4}}" bindtap="querenshouhuo" id="{{item.orderId}}" class="right_forth_style color">确认收货</view>
+
+
+        <view wx:if="{{item.state==2 && item.orderState==0}}" bindtap="deleteOrder" id="{{item.orderId}}" class="right_forth_style color">删除</view>
+        <view wx:if="{{item.state==2 && item.orderState==2}}" bindtap="deleteOrder" id="{{item.orderId}}" class="right_forth_style color">删除</view>
+      </view>
+    </view>
+  </block>
+</view>
+

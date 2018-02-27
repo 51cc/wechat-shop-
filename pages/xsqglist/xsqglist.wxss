@@ -1,0 +1,65 @@
+/* xsqglist.wxss */
+page{
+  height: 100%;
+  background: white;
+}
+.contain{
+
+}
+.xsq_bg_style{
+  background: white;
+  width: 750rpx;
+}
+.xsq_single_style{
+  margin-left: 25rpx;
+  width: 698rpx;
+  height: 238rpx;
+  margin-top:20rpx;
+  border: 1rpx solid #eeeeee;
+  display: flex;
+}
+.xsq_img_style{
+  margin: 19rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background: red;
+}
+.xsq_right_style{
+  width: 441rpx;
+  margin-top: 19rpx;
+  height: 200rpx;
+}
+.xsq_up_text_style{
+    font-size: 24rpx;
+    color: rgb(34, 44, 56);
+    /* width: 440rpx;  */
+    margin-top: 35rpx;
+    line-height: 36rpx;    
+}
+.xsq_middle_style{
+  display: flex;
+  width: 440rpx;
+}
+.xsq_btn_style{
+  width: 160rpx;
+  height: 55rpx;
+  border-radius: 7.5rpx;
+  color: white;
+  line-height: 55rpx;
+  font-size: 24rpx;
+  text-align: center;
+  background: rgb(255, 77, 77);
+}
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}

@@ -1,0 +1,22 @@
+<view class="contain">
+  <view hidden="{{hasContent}}">
+    <import src="../template/quesheng" />
+    <template is = "quesheng" data="{{...item}}"/> 
+  </view>
+
+<scroll-view scroll-y="true" style="height:{{sheight}}px;" bindscrolltolower="scrollLower">  
+    <view class="rows_bg_style">
+      <block wx:for="{{news}}">
+          <view class="news_single_style" bindtap="jumptonewsdetail" id="{{item.id}}">
+            <image src="{{item.icon}}"></image>
+            <view class="news_single_right_style">
+              <text class="news_single_right_up_text_style">{{item.title}}</text>
+              <text class="news_single_right_down_text_style">{{item.createtime}}</text>
+            </view>
+          </view>
+        </block>
+    </view>
+</scroll-view>
+
+
+</view>

@@ -1,0 +1,41 @@
+<!-- 输入框 -->
+   <!-- <block wx:for="{{forms}}">
+  <view class="row">
+    <view class="title">{{item.title}}</view>
+    <input class="row_input" id="{{item.id}}" bindinput="bindKeyInput" placeholder="{{item.placeholder}}" />
+  </view>
+</block>
+<view class="blank"></view>    -->
+  <view class="row_style" bindtap="jumpToAddress">
+    <text style="width:710rpx;height:40rpx;" class="text1">{{name}} {{phone}}</text>
+    <text style="font-size:28rpx;" class="text2">{{shoujianrenAddress}}</text>        
+    <image style="position: absolute;right:20rpx;top:65rpx;width:23rpx;height:23rpx;" src="../../Asset/arrow_right.png"></image>   
+
+  </view>
+<image class="color_line_style" src="../../Asset/line.jpg"></image>  
+
+<!-- 商品列表 -->
+<view class="product_list">
+  <block wx:for="{{products}}">
+    <view class="product">
+      <image class="left" src="{{item.product.icon}}"></image> 
+      <view class="right">
+        <text class="top">{{item.product.name}}</text>
+        <text class="center">¥{{item.productprice}}</text>
+        <text class="bottom">数量:{{item.proNum}}</text> 
+      </view> 
+    </view>
+  </block>
+</view>
+
+<!-- 商品总价 -->
+<view class="row margin150">
+  <view class="title">商品总价</view>
+  <view class="price">￥{{sumMoney}}</view>
+</view>
+
+<!-- 功能按钮 -->
+<view class="function_menu">
+  <view class="left">实付款 ¥ {{shifufei}}</view>
+  <view class="right" bindtap="submiteTheOrder">立即支付</view>
+</view>

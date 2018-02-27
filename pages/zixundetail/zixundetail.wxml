@@ -1,0 +1,19 @@
+<view class="contain">
+    <text class="title_style">{{title}}</text>
+    
+    <view class="time_fu_style">
+      <text class="time_style">{{time}}</text>
+      <!--<image bindtap="favNews" class="detail_fav_style" src="../../Asset/d_fav.png"></image>-->
+    </view>
+   
+
+  <view class="line_style" style="margin-bottom:20rpx;"></view>
+  <video hidden="{{show}}" id="wgqvideo" poster="{{img}}" style="width:700rpx;height:400rpx;margin:25rpx;" id="myVideo" src="{{videoUrl}}" danmu-list="{{danmuList}}"  enable-danmu danmu-btn controls="{{!show}}">
+      
+    
+  </video>
+  <import src="../../wxParse/wxParse.wxml"/> 
+          <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+          </view>
+</view>

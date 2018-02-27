@@ -1,0 +1,106 @@
+<view class="cotain">
+
+
+ <swiper style="width:750rpx;height:375rpx;" indicator-dots="{{indicatorDots}}"
+                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <block wx:for="{{imgUrls}}">
+                    <swiper-item>
+                <image id="{{item.category+item.targetId}}" bindtap="jumpdetail" src="{{item.img}}" class="slide-image" mode="aspectFit" style="width:100%;height:100%;"/>
+                    </swiper-item>
+                </block>
+        </swiper>
+
+
+
+
+    <view class="second">
+    <view class="sec_left">
+        <image src="../../Asset/f_location.png"></image>
+        <text bindtap="changcity">{{city}}</text>
+    </view>
+
+    <view class="sec_right">
+        <image src="../../Asset/f_search.png"></image>
+        <input style="font-size:26rpx;" bindinput="bindKeyInput" placeholder="输入搜索"/>
+    </view>
+
+     <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+            disabled="{{disabled}}" bindtap="jumptosearchPro" 
+            style="color:#444444;background:#eeeeee;line-height:68rpx;font-size:26rpx;margin-top:25rpx;height:68rpx;"hover-class="other-button-hover">搜索</button>
+  </view>
+
+
+<view class="category_style">
+        <view class="category_single_style" bindtap="jumptonextview" id="1">
+            <image class="category_icon" src="../../Asset/pro_all.png"></image>
+            <text class="category_text">全部商品</text>
+        </view>
+        <view class="hr_v"></view>
+
+        <view class="category_single_style" bindtap="jumptonextview" id="2">
+            <image class="category_icon" src="../../Asset/pro_new.png"></image>
+            <text class="category_text">新上产品</text>
+        </view>
+        <view class="hr_v"></view>
+
+        <view class="category_single_style" bindtap="jumptonextview" id="3">
+            <image class="category_icon" src="../../Asset/pro_hot.png"></image>
+            <text class="category_text">热卖商品</text>
+        </view>
+        <view class="hr_v"></view>
+
+        <view class="category_single_style" bindtap="jumptoorder" id="4">
+            <image class="category_icon" src="../../Asset/pro_order.png"></image>
+            <text class="category_text">订单管理</text>
+        </view>
+    </view>
+
+
+
+
+
+
+<view class="third_style">
+    <view class="third_top" bindtap="jumptoshops">
+        <text style="font-size:28rpx;">店铺推荐</text>
+        <image src="../../Asset/arrow_right.png"></image>
+    </view>
+
+    <view wx:if="{{hasShops}}" class="has_shops_style">
+       <block wx:for="{{shops}}">
+            <image src="{{item.img}}" bindtap="jumptoshopdetail" id="{{item.partnerId}}"></image>
+       </block>
+    </view>
+    <view wx:else class="has_no_shops_style">
+            <text>该城市暂无入住的商铺,换个城市试试。</text>
+    </view>
+</view>
+
+
+
+
+
+
+   <view class="forth_style" >
+        <view style="border-bottom:1px solid #eeeeee;background:white;font-size:32rpx;font-weight:bolder;" class="m_style">推荐商品</view>
+
+        <view wx:for="{{products}}" wx:for-index="idx" class="product_single" bindtap="jumptodetail" id="{{item.productId}}">
+            <image src="{{item.icon}}"></image>
+            <text class="text1">{{item.fullName}}</text>
+            <view class="bottom_text_style">
+              <text class="text3">¥{{item.price}}</text>
+              <text style="text-decoration:line-through;color:rgb(150, 158, 169);font-size:20rpx;width:150rpx;margin-top:13rpx;margin-left:13rpx" class="text3">¥{{item.oldPrice}}</text>
+              <text  class="text3" style="position: absolute;right:10rpx;font-size:20rpx;text-align:right;color:rgb(150, 158, 169);">销量{{item.saleCount}}</text>
+            </view>
+            
+        </view>
+        <view class="clear"></view>
+        <view bindtap="jumptoallproduct" class="m_style">更多商品</view>
+    </view>
+
+
+
+
+
+</view>
+

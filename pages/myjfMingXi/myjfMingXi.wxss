@@ -1,0 +1,17 @@
+.mingxi_style{
+  height: 100rpx;
+  width: 710rpx;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.mingxi_up{
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.mingxi_up>text{
+  width: 355rpx;
+  text-align: left;
+  color: #444444;
+  font-size: 32rpx;
+}

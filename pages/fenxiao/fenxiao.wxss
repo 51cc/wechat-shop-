@@ -1,0 +1,112 @@
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.cenert_head_bg_style{
+    display: block;
+    width: 750rpx;
+    height: 300rpx;
+    position: relative;
+    text-align: center;
+}
+
+.my_center_head_style{
+    width: 100%;
+    height: 100%;
+}
+.my_center_headicon_style{
+  position: absolute;
+  top: 50rpx;
+  left: 320rpx;
+    height: 120rpx;
+    background: red;
+    width: 120rpx;
+    border: 0.5rpx solid white;
+    border-radius: 60rpx;
+}
+.text_style{
+    font-size: 30rpx;
+    height: 30rpx;
+    color: white;
+}
+.level_style{
+  position: absolute;
+  display: flex;
+  top: 190rpx;
+  width: 750rpx;
+  height: 40rpx;
+}
+.dengji_style{
+  margin-top: 4rpx;
+  width: 95rpx;
+  height: 32rpx;
+}
+.sec_style{
+  width: 750rpx;
+  background: white;
+}
+.sec_single_style{
+  display: flex;
+  background: white;
+  height: 120rpx;
+}
+.sec_text_style{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  line-height: 120rpx;
+}
+.lineview_style{
+  width: 710rpx;
+  margin-left: 20rpx;
+  height: 1rpx;
+  background: #eeeeee;
+}
+.third_style{
+  margin-top: 20rpx;
+  width: 750rpx;
+  background: white;
+}
+
+.third_sigle_style{
+  display: flex;
+  float: left;
+  margin-top: 1rpx;
+  width: 370rpx;
+  height: 120rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.third_sigle_style:active{
+  background: #eeeeee;
+}
+.third_sigle_style:nth-child(odd){
+  border-right: 1rpx solid #eeeeee;
+
+}
+.fenxiao_img_style{
+  margin: 37rpx 30rpx 37rpx 20rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+.fenxiao_text_style{
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #444444;
+}
+.tixian_style{
+  background: #e30c26;
+  margin-top: 35rpx;
+  margin-left: 230rpx;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  color: white;
+  text-align: center;
+
+}

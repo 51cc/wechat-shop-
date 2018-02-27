@@ -1,0 +1,10 @@
+/* pages/mynewyuyue/mynewyuyue.wxss */
+@import "../aaafirst/aaafirst.wxss";
+@import "../orders/orders.wxss";
+
+page{
+  height: 100%;
+}
+.contain{
+  background: #f6f6f6;
+}

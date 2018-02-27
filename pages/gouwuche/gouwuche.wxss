@@ -1,0 +1,169 @@
+.contain{
+    height: 90%;
+    background: #f5f5f5;
+    padding-bottom: 120rpx;
+}
+.shopcar_row_style{
+    display: flex;
+    height: 225rpx;
+    width: 100%;
+    border-bottom: 0.5px solid #eeeeee;
+}
+.shopcar_row_left_style{
+    height: 225rpx;
+    width: 262rpx;
+    background: white;
+    position: relative;
+}
+.shopcar_selectimg_style{
+    position: absolute;
+    height: 43rpx;
+    width: 43rpx;
+    margin-left: 20rpx;
+    margin-top: 90rpx;
+}
+.shopcar_proimg_style{
+    margin-left: 80rpx;
+    margin-top: 35rpx;
+    height: 150rpx;
+    width: 150rpx;
+    /* background: red; */
+}
+
+
+
+.shopcar_row_middle_style{
+    height: 200rpx;
+    width: 32.5%;
+    margin-top:45rpx;
+}
+.shopcar_row_middle_style text{
+    display: block;
+    font-size: 32rpx;
+     
+}
+
+
+.shopcar_row_right_style{
+    height: 100%;
+    width: 32.5%;
+    background: white;
+}
+.shopcar_delete_img_style{
+    float: right;
+    margin: 20rpx;
+    height: 42rpx;
+    width: 42rpx;
+}
+
+.addstyle{
+    position: relative;
+    width: 200rpx;
+    height: 50rpx;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rpx;
+}
+.plus{
+    position: absolute;
+    left: 18rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.add{   
+    position: absolute;
+    right: 10rpx;
+     width: 40rpx;
+    height: 40rpx;
+}
+.numstyle{
+    position: absolute;
+    margin-top: 10rpx;
+    right: 82rpx;
+    color: black;
+    line-height: 35rpx;
+    text-align: center;
+    font-size: 28rpx;
+}
+
+.bottom_view_style{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 120rpx;
+    background: white;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+}
+.bottom_view_style image{
+    position: absolute;
+    height: 43rpx;
+    width: 43rpx;
+    margin-left: 20rpx;
+    margin-top: 40rpx;
+}
+.bottom_text_select_style{
+      font-size: 32rpx;
+    display: block;
+    height: 100%;
+    line-height: 120rpx;
+    text-align: left;
+    margin-left: 80rpx;
+}
+.shopcar_jiesuan_style{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 220rpx;
+    text-align: center;
+    line-height: 120rpx;
+    color: white;
+    font-size: 32rpx;
+    background: orange;
+}
+
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}
+.client_text_style{
+  width: 710rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 28rpx;
+  color: #444444;
+  display: block;
+  background: white;
+}
+
+
+
+.shop_right_style{
+  width: 487rpx;
+  height: 225rpx;
+  background: white;
+  
+}
+.shop_right_up_style{
+  height: 100rpx;
+  width: 485rpx;
+  display: flex;
+  
+}
+.name_style{
+  font-size: 24rpx;
+  color: #222c38;
+  text-align: left;
+  line-height: 30rpx;
+  width: 400rpx;
+}

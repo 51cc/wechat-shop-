@@ -1,0 +1,125 @@
+<view class="cotain">
+<swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block  wx:for="{{imgUrls}}">
+                <swiper-item>
+                <image src="{{item.img}}" class="slide-image" style="width:100%" height="150"/>
+                </swiper-item>
+            </block>
+    </swiper>
+
+    <view class="sec_style">
+        <text class="text1">{{title}}</text>
+        <text class="text2" style="color:red;">¥{{price}}</text>
+        <text class="text3">库存:{{proNumber}}</text>
+    </view>
+    
+    <view class="rule_style" style="display:none;" bindtap="selectrules">
+        <text>选择规格</text>
+        <image class="image1_style" src="../../Asset/ico_more.png"></image>
+    </view>
+
+     <view class="shoper_detail_style">
+        <view class="shoper_detail_first_style">
+            <image src="{{clientIcon}}" class="image2_style"></image>
+            <view class="title_address_style">
+                <text class="text1">{{clientName}}</text>
+                <text class="text2">{{clientAddress}}</text>
+            </view>
+        </view>
+        
+        <view class="shoper_detail_second_style">
+            <block wx:for="{{services}}">
+                <view class="shoper_detail_second_single_style">
+                    <text class="score_up_style">{{item.sTitle}}</text>
+                    <image src="../../Asset/score_bg.png">
+                    </image>
+                    <text class="score_style">{{item.score}}</text>
+                </view>
+            </block>
+        </view>
+
+        <!--<view class="shoper_detail_third_style" bindtap="jumptocomments">
+            <text class="text11">评价</text>
+            <text class="text12">综合评分</text>
+            <text class="text13">5</text>
+            <image src="../../Asset/arrow_right.png" class="arrow_right_third"></image>
+        </view>-->
+    </view>
+
+
+    <view class="four_style">
+        <view class="four_head_style">
+            <text class="text41">图文详情</text>
+            <view class="line_style"></view>
+        </view>
+
+        <import src="../../wxParse/wxParse.wxml"/> 
+        <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+
+    </view>
+</view>
+
+<view class="bottom_view_style" style="display:none;">
+    <view class="bottom_view_style1" bindtap="jumptokefu">
+            <image src="../../Asset/b_kefu.png"></image>
+    <contact-button type="default-light" size="18"session-from="weapp">客服
+        </contact-button>
+    </view>
+    <view class="bottom_view_style1" bindtap="jumptoshoucang">
+        <image src="../../Asset/b_fav.png"></image>
+        <text>收藏</text>
+    </view>
+    <view class="bottom_view_style1" bindtap="jumptogouwuche">
+        <image bindtap="jumptogouwuche" src="../../Asset/b_shopcar.png"></image>
+        <text bindtap="jumptogouwuche">购物车</text>
+    </view>
+    <view class="bottom_view_style2" bindtap="jairugouwuche">
+            <text>加入购物车</text>
+    </view>
+    <view class="bottom_view_style3" bindtap="buynow">
+            <text>立即购买</text>
+    </view>
+</view>
+
+<view class="select_rule_style" wx:if="{{showRule}}">
+    <view class="select_first_style">
+        <image class="select_first_style_image" src="{{imgUrl}}"></image>
+        <view class="select_first_right_style">
+            <text class="text1">{{title}}</text>
+            <text class="text2" style="color:red;">¥{{price}}</text>
+            <text class="text3">库存:{{proNumber}}</text>
+            <text class="text1">已选    数量:{{proNum}}</text>
+        </view>
+       <image bindtap="closeRuleView" src="../../Asset/close.png" style="width:64rpx;height:64rpx;"></image> 
+
+
+    </view>
+
+
+    <view class="select_second_style">
+        <view class="select_second_row_style">
+            <text>数量</text>
+            <view class="addstyle">
+                            <image class="plus" src="../../Asset/plus.png" bindtap="plus"></image>
+                            <text class="numstyle">{{proNum}}</text>
+                            <image class="add" src="../../Asset/add.png" bindtap="add"></image>
+                        </view>
+        </view>
+    </view>
+
+
+    <view class="select_third_style">
+        <text class="text1" style="padding-left:20rpx;padding-top:30rpx;">总价:¥{{sumPrice}}</text>
+    </view>
+
+
+    <view class="select_forth_style">
+        <view class="select_forth_left_btn_style" bindtap="addshopcarbuttom">加入购物车</view>
+    <view class="select_forth_right_btn_style" bindtap="buynowbuttom">立即购买</view>
+
+    </view>
+
+</view>

@@ -1,0 +1,54 @@
+<!--group.wxml-->
+<view class="group-top">
+  <view class="left">
+    <image src="{{product.icon}}"></image>
+  </view>
+
+  <view class="right">
+    <view class="top">{{product.name}}</view>
+    <view style='display:flex;' class='right_bottom'>
+      <view style='font-size:28rpx;' class="bottom">￥{{product.teamprice}}</view>
+      <view  style='font-size:24rpx;'class="center">{{product.teamnum}}人团</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="group-people">
+  <view class="head-img">
+    <view wx:if="{{teamOrder.length>0}}" class="img">
+      <image class="toux" src="{{teamOrder[0].user_icon}}"></image>
+      <image class="teamhead" src="../../image/icon/teamhead.png"></image>
+    </view>
+    <block wx:for="{{teamOrder}}" wx:for-index="idx" >
+      <view wx:if="{{idx>=1}}" class="img">
+        <image class="toux" src="{{teamOrder[idx].user_icon}}"></image>
+      </view>
+    </block>
+    <view wx:if="{{team.teamNum>teamOrder.length}}" class="img">
+      <image class="toux" src="../../image/icon/icon-addteam.png"></image>
+    </view>
+  </view>
+  <view wx:if="{{state==2 && teamOrder.length<team.teamNum}}" class="time">仅剩{{team.teamNum-teamOrder.length}}个名额，{{daojishi}}后结束</view>
+
+
+
+  <button wx:if="{{state==2 && team.state==0 &&teamOrder.length<team.teamNum &&!isself}}" bindtap="buyProduct">参与活动</button>
+
+
+  <view wx:if="{{state==1 && teamOrder.length<team.teamNum}}" class="time">{{daojishi}}后结束</view>
+  <button wx:if="{{state==1 && teamOrder.length<team.teamNum}}" open-type="share" >邀请好友参团</button>
+
+ <view wx:if="{{isself &&state==2 && team.state==0&&teamOrder.length<team.teamNum}}" class="time">{{daojishi}}后结束</view>
+ <button wx:if="{{isself &&state==2 && team.state==0&&teamOrder.length<team.teamNum}}" open-type="share" >邀请好友参团</button>
+
+</view>
+
+<view class="title-name">拼团须知</view>
+<import src="../../wxParse/wxParse.wxml" />
+<view class="content">
+  <view class="wxParse" style="font-size:28rpx;line-height:50rpx;">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view> 

@@ -1,0 +1,23 @@
+<view class="cotain">
+
+    <scroll-view scroll-x style="padding:20rpx 0rpx;width: 100%">
+      <block wx:for="{{categorys}}">
+            <text wx:if="{{item.selected}}" style="padding:30rpx;color:red;white-space:nowrap;" id="{{item.categoryId}}">{{item.name}}                      </text>
+            <text wx:else style="padding:30rpx;color:#444444;white-space:nowrap;" bindtap="changeSelect" id="{{item.categoryId}}">{{item.name}}</text>
+      </block>
+    </scroll-view>
+    
+
+    <view class="forth_style" wx:for="{{catePros}}" wx:for-index="idx">
+                        <view class="product_single" bindtap="jumptodetail" id="{{item.productId}}">
+                            <image src="{{item.icon}}"></image>
+                            <text class="text1">{{item.name}}</text>
+                            <text class="text2">{{item.targetName}}</text>
+                            <text class="text3">¥{{item.price}}</text>
+                    <!--<text class="text2">新上架      库存:{{item.totalCount}}</text>-->
+                        </view>
+    </view>
+
+</view>
+
+

@@ -1,0 +1,211 @@
+<view class="contain">
+
+
+<!-- <button
+data-wares_image="http://shareapi.aldwx.com/public/image/template/mini-retailers-img.jpg"
+data-wares_logo="http://shareapi.aldwx.com/public/image/template/mini-retailers-logo.png"
+data-wares_title="美丽优选"
+data-wares_content="我挺喜欢的宝贝，分享给你，进来看看还能领优惠券哦~"
+data-wares_price="￥61.99扫码购买"
+bindtap="aldminishare"
+data-template_key="78163f10be7925eef8f5a3da902da0b5">分享</button> -->
+
+
+
+    <swiper style="width:750rpx;height:562rpx;" indicator-dots="{{indicatorDots}}"
+                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <block  wx:for="{{mDic.list}}">
+                    <swiper-item>
+                    <image src="{{item.img}}" class="slide-image" mode="aspectFit" style="width:100%;height:100%;"/>
+                    </swiper-item>
+                </block>
+        </swiper>
+
+
+    <view class="sec_style">
+        <text class="text1" style="width:710rpx;padding-bottom:15rpx;">{{mDic.name}}</text>
+        <!-- wx:if="{{isMianYi}}" -->
+        <text  class="text2" style="color:red;font-size:32rpx;width:200rpx;">{{mDic.integral}}</text>
+        <!-- <text wx:else class="text2" style="color:red;font-size:26rpx;width:200rpx;">{{price}}</text>
+        <text class="text2" style="padding-left:20rpx;color:#999;font-size:24rpx;width:200rpx;">{{}}</text> -->
+        <text class="text2" style="padding-left:20rpx;color:#999;font-size:24rpx;width:200rpx;">积分</text>
+    </view>
+    <view class="sec_new_style">
+        <text style="text-align: left;line-height:80rpx;padding-left:20rpx;width:230rpx;font-size:24rpx;" class="text3">市场参考价:¥{{mDic.price}}</text>
+        <text style="text-align: center;line-height:80rpx;width:250rpx;font-size:24rpx;" class="text3">名额:{{mDic.stock}}</text>
+        <text style="text-align: right;line-height:80rpx;padding-right:20rpx;width:230rpx;font-size:24rpx;" class="text3">包邮</text>
+
+    </view>
+    
+
+
+    <!-- <view class="rule_style">
+        <text style="display: block;width:500rpx;height:70rpx;line-height:70rpx;font-size:28rpx;">数量</text>
+
+        <view class="addstyle">
+            <image class="plus" src="../../Asset/plus.png" bindtap="plus"></image>
+            <text class="numstyle">{{proNum}}</text>
+            <image class="add" src="../../Asset/add.png" bindtap="add"></image>
+        </view>
+
+    </view> -->
+
+
+     <!-- <view class="shoper_detail_style" bindtap="jumptoclientdetail"> -->
+        <!-- <view class="shoper_detail_first_style">
+            <image src="{{clientIcon}}" class="image2_style"></image>
+            <view class="title_address_style">
+                <text style="display:block;color:#444444;font-size:28rpx;width:500rpx;height:40rpx;padding:0;" class="text1">{{clientName}}</text>
+                <text style="display:block;color:#999999;font-size:24rpx;width:500rpx;height:40rpx;padding:0;" class="text2">{{clientAddress}}</text>
+            </view>
+        </view>
+         -->
+
+        
+        <!--<view class="shoper_detail_second_style">
+            <block wx:for="{{services}}">
+                <view class="shoper_detail_second_single_style">
+                    <text class="score_up_style">{{item.sTitle}}</text>
+                    <image src="../../Asset/score_bg.png">
+                    </image>
+                    <text class="score_style">{{item.score}}</text>
+                </view>
+            </block>
+        </view>-->
+
+        <!--<view class="shoper_detail_third_style" bindtap="jumptocomments">
+            <text class="text11">评价</text>
+            <text class="text12">综合评分</text>
+            <text class="text13">5</text>
+            <image src="../../Asset/arrow_right.png" class="arrow_right_third"></image>
+        </view>-->
+    <!-- </view> -->
+
+    <!-- <view bindtap="jumptocomments" class="comment_num_style">
+        <text style="font-size:28rpx;color:#444444;" class="comment_text_left_style">用户评价</text>
+        <text class="comment_text_left_style" style="color:#999999;text-align: right;">共{{commentsNum  }}条></text>
+    </view> -->
+
+    <view class="four_style">
+        <view class="four_head_style">
+            <text class="text41">抽奖说明</text>
+            <view class="line_style"></view>
+        </view>
+
+
+        <import src="../../wxParse/wxParse.wxml"/> 
+        <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article1.nodes}}"/>
+        </view> 
+
+    </view>
+
+
+    <view class="four_style">
+        <view class="four_head_style">
+            <text class="text41">图文详情</text>
+            <view class="line_style"></view>
+        </view>
+
+
+        <import src="../../wxParse/wxParse.wxml"/> 
+        <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view> 
+
+    </view>
+</view>
+
+<view class="bottom_view_style">
+    <text class='duihuan_left_text_style'>抽奖：</text>
+    <text class='duihuan_middle_text_style'>{{mDic.integral}}</text>
+    <text style='margin-left: 0rpx;' class='duihuan_left_text_style'>积分</text>
+    <text class='duihuan_btn' bindtap='duhuaNow'>我要抽奖</text>
+</view>
+
+
+
+
+
+
+
+<view class="sharder_style" wx:if="{{showRule}}"></view>
+
+<view class="select_rule_style" wx:if="{{showRule}}">
+    <view class="select_first_style">
+        
+        <image class="select_first_style_image" src="{{imgUrl}}"></image>
+
+        <view class="select_first_right_style">
+            <!-- <text class="text1" style="width:350rpx;overflow:hidden;max-height:50rpx;padding-bottom:20rpx;">{{title}}</text> -->
+            <text class="text2" style="color:red;font-size:32rpx;">¥{{price}}</text>
+            <text class="text1" style="font-size:24rpx;color:#999999;padding-top:10rpx;">库存:{{proNumber}}</text>
+            <text class="text1" style="font-size:24rpx;color:#999999;padding-top:10rpx;">{{selectNames}}</text>
+        </view>
+
+
+       <image bindtap="closeRuleView" src="../../Asset/close.png" style="width:64rpx;height:64rpx;"></image> 
+    </view>
+
+
+    <scroll-view scroll-y="true" class="rules_select_style"> 
+      <view class="rule_big_style">
+         <block wx:for="{{rules}}" wx:for-index="idx">
+          <view class="rule_head_style">
+            <text class="rule_head_text_style">{{item.title}}</text>
+          </view>
+
+
+          <view class="rule_bottom_style" >
+              <block wx:for="{{item.items}}">
+
+                <text wx:if="{{item.selected}}" class="rules_text_style" style="background: red;color:white;"  id="{{item.id+idx}}">
+                {{item.name}}
+                </text>
+
+                <text bindtap="selectTheItem" wx:else class="rules_text_style" id="{{item.id+idx}}">
+                {{item.name}}
+                </text>
+              </block>
+          </view>
+
+        </block>
+
+      </view>    
+
+      <view class="clear"></view>
+
+
+
+ <view class="select_second_style">
+        <view class="select_second_row_style">
+            <text style="font-size:32rpx;color:#999;">数量</text>
+            <view class="addstyle">
+                            <image class="plus" src="../../Asset/plus.png" bindtap="plus"></image>
+                            <text class="numstyle">{{proNum}}</text>
+                            <image class="add" src="../../Asset/add.png" bindtap="add"></image>
+                        </view>
+        </view>
+    </view>
+
+
+
+    <view class="select_third_style">
+        <text class="text2" style="padding-left:20rpx;padding-top:30rpx;color:#999;">总价:</text>
+        <text class="text3" style="float:right;right:20rpx;padding-right:20rpx;line-height:150rpx;">¥{{sumPrice}}</text>
+    </view>
+    </scroll-view>
+
+
+
+
+   
+
+
+
+    <view class="select_forth_style">
+        <view class="select_forth_left_btn_style" bindtap="addshopcarbuttom">加入购物车</view>
+        <view class="select_forth_right_btn_style" bindtap="buynowbuttom">立即购买</view>
+    </view>
+
+</view>

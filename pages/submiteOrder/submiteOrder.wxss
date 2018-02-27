@@ -1,0 +1,150 @@
+page{
+    height: 100%;
+    background: #eeeeee;
+}
+.contain{
+    padding-bottom: 150rpx;
+}
+.row_style{
+    height: 120rpx;
+    background: white;
+    padding: 20rpx;
+}
+.color_line_style{
+  display: block;
+  width: 750rpx;
+  height: 5rpx;
+  margin-bottom: 20rpx;
+}
+.text1{
+    display: block;
+    font-size: 24rpx;
+    color: #444444;
+    padding: 10rpx 0;
+    line-height: 30rpx;
+    /* margin-right: 20rpx; */
+  
+}
+.text2{
+    padding: 10rpx;
+    font-size: 35rpx;
+    color: #999999;
+}
+
+.select_first_style{
+    /* margin-top: 20rpx; */
+    padding: 20rpx 20rpx;
+    width: 710rpx;
+    background: white;
+    display: flex;
+    border-bottom: 1px solid #eeeeee;
+}
+.select_first_style image{
+    height: 200rpx;
+    width: 200rpx;
+    background: white;
+}
+.select_first_right_style{
+    margin: 0rpx 20rpx;   
+    width: 470rpx; 
+}
+.third_row_style{
+    width: 710rpx;
+    height: 80rpx;
+    background: white;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 1px solid #eeeeee;
+}
+.third_row_style text{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.select_forth_style{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 120rpx;
+    background: white;
+    border-top: 0.5px solid #eeeeee;
+    display: flex;
+    text-align: center;
+    z-index: 10000;
+}
+
+.selectAddress{
+    position: fixed;
+    bottom: 0px;
+    width: 750rpx;
+    height: 800rpx;
+    background: white;
+    border-top: 0.5px solid #eeeeee;
+    z-index: 100;
+}
+.add_btn_style{
+  position: absolute;
+  bottom: 20rpx;
+  background: red;
+  width: 600rpx;
+  margin-left: 75rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.add_address_row_style{
+  margin-left: 20rpx;
+  width: 710rpx;
+  height: 180rpx;
+  margin-top: 10rpx;
+  background: red;
+  
+}
+
+.rows{
+    height: 88rpx;
+    width: 750rpx;
+    border-bottom: 1rpx solid #eeeeee;
+    background: white;
+    text-align: center;
+    display: flex;
+    line-height: 2.8;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.rows text{
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 35rpx;
+    color: #444444;
+}
+.rows_input_style{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    margin-left: 12.5rpx;
+    width: 700rpx;
+    text-align: left;
+}
+.addaddress_style{
+    margin: 30rpx 40rpx 30rpx 40rpx;
+    height: 80rpx;
+    background: #ff4546;
+    border-radius: 10rpx;
+    text-align: center;
+    color: white;
+    font-size: 36rpx;
+    line-height: 2;
+}
+.client_text_style{
+  width: 710rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 28rpx;
+  color: #444444;
+  display: block;
+  background: white;
+}

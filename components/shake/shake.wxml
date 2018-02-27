@@ -1,0 +1,10 @@
+<template name="shake" >
+<!-- src="../../components/shake/3388.mp3" -->
+  <audio src="https://yun.pfan123.com/shake_sound.mp3"  id="shakeAudio" ></audio>
+  
+  <view class="ditu {{anim ? 'anim' : ''}}">
+      <image style='width:100%;height:100%;' src='../../components/shake/01.png' hidden='{{anim}}'></image>
+  </view> 
+
+
+</template> 

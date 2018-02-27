@@ -1,0 +1,50 @@
+<view class='contain'>
+  <view class='rows_cell_style'>
+      <text class='rows_text_style' style='width:510rpx;'>服务数量</text>
+      <view class='rows_first_right_style'>
+          <image bindtap='jiannum' src='../../Asset/plus.png'></image>
+          <text>{{num}}</text>
+          <image bindtap='jianum' src='../../Asset/add.png'></image>
+      </view>
+  </view>
+
+
+  <view class='rows_cell_style' bindtap='jumptoselecttime' style="margin-top:20rpx;">
+      <text class='rows_text_style'>预约时间</text>
+      <view class='rows_sec_right_style'>
+          <text>{{days}} {{hour}}</text>
+          <image src='../../Asset/yy_pj.png'></image>
+      </view>
+  </view>
+
+
+  <view class='rows_cell_style' style="margin-top:20rpx;">
+      <text class='rows_text_style'>预约人姓名</text>
+      <input id='100' bindinput='bindinput' class='rows_input_style' placeholder='请输入预约人'></input>
+  </view>
+  <view class='rows_cell_style' style="border:0;">
+      <text class='rows_text_style'>手机号</text>
+      <input type='number' id='200' bindinput='bindinput' class='rows_input_style' placeholder='请输入预约人手机号'></input>
+  </view>
+
+  <block wx:if="{{isline==1}}">
+    <view class='rows_cell_style' style="margin-top:20rpx;">
+        <text class='rows_text_style'>优惠券</text>
+        <block wx:if="{{keyong}}">
+           <text class='rows_right_text_style'>已选{{coupon.money}}元</text>
+        </block>
+        <block wx:else>
+           <text class='rows_right_text_style'>无可用优惠券</text>
+        </block>
+    </view>
+    <view class='rows_cell_style' style="margin-top:0rpx;">
+        <text class='rows_text_style'>合计</text>
+        <text class='rows_right_text_style'>¥{{sumMoney}}</text>
+    </view>
+  </block>
+   <view class='rows_cell_style' style="margin-top:0rpx;">
+        <input id='300' bindinput='bindinput' class='rows_input_detail_style' placeholder='可填写20字以内的备注信息'></input>
+    </view>
+  <view class="yy_btn_style" style='background:{{maincolor}}'  bindtap='jumptosubmite'>立即预约</view>
+
+</view>

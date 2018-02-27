@@ -1,0 +1,139 @@
+<!--pages/huatidetail/huatidetail.wxml-->
+<view style='padding-bottom:120rpx;'>
+
+<view class='huatilist'>
+  <view class='huatitop'>
+    <view class='left'>
+      <image style='width:80rpx;height:80rpx;border-radius:40rpx;' src='{{mDic.usrerImg}}'></image>
+    </view>
+    <view class='center'>
+      <view class='top'>{{mDic.userName}}</view>
+      <view class='bottom'>{{mDic.strTime}}</view>
+    </view>
+  </view>
+  <view class='huatitext'>{{mDic.content}}</view> 
+</view>
+
+
+<view wx:for="{{mDic.topicImages}}" wx:for-index='idx'  style='width:710rpx;padding:10rpx 20rpx;'>
+   <image  id='{{idx}}' mode='widthFix' style='width:100%;' bindload="imgload" src='{{item.image}}'></image> 
+  <!-- <image  id='{{idx}}' mode='widthFix' style='max-width:100%; min-width:{{item.width}}px;height:{{item.height}}px;' bindload="imgload" src='{{item.image}}'></image> -->
+
+</view>
+
+
+
+<view class='huatiaddress' bindtap='lookaddress' data-lan="{{mDic.lan}}" data-lon='{{mDic.lon}}' data-address='{{mDic.address}}' wx:if="{{mDic.address.length>0}}">
+  <image style='width:30rpx;height:30rpx;margin:-3rpx 5rpx 0 0;vertical-align:middle;' src='../../Asset/f_client_address.png'></image>
+  <text>{{mDic.address}}</text>
+</view>
+<view bindtap='jumptomianze' class='huatiaddress' style='padding-left:25rpx;padding-bottom:25rpx;'>
+  免责声明
+</view>
+<view class='pingl'>
+  <text>全部评论（{{mDic.topicComments.length}}）</text>
+</view>
+<view class='huifuc menu'>
+  <!-- <view wx:for="{{cateinfo}}" wx:for-item="info" class='menu'> -->
+    <block wx:for="{{mDic.topicComments}}">
+    <view class='toux'>
+      <image style='width:80rpx;height:80rpx;border-radius:40rpx;' src='{{item.userimg}}'></image>
+    </view>
+    <view class='neirong'>
+      <view class='tip'>
+        <view class='tipleft'>{{item.username}}  <text>{{item.strTime}}</text> </view>
+        <view class='tipright'>
+          <image bindtap='jumptopl' id='888' data-tId="{{item.id}}" data-pUserId="{{item.userid}}" data-pUserName="{{item.username}}" style='width:40rpx;height:40rpx;' src='../../Asset/pl.png'></image>
+        </view>
+      </view>
+      <view id="{{item.id}}" data-fId="{{item.userid}}" class='cententc' bindlongtap="delimg"   bindtouchstart="mystart" bindtouchend="myend">
+       {{item.content}}
+      </view>
+      <view class='information_conter' wx:if="{{item.comment.length>0}}">
+
+         <block wx:for="{{item.comment}}" wx:for-item="itemName"> 
+
+          <view class='info' wx:if="{{itemName.parentid.length>0}}">
+            <text  bindtap='jumptopl' id='777' data-tId="{{item.id}}" data-dId="{{itemName.id}}" data-pUserId="{{itemName.userid}}"  data-pUserName="{{itemName.username}}" style='font-size:24rpx;color:#5a7bb3;'>{{itemName.username}}</text><text style='font-size:24rpx;color:#444444;' >回复</text> <text style='font-size:24rpx;color:#5a7bb3;' bindtap='jumptopl' id='777' data-tId="{{item.id}}" data-dId="{{itemName.id}}" data-pUserId="{{itemName.parentuserid}}"  data-pUserName="{{itemName.parentusername}}">{{itemName.parentusername}}</text><text style='font-size:24rpx;color:#444444;' bindlongtap="delimg"   bindtouchstart="mystart" bindtouchend="myend" data-fId="{{itemName.userid}}" id="{{itemName.id}}">:{{itemName.content}}</text>
+          </view>
+
+          <view class='info' wx:else>
+            <text bindtap='jumptopl' id='777' data-tId="{{item.id}}" data-dId="{{itemName.id}}" data-pUserId="{{itemName.userid}}"  data-pUserName="{{itemName.username}}" style='font-size:24rpx;color:#5a7bb3;'>{{itemName.username}}</text><text style='font-size:24rpx;color:#444444;' bindlongtap="delimg"   bindtouchstart="mystart" bindtouchend="myend" data-fId="{{itemName.userid}}" id="{{itemName.id}}">:{{itemName.content}}</text>
+          </view>
+
+         </block> 
+      </view>
+      <view class='fengeline'></view>
+    </view>
+  <view style='clear: both;'></view>
+  </block>
+</view>
+
+
+
+</view>
+
+
+<!-- 操作 -->
+<view class='caozuo'>
+  <view bindtap='jumptopl' id='999'>
+    <image src='../../Asset/pl.png' style='width:40rpx;height:40rpx;margin:-3rpx 5rpx 0 0;vertical-align:middle;'></image>
+    <text>{{mDic.topicComments.length}}</text>
+  </view>
+  <view>
+    <image  id="{{mDic.id}}" bindtap='zan' wx:if="{{mDic.isCollect!=1}}" src='../../Asset/dz.png' style='width:40rpx;height:40rpx;margin:-3rpx 5rpx 0 0;vertical-align:middle;'></image>
+     <image  id="{{mDic.id}}" bindtap='zan' wx:else src='../../Asset/ydz.png' style='width:40rpx;height:40rpx;margin:-3rpx 5rpx 0 0;vertical-align:middle;'></image>
+    <text>{{mDic.collect}}</text>
+  </view>
+  <view>
+    <button open-type='share' id="{{mDic.id}}">
+      <image src='../../Asset/fx.png' style='width:40rpx;height:40rpx;margin:-3rpx 5rpx 0 0;vertical-align:middle;'></image>
+      <text>分享</text>
+    </button>
+  </view>
+  <view class='lianxi' id="{{mDic.tel}}" bindtap='jumptotel'>联系TA</view>
+</view>
+
+<!--start 弹出输入框  -->
+<form wx:if="{{isfabu}}" class='fabupl' bindsubmit="bindsubmit">
+  <view class='reply_center'>
+    <input type='text' bindinput="oNbindinputTap" focus="focus" class='input_style' placeholder='请输入您的评论' placeholder-class='place'></input>
+    <button formType="submit">发送</button>
+  </view>
+</form>
+<!--end 弹出输入框  -->
+
+<!-- 免责声明 -->
+<view class='mianze' wx:if="{{ismianze}}">
+  <view class='top'>免责声明</view>
+  <import src="../../wxParse/wxParse.wxml"/> 
+      <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view> 
+  <!-- <view class='center'>{{mDic.disclaimer.content}}</view> -->
+  <view class='bottom'>
+    <button bindtap='jumptoquxiaomianze'>我已阅读</button>
+  </view>
+</view>
+
+<!-- 删除评论 -->
+<view class='delpl'wx:if='{{isdelpl}}'>
+  <view class='tip'>删除我的评论</view>
+  <view class='del'>
+    <button>删除</button>
+  </view>
+  <view style='height:10rpx;background:#959595;'></view>
+  <view class='quxiao'>
+    <button>取消</button>
+  </view>
+</view>
+
+
+<!-- 遮罩 -->
+<view class='shade' wx:if='{{isshade}}' ></view>
+
+<!-- 遮罩1 -->
+<view class='shade' bindtap='jumptoqc' wx:if='{{isshade1}}' ></view>
+
+
+

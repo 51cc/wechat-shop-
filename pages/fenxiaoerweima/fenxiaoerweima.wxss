@@ -1,0 +1,35 @@
+/* fenxiaoerweima.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.head_text_style{
+  width: 750rpx;
+  height: 80rpx;
+  background: white;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #444444;
+}
+.erweoma_style{
+  margin: 20rpx 200rpx;
+  width: 350rpx;
+  height: 350rpx;
+  background: red;
+}
+.text_style{
+  min-height: 80rpx;
+  padding: 0rpx 20rpx;
+  width: 710rpx;
+  background: white;
+  line-height: 80rpx;
+  color: #999999;
+  font-size: 30rpx;
+  text-align: left;
+  border-bottom: 1rpx solid #eeeeee;
+
+}

@@ -1,0 +1,88 @@
+<view class="contain">
+  <image class="yq_head_style" src='../../Asset/yq_head.png'></image>
+  <view class="yq_time_style">活动时间:{{mDic.startTime}}-{{mDic.endTime}}</view>
+  <view bindtap='jumptoyaoqing' class="yq_btn_style">邀请好友</view>
+   <button class='yq_share_style' open-type="share"></button> 
+
+  <view style='margin-top:55rpx;'>
+        <view style='display:flex;'>
+          <image style='width:44rpx;height:8rpx;margin-top:36rpx;margin-left: 131rpx;' src='../../Asset/left_d.png'></image>
+          <text class="yq_head_text_style">邀请好友消费{{mDic.price}}元领好礼</text>
+          <image style='width:44rpx;height:8rpx;margin-top:36rpx;margin-left:5rpx;'  src='../../Asset/right_d.png'></image>
+        </view>
+        <block wx:for="{{dataAy}}" wx:for-index="idx">
+          <view class="yq_row_style">
+              <image src='{{item.img}}' class="yq_row_img_style"></image>
+
+              <view class="yq_right_style">
+                  <view class="yq_right_up_style">
+
+
+                    <text wx:if="{{idx==0}}" class="yq_left_text_style">[邀请{{item.peoples}}人]每人消费{{mDic.price}}元</text>
+                     <text wx:elif="{{idx==1}}" class="yq_left_text_style">[邀请{{item.peoples}}人]每人消费{{mDic.price}}元</text>
+                      <text wx:elif="{{idx==2}}" class="yq_left_text_style">[邀请{{item.peoples}}人]每人消费{{mDic.price}}元</text>
+
+
+                    <view style=" height: 40rpx;display: flex; position: absolute;right: 0;">
+                      <text style=' font-weight: normal;color: #969998;' class="yq_left_text_style">进度</text>
+
+
+                      <text wx:if="{{idx==0}}" style=' font-weight: bold;color: #fb4239;' class="yq_left_text_style">{{lp>item.peoples?item.peoples:lp}}</text>
+                         <text wx:elif="{{idx==1}}" style=' font-weight: bold;color: #fb4239;' class="yq_left_text_style">{{lp>item.peoples?item.peoples:lp}}</text>
+                            <text wx:elif="{{idx==2}}" style=' font-weight: bold;color: #fb4239;' class="yq_left_text_style">{{lp>item.peoples?item.peoples:lp}}</text>
+
+
+                      <text wx:if="{{idx==0}}" style=' font-weight: bold;color: #969998;' class="yq_left_text_style">/{{item.peoples}}</text>
+                      <text wx:elif="{{idx==1}}" style=' font-weight: bold;color: #969998;' class="yq_left_text_style">/{{item.peoples}}</text>
+                      <text wx:elif="{{idx==2}}" style=' font-weight: bold;color: #969998;' class="yq_left_text_style">/{{item.peoples}}</text>
+                    </view>
+                  </view>
+                  <view class="yq_right_down_style">
+                      <text class="yq_right_down_text_style">{{item.name}}</text>
+                      <view  wx:if="{{item.state==1&&lp>=item.peoples}}" style="background:#c6c6c6;" class="yq_anniu_style">已领取</view>
+
+                      <view  id="{{idx}}" bindtap='lingqulipin' wx:elif="{{item.state==0&&lp>=item.peoples}}" class="yq_anniu_style">立即领取</view>
+
+                      <view  wx:else style="background:#c6c6c6;" class="yq_anniu_style">未达标</view>
+
+
+                  </view>
+              </view>
+        
+          </view>
+        </block>
+  </view>
+  <view style='margin-top:55rpx;'>
+        <view style='display:flex;'>
+          <image style='width:44rpx;height:8rpx;margin-top:36rpx;margin-left: 231rpx;' src='../../Asset/left_d.png'></image>
+          <text style="width:200rpx;" class="yq_head_text_style">活动规则</text>
+          <image style='width:44rpx;height:8rpx;margin-top:36rpx;margin-left:5rpx;'  src='../../Asset/right_d.png'></image>
+        </view>
+        <import src="../../wxParse/wxParse.wxml"/> 
+        <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view> 
+  </view>
+  
+
+
+
+    <block wx:if="{{islingqu}}">
+      <view bindtap='hiddenTheMask' style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style'>
+        <image class='lingqu_bg_style'></image> 
+        <image bindtap='closeTheMask' src='../../Asset/yq_close.png' class='yq_close_style'></image>
+        <text class='yq_title_style'>礼品领取</text>
+        <view class="yq_lingqu_bg_style">
+            <text>联系人：{{name}}</text>
+            <text>联系电话：{{phone}}</text>
+            <text>联系地址：{{address}}</text>
+            <view class='yq_bottom_style'>
+                <view bindtap='xiugaidizhi' class="yq_xiugai_style">修改地址</view>
+                <view bindtap='querenlingqu' style='margin-left: 50rpx;border: none;color: white;background:#fb4239; ' class="yq_xiugai_style">确认领取</view>
+            </view>
+        </view>
+
+      </view>
+  </block>
+
+</view>

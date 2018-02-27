@@ -1,0 +1,59 @@
+<view class="contain">
+
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+  <!-- <view bindtap="jumptolingqu" style="margin-left:305rpx;" class="lingqu_btn">去领取</view> -->
+</view>
+
+  <view class="yhq_list_style">
+       <block wx:for="{{dataAy}}">
+    <view class="row_style">
+        <image class="youhuiquan_bg_style" src="../../Asset/my_youhuiquan_bg.png">
+        </image>
+
+        <view class="left_price_style">
+          <text class="rmb_style">¥</text>
+          <text class="price_style">{{item.money}}</text>
+        </view>
+
+        <view class="middle_style" bindtap="jumptodetail" id="{{item.couponId}}">
+          <text class="youhuiquan_title_style">{{item.title}}</text>
+          <text class="instr_style">{{item.isAll}}</text>
+          <text class="time_style">{{item.startDate}}至{{item.endDate}}</text>
+          
+           <block wx:if="{{item.ifInbite==1}}"> 
+            <text class="time_style">好友邀请领券</text>
+           </block> 
+           <block wx:else> 
+
+           </block> 
+        </view>
+
+
+        <view class="right_style">
+
+        <!-- <view  wx:if="{{item.state==0}}" class="lingqu_btn" bindtap="qushiyong">去使用</view> -->
+
+          <image wx:if="{{item.state==1}}" class="right_img_style" src="../../Asset/f_shiyong.png"></image>
+        
+          <image wx:elif="{{item.diff<0}}" class="right_img_style" src="../../Asset/f_guoqi.png"></image>
+          
+        </view>
+    </view>
+  </block>
+  </view>
+
+
+  <view class="category_view_style">
+      <block wx:for="{{categorys}}">
+          <view class="order_single_style" wx:if="{{item.select}}" id="{{item.id}}">
+          {{item.name}}
+          </view>
+
+          <view class="order_single_unselect_style" wx:else bindtap="changetotrue" id="{{item.id}}">
+          {{item.name}}
+          </view>
+      </block>
+  </view>
+</view>

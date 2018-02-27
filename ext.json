@@ -1,0 +1,54 @@
+{
+  "ext": {
+    "attr": {
+      "code": "DIY20171114133325291487",
+      "name": "测试001"
+    },
+    "name": "测试001"
+  },
+  "extAppid": "wxba893bdb0a7d6c15",
+  "extEnable": true,
+  "extPages": {
+    "pages/logs/logs": {
+      "navigationBarTitleText": "logs"
+    }
+  },
+  "networkTimeout": {
+    "downloadFile": 10000,
+    "request": 10000
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "./pages/themes/xk/ico_first_n.png",
+        "pagePath": "pages/aaafirst/aaafirst",
+        "selectedIconPath": "./pages/themes/ff80ab/ico_first_s.png",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./pages/themes/xk/ico_fenlei_n.png",
+        "pagePath": "pages/fenlei/fenlei",
+        "selectedIconPath": "./pages/themes/ff80ab/ico_fenlei_s.png",
+        "text": "分类"
+      },
+      {
+        "iconPath": "./pages/themes/xk/ico_gouwuche_n.png",
+        "pagePath": "pages/gouwuche/gouwuche",
+        "selectedIconPath": "./pages/themes/ff80ab/ico_gouwuche_s.png",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "./pages/themes/xk/ico_my_n.png",
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "./pages/themes/ff80ab/ico_my_s.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00b6ff",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "首页"
+  }
+}

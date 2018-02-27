@@ -1,0 +1,95 @@
+/* pages/submiteJiFenOrder/submiteJiFenOrder.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.row_style{
+    height: 120rpx;
+    background: white;
+    padding: 20rpx;
+}
+.color_line_style{
+  display: block;
+  width: 750rpx;
+  height: 5rpx;
+  margin-bottom: 20rpx;
+}
+.text1{
+    display: block;
+    font-size: 24rpx;
+    color: #444444;
+    padding: 10rpx 0;
+    line-height: 30rpx;
+    /* margin-right: 20rpx; */
+  
+}
+.text2{
+    padding: 10rpx;
+    font-size: 35rpx;
+    color: #999999;
+}
+.select_forth_style{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 120rpx;
+    background: white;
+    border-top: 0.5px solid #eeeeee;
+    display: flex;
+    text-align: center;
+    z-index: 10000;
+}
+.duihuan_left_text_style{
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 120rpx;
+  height: 120rpx;
+ 
+}
+
+.duihuan_middle_text_style{
+  font-size: 32rpx;
+  color: #ff0000;
+  line-height: 120rpx;
+  height: 120rpx;
+}
+
+.product_row{
+  display: flex;
+  margin-top: 20rpx;
+  width: 750rpx;
+  height: 220rpx;
+  background: white;
+}
+
+.product_icon{
+  margin: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
+}
+.product_right{
+  width: 510rpx;
+  margin-top: 20rpx;
+  height: 180rpx;
+}
+.product_title{
+   margin-top: 20rpx; 
+  font-size: 28rpx;
+  color: #444444;
+  text-align: left;
+  height: 90rpx;
+  line-height: 45rpx;
+  display: block;
+}
+
+.product_bottom{
+  display: block;
+  height: 90rpx;
+  line-height: 70rpx;
+  margin-bottom: 0rpx;
+  font-size: 28rpx;
+  color: #444444;
+  text-align: left;
+
+}

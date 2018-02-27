@@ -1,0 +1,216 @@
+page{
+    height: 100%;
+    background: #f4f4f4;
+    display: flex;
+    position: relative;
+}
+.contain{
+    display: flex;
+    height: 100%;
+}
+.left_style{
+    height: 100%;
+    width: 225rpx;
+}
+
+.left_single_style{
+    width: 100%;
+    background: #f4f4f4;
+    border-right: 1rpx solid #eeeeee;
+    border-bottom: 1rpx solid #eeeeee;
+    margin: 0rpx auto;
+    /* line-height: 120rpx; */
+    text-align: center;
+}
+.left_single_style text{
+  display: block;
+  width: 225rpx;
+   padding-bottom: 40rpx;
+   padding-top: 40rpx;
+    
+   
+   text-align: center;
+    font-size: 32rpx;
+    color: #444444;
+}
+
+
+
+.right_style{
+    height: 100%;
+    width: 525rpx;
+    background: white;
+    
+}
+
+.right_imgtext_style{
+    display: block;
+    float: left;
+    width: 29%;
+    margin: 10rpx 10rpx 0rpx 10rpx;
+    background: red;
+    
+}
+.right_imgtext_style image{
+    /*width: 100%;
+    height: 75%;*/
+    width: 165rpx;
+    height: 165rpx;
+    background: red;
+}
+.right_imgtext_style text{
+    width: 165rpx;
+    font-size: 25rpx;
+    line-height: 30rpx;
+    height: 30rpx;
+    text-align: center;
+    display: block;
+    background: white;
+}
+
+
+.product_single{
+    float: left;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    width: 243rpx;
+    background: white;
+    border: 1rpx solid #ededed;
+
+}
+.product_single image{
+    width: 243rpx;
+    margin-bottom: 10rpx;
+    height: 243rpx;
+    background: white;
+}
+.product_single text{
+    display: flex;
+}
+
+
+.text1{
+    margin-left: 15rpx;
+    margin-right: 15rpx;
+    font-size: 20rpx;
+    color: rgb(34, 44, 56);
+    width: 213rpx; 
+    height: 50rpx;
+   
+}
+.text2{
+  width: 300rpx;
+    /* overflow: hidden; */
+    margin-left: 15rpx;
+    margin-top: 10rpx;
+    font-size: 30rpx;
+    color: #999999;
+}
+.bottom_text_style{
+  display: flex;
+  padding: 10rpx 10rpx; 
+  position: relative;
+  height: 50rpx; 
+}
+.text3{
+    margin-left: 0rpx;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+    color: rgb(255, 77, 77);
+    line-height: 50rpx;
+    /* padding: 10rpx 0rpx;  */
+    /* line-height: 55rpx; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.left_style1{
+    height: 100%;
+    width: 225rpx;
+    /*border-right: 1px solid #eeeeee;*/
+}
+
+.left_single_style1{
+    /* height: 119rpx; */
+    width: 205rpx;
+    padding: 10rpx 10rpx;
+    background: #f4f4f4;
+    border-right: 1rpx solid #eeeeee;
+    border-bottom: 1rpx solid #eeeeee;
+    margin: 0rpx auto;
+    line-height: 60rpx;
+    text-align: center;
+}
+
+.left_single_style1 text{
+    /*display: block;*/
+    /* width: 225rpx;
+   
+    height: 40rpx;
+    font-size: 32rpx;
+    color: #444444;
+    text-align: left; */
+
+
+    display: block;
+  width: 225rpx;
+   padding-bottom: 20rpx;
+   padding-top: 20rpx;
+    
+   
+   text-align: center;
+    font-size: 32rpx;
+    color: #444444;
+}
+
+
+
+.right_style1{
+    height: 2000rpx;
+    width: 525rpx;
+    background: white;
+}
+
+.right_imgtext_style1{
+    display: block;
+    float: left;
+    width: 29%;
+    /*height: 200rpx;*/
+    margin: 10rpx 10rpx 0rpx 10rpx;
+    background: white;
+    
+}
+.right_imgtext_style1 image{
+    /*width: 100%;
+    height: 75%;*/
+    width: 165rpx;
+    height: 165rpx;
+    background: white;
+}
+.right_imgtext_style1 text{
+    width: 165rpx;
+    font-size: 25rpx;
+    line-height: 30rpx;
+    height: 30rpx;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    background: white;
+}
+.right_head_style1{
+  height: 262rpx;
+  width: 525rpx;
+}
+.right_head_style1 image{
+  width: 525rpx;
+  height: 262rpx;
+}

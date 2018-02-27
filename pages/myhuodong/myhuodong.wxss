@@ -1,0 +1,59 @@
+/* pages/myhuodong/myhuodong.wxss */
+@import "../orders/orders.wxss";
+.contain{
+  height: 100%;
+  background: #eeeeee;
+}
+.head_style{
+  width: 750rpx;
+  height: 88rpx;
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #eeeeee;
+}
+.head_style_lefttext{
+  width: 355rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: block;
+  margin-left: 20rpx;
+  text-align: left;
+  font-size: 24rpx;
+  color: #444444;
+}
+.bottom_style{
+  display: flex;
+  height: 170rpx;
+  width: 750rpx;
+  border-bottom: 1px solid #eeeeee;
+  background: white;
+}
+.bottom_img_style{
+  margin-left: 25rpx;
+  height: 120rpx;
+  width: 200rpx;
+  margin-top: 25rpx;
+  background: white;
+}
+.bottom_right_style{
+  margin-left: 25rpx;
+  width: 480rpx;
+  height: 120rpx;
+  margin-top: 25rpx;
+}
+.bottom_str1_style{
+  display: block;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #444444;
+  text-align: left;
+  height: 50rpx;
+}
+.bottom_str2_style{
+  display: block;
+  line-height: 35rpx;
+  font-size: 24rpx;
+  color: #999999;
+  text-align: left;
+  height: 35rpx;
+}

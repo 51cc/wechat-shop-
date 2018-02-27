@@ -1,0 +1,23 @@
+<view class="contain">
+
+    <view class="left_style1">
+        <block wx:for="{{categorys}}">
+            <view wx:if="{{item.selected}}" bindtap="selectOtherCategory" class="left_single_style1" id="{{item.categoryId}}" style="background:white;border-right: 0rpx solid #eeeeee;">
+                <text>{{item.name}}</text>
+            </view>
+
+            <view wx:else bindtap="selectOtherCategory" class="left_single_style1" id="{{item.categoryId}}">
+                <text>{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+
+    <view class="right_style1">
+        <view class="right_imgtext_style1"  wx:for="{{products}}">
+            <image bindtap="jumptodetail" src="{{item.image}}" id="{{item.categoryId}}"></image>
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+
+
+</view>

@@ -1,0 +1,63 @@
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+
+
+<scroll-view scroll-y="true" style="height:{{sheight}}px;" bindscrolltolower="scrollLower">  
+
+
+    <view class="forth_style" wx:for="{{products}}" wx:for-index="idx">            
+                <view class="product_single" bindtap="jumptodetail" id="{{item.productId}}">
+                                <image src="{{item.icon}}"></image>
+                                <text class="text1">{{item.fullName}}</text>
+                                <view class="bottom_text_style">
+                                <text class="text3">¥{{item.price}}</text>
+                                  <text style="text-decoration:line-through;color:rgb(150, 158, 169);font-size:20rpx;width:150rpx;margin-top:13rpx;margin-left:13rpx" class="text3">¥{{item.oldPrice}}</text>
+                                <text  class="text3" style="position: absolute;right:10rpx;font-size:20rpx;text-align:right;color:rgb(150, 158, 169);">销量{{item.saleCount}}</text>
+                                </view>
+                              
+                            </view>
+    </view>
+
+</scroll-view>
+
+
+<view class="category_list_background_style" wx:if="{{showlist}}" style="display:none">
+    <scroll-view class="category_list_style" scroll-y="true">
+        <block  wx:for="{{categorys}}">
+            <text bindtap="selectTheProById" id="{{item.categoryId}}">{{item.name}}</text>
+        </block>
+    </scroll-view>
+   
+    
+</view>
+
+<view class="category_list_background_style" wx:if="{{showlist}}" style="display:block">
+    <scroll-view class="category_list_style" scroll-y="true">
+        <block wx:for="{{categorys}}">
+            <text bindtap="selectTheProById" id="{{item.categoryId}}">{{item.name}}</text>
+        </block>
+    </scroll-view>
+   
+   
+</view>
+
+
+
+
+
+<view class="head_style">
+    <block wx:for="{{selecteds}}" wx:for-index="idx">
+        <view class="head_categary" id="{{item.id}}">
+            <text wx:if="{{item.selected}}" class="selected_text" bindtap="showbrand" id="{{item.id}}">{{item.name}}</text>
+            <text wx:else class="un_selected_text" bindtap="showbrand" id="{{item.id}}">{{item.name}}</text>
+           
+
+            <image wx:if="{{idx==2&&!item.selected}}" style="width:48rpx;height:48rpx;position: absolute;left: 150rpx;top: 10rpx;" src="../../Asset/01.png"></image> 
+            <image wx:elif="{{idx==2 && jiage==1&&item.selected}}" style="width:48rpx;height:48rpx;position: absolute;left: 150rpx;top: 10rpx;" src="../../Asset/02.png"></image> 
+            <image wx:elif="{{idx==2 && jiage==2&&item.selected}}" style="width:48rpx;height:48rpx;position: absolute;left: 150rpx;top: 10rpx;" src="../../Asset/03.png"></image> 
+        
+        </view>
+    </block>
+</view>

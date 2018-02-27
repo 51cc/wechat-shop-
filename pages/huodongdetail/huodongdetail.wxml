@@ -1,0 +1,143 @@
+<view class="contain">
+    <swiper style="width:750rpx;height:375rpx;" indicator-dots="{{indicatorDots}}"
+                        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                        <block  wx:for="{{imgUrls}}">
+                            <swiper-item>
+                            <image src="{{item.img}}" class="slide-image" mode="aspectFit" style="width:100%;height:100%;"/>
+                            </swiper-item>
+                        </block>
+        </swiper>
+
+      <view class="kanjia_detail_head_style">
+          <text class="kanjia_detail_title_style">{{mDic.themeTitle}}</text>
+
+          <view style="width:710rpx;display:flex;margin-top:20rpx;margin-bottom:20rpx;">
+              <view style='display:flex;width:355rpx;'>
+                  <block wx:if="{{mDic.price}}">
+                  <text style="display:block;height:40rpx;font-size:30rpx;color:#ff4a4a;text-align:left;">费用：¥{{mDic.price}}</text>
+                  </block>
+                  <block wx:else>
+                  <text style="display:block;height:40rpx;font-size:30rpx;color:#ff4a4a;text-align:left;">费用：免费</text>
+                  </block>
+
+                  <text style="display:block;height:40rpx;margin-top:5rpx;margin-left:20rpx;font-size:24rpx;color:#bbbbbb;text-align:left;">名额：{{mDic.peopleNum}}人</text>
+              </view>
+
+              <view style='position:relative;display:flex;width:355rpx;background:white;'>
+                  <image style='position: absolute;right:120rpx;width:30rpx;height:30rpx;' src='../../Asset/hd_huo.png'></image>
+                  <block wx:if="{{mDic.state==0}}">
+                      <text style=" position: absolute;right:20rpx;width:100rpx;height:30rpx;font-size:24rpx;color:#ff4a4a;text-align:center;">即将开始</text>
+                  </block>
+                  <block wx:elif="{{mDic.state==1}}">
+                      <text style=" position: absolute;right:20rpx;width:100rpx;height:30rpx;font-size:24rpx;color:#ff4a4a;text-align:center;">进行中</text>
+                  </block>
+                  <block wx:elif="{{mDic.state==2}}">
+                      <text style=" position: absolute;right:20rpx;width:100rpx;height:30rpx;font-size:24rpx;color:#ff4a4a;text-align:center;">已满员</text>
+                  </block>
+                  <block wx:elif="{{mDic.state==3}}">
+                      <text style=" position: absolute;right:20rpx;width:100rpx;height:30rpx;font-size:24rpx;color:#ff4a4a;text-align:center;">已结束</text>
+                  </block>
+              </view>
+             
+          </view>
+        </view>
+
+      <view style="margin-top:20rpx;background:white;">
+        <view class='dianming_style'>
+          <text style='display:block;height:50rpx;'>{{mDic.parentName}}</text>
+        </view>
+
+        <view class='dianming_style' style='border:0;'>
+
+          <view class='dianming_left_style'  bindtap='jumptoclientmap'>
+              <image src='../../Asset/yy_address.png'></image>
+              <text style='width:520rpx;display:block;text-overflow:ellipsis;white-space: nowrap;overflow:hidden;font-size:24rpx;color:#444444; line-height: 50rpx;height:50rpx;'>{{mDic.ADDRESS}}</text>
+          </view>
+
+          <view class='dianming_right_style' bindtap='makePhone'>
+              <image src='../../Asset/yy_phone.png'></image>
+          </view>
+
+        </view>
+      </view>
+
+      <!-- <view class='yy_pj_style' bindtap='jumptocommentlist'>
+         <text class='yy_pj_left'>服务评价</text>
+          <view class='yy_pj_right_style'>
+            <text>共{{mDic.count}}条</text>
+            <image src='../../Asset/yy_pj.png'></image>
+          </view>
+      </view> -->
+      <view style='background:white;border-bottom:1px solid #eeeeee;width:750rpx;margin:20rpx 0 0 0;padding:10rpx 0;'>
+        <text style='font-size:24rpx;margin-left:20rpx;line-height:66rpx;height:66rpx;'>报名时间：{{mDic.startTime}}-{{mDic.endTime}}</text>
+      </view>
+      <view style='background:white;border-bottom:0px solid #eeeeee;width:750rpx;margin:0;padding:10rpx 0;'>
+              <text style='font-size:24rpx;margin-left:20rpx;line-height:66rpx;height:66rpx;'>参与人数：{{mDic.activityCount}}人</text>
+      </view>
+
+      <view style='margin-top:20rpx;width:750rpx;background:white;'>
+         <text style='height:88rpx;line-height:88rpx;margin-left:20rpx;' class='yy_pj_left'>活动介绍</text>
+
+          <view style="padding-top:20rpx;border-top:1px solid #eeeeee;">    
+            <import src="../../wxParse/wxParse.wxml"/> 
+            <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+          </view>
+      </view>
+        
+</view>
+
+<view class="yy_bottom_style" style='display:flex;'>
+  <view class='h_input'>
+    <input bindinput='bindinput' id='name' style='border:0;margin:0 24rpx;' class='h_input' placeholder='请输入您的姓名'></input>
+  </view>
+ <view class='h_input'>
+    <input type='number' bindinput='bindinput' id='phone' style='border:0;margin:0 24rpx;' class='h_input' placeholder='请输入您的手机号'></input>
+  </view>
+  <block wx:if="{{mDic.state==0}}">
+      <text style='background:#c7c7c7;color:#979090;' class='baoming_style'>报名</text> 
+  </block>
+  <block wx:elif="{{mDic.state==1}}">
+    <text bindtap='baoming' id="1" class='baoming_style'>报名</text>
+  </block>
+  <block wx:elif="{{mDic.state==2}}">
+    <text style='background:#c7c7c7;color:#979090;' class='baoming_style'>报名</text>
+  </block>
+  <block wx:elif="{{mDic.state==3}}">
+    <text style='background:#c7c7c7;color:#979090;' class='baoming_style'>报名</text>
+  </block>
+
+</view>
+
+<block wx:if="{{isshow}}">
+    <view style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style' ></view>
+    <view class='alter_style'>
+        <image bindtap='closeTheView' src='../../Asset/close.png' class='close_style'></image>
+        <image wx:if="{{state==0}}" class='tishi_style' src='../../Asset/hd_jijiangkaishi.png'></image>
+        <image wx:elif="{{state==1}}" class='tishi_style' src='../../Asset/hd_chenggong.png'></image>
+        <image wx:elif="{{state==2}}" class='tishi_style' src='../../Asset/hd_shibai.png'></image>
+
+        <block wx:if="{{state==0}}">
+          <view class='bottom_style'>
+              <text class='bottom_style_text1'>亲，您来早了，活动未开始</text>
+              <text class='bottom_style_text2'>报名时间</text>
+              <text class='bottom_style_text2'>{{mDic.startTime}}-{{mDic.endTime}}</text>
+          </view>
+        </block>
+        <block wx:elif="{{state==2}}">
+          <view class='bottom_style'>
+              <text style='font-size:32rpx;' class='bottom_style_text1'>报名失败</text>
+              <text class='bottom_style_text2'>报名的人太多，请稍后再试</text>
+          </view>
+        </block>
+        <block wx:elif="{{state==1}}">
+          <view class='bottom_style'>
+              <text style='font-size:32rpx;' class='bottom_style_text1'>报名成功</text>
+              <text class='bottom_style_text2'>恭喜您</text>
+              <text class='bottom_style_text2'>请合理安排时间，准时参加活动</text>
+          </view>
+        </block>
+
+    </view>
+</block>

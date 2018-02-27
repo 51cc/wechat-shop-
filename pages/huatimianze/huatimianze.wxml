@@ -1,0 +1,8 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+  <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view> 
+  
+   <view bindtap='jumpback' class='bottom' style='background:{{maincolor}};'>
+   我已阅读
+  </view>

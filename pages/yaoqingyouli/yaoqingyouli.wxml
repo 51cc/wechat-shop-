@@ -1,0 +1,30 @@
+<view style='height:{{sheight}}px;width:{{swidth}}px;' class="contain">
+
+  <!-- <image mode='scaleToFill' style='height:{{sheight}}px;width:{{swidth}}px;' src='../../Asset/yq_ren.png' class="yqyl_bg_img"></image> -->
+
+  <text class='yqyl_time_style'>活动时间：{{startTime}}-{{endTime}}</text>
+ 
+
+
+  <block wx:if="{{hasData}}">
+    <block wx:if="{{isReceive}}">
+        <text style=' top: 600rpx;' class="yqyl_text_down_style">您已经领取现金券</text>
+        <view bindtap='jumptoproList' class="yqyl_lq_style">去消费</view>
+      </block>
+
+      <block wx:else>
+        <text style='position:absolute;top:560rpx;left:0rpx;width: 750rpx;height:30rpx;font-size: 28rpx;text-align: center;color: #444444;'>您的好友{{yname}}送您一张</text>
+        <text class="yqyl_text_middle_style">{{mDic.money}}元现金券</text>
+        <text class="yqyl_text_down_style">邀请您一起买买买</text>
+        <view bindtap='lingqu' class="yqyl_lq_style">领取</view>
+      </block>
+  </block>
+  <block wx:else>
+        <text style=' top: 600rpx;' class="yqyl_text_down_style">红包正在开启</text>
+  </block>
+
+ 
+
+
+  <text bindtap='jumptoyq' class='yqyl_bottom_text_style'>您也可以参与邀请活动领取多重好礼</text>
+</view>

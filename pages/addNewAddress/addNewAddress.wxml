@@ -1,0 +1,11 @@
+<block wx:for="{{rowsData}}">
+        <view class="rows">
+            <text style="width:80rpx;font-size:30rpx;">{{item.title}}</text>
+<input class="rows_input_style" id="{{item.id}}" bindinput="bindKeyInput" placeholder="{{item.placeName}}"/>
+
+        </view>
+</block>
+
+<view class="addaddress_style" bindtap="addNewAddress">
+    添加
+</view>

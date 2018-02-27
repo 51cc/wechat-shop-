@@ -1,0 +1,83 @@
+
+<view class="head_style" style="background:{{maincolor}};">
+
+
+  <view class="head_view_style">
+      <view class="head_left_style">
+        <text class="head_left_up_style">我的积分</text>
+        <text class="head_left_down_style">{{sumJiFen}}</text>
+      </view>
+      <view class="head_middle_style">
+        <view class="head_middle_middle_style">
+          <!-- <image src="../../Asset/jifen_ico.png"></image>
+          <text>+{{singleJiFen}}</text> -->
+        </view>
+      </view>
+      <view class="head_right_style">
+        <block wx:if="{{!isQD}}">
+          <view class="qiandao_style" bindtap="qianDao">
+            <image src='../../Asset/jifen_3.png'></image>
+            <text>签到</text>
+          </view> 
+        </block>
+
+        <block wx:else>
+            <view class="yi_qiandao_style">
+              <text>已签到</text>
+            </view>
+        </block>
+
+        <text style='font-size:24rpx;' class="day_qian_style">每日签到领积分</text>
+      </view>
+
+  </view>
+
+  <view class="mask_style">
+    <image src='../../Asset/jf_yinying.png'>
+    </image> 
+  </view>
+
+  <view class="mask_style" style="display:flex;">
+   <text class="j_text" bindtap="jumptojifenorder">积分订单</text>
+   <text class="j_text" bindtap="jumptojifenmingxi">积分明细</text>
+   <text class="j_text" bindtap="jumptojifenguize">积分规则</text>  
+  </view>
+  
+</view>
+
+<view class="choujiang_bg" style='margin-top:0rpx;'>
+    <image style='width:700rpx;height:240rpx;margin-left:25rpx;' src='../../Asset/cj_ico.png' bindtap='jumptochoujiang'></image>
+    <!-- <view class='choujiang_product_style'>
+        <block wx:for="{{choujiangAy}}" wx:for-index="idx">
+            <view class='product-wraper-item'>
+                <image src="{{item.icon}}"></image>
+                <text class='product-wraper-item-title'>{{item.name}}</text>
+                <view class='product_bottom_style'>
+                      <text class='product_left_style'>{{item.integral}}积分</text>
+                      <text bindtap='jumptochoujiangdetail' data-id="{{idx}}" id="{{item.id}}" class='product_right_style'>去抽奖</text>
+                </view>
+            </view>
+        </block>
+    </view> -->
+</view>
+
+
+<view class="choujiang_bg">
+    <image src='../../Asset/tit2.png'></image>
+    <view class='jifen_duihuan_style'>
+        <block wx:for="{{duihuanAy}}" wx:for-index="idx">
+                <view class="product-sec-wraper-item" data-id="{{idx}}" bindtap="jumptoproductdetail" id="{{item.id}}">
+              <image  src="{{item.icon}}"></image>
+              <view class="product-sec-wraper-right">
+                <text class="product-sec-wraper-item-title">{{item.name}}</text>
+                <view class="product-sec-wraper-item-bottom">
+                    <text class="product-sec-wraper-item-bottom-price">{{item.integral}}积分</text>
+                    <!-- <text class="product-sec-wraper-item-bottom-olprice">¥199{{item.oldPrice}}</text> -->
+                    <text class="product-sec-wraper-item-bottom-sell">库存{{item.stock}}</text>
+                </view>
+                <text  class="product-sec-wraper-item-bottom-fav">市场参考价：{{item.price}}</text>
+              </view>
+            </view>
+        </block>
+    </view>
+</view>

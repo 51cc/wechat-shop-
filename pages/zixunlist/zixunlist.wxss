@@ -1,0 +1,64 @@
+/* zixunlist.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.rows_bg_style{
+  background: white;
+  width: 100%;
+}
+
+.news_single_style{
+  display: flex;
+  background: white;
+  width: 100%;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.news_single_style:active{
+  background: #eeeeee;
+}
+.news_single_style image{
+  margin: 17.5rpx;
+  width: 200rpx;
+  height: 150rpx;
+  background: white;
+}
+.news_single_right_style{
+  width: 480rpx;
+  height: 130rpx;
+  padding: 10rpx 0rpx;
+  margin: 17.5rpx 17.5rpx 17.5rpx 0rpx;
+}
+.news_single_right_up_text_style{
+  font-size: 34rpx;
+  color: #444444;
+  overflow: hidden;
+  line-height: 40rpx;
+  text-align: left;
+}
+.news_single_right_down_text_style{
+  display: block;
+  padding: 10rpx 0rpx 0rpx 0rpx;
+  margin-bottom: 0rpx;
+  font-size: 24rpx;
+  color: #999999;
+  overflow: hidden;
+  line-height: 40rpx;
+  text-align: left;
+}
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}

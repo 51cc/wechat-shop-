@@ -1,0 +1,23 @@
+/* pages/huatimianze/huatimianze.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+.bottom{
+  margin-top: 50rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: white;
+  margin-left: 24rpx;
+  width: 702rpx;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+
+}
+.bottom>.button{
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  /* background: #e71f19; */
+}

@@ -1,0 +1,52 @@
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.row_style{
+  height: 100rpx;
+  width: 750rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+  display: flex;
+}
+.row_left_style{
+  padding-left: 20rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  width: 150rpx;
+  font-size: 30rpx;
+  color: #444444;
+}
+.row_right_style{
+  width: 560rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  text-align: right;
+}
+.button_style{
+  line-height: 90rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 50rpx 25rpx;
+  width: 700rpx;
+  height: 90rpx;
+  border-radius: 8rpx;
+  color: white;
+}
+.rows_style{
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  background: white;
+}
+.textarea_style{
+  margin: 0rpx;
+  width: 710rpx;
+  height: 99rpx;
+  line-height: 99rpx;
+  font-size: 30rpx;
+}

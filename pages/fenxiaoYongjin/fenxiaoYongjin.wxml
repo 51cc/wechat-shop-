@@ -1,0 +1,97 @@
+<view class="contain">
+  <view class="head_bg_style">
+      <view class="left_style">
+        <text class="head_text_style">累计佣金(元)</text>
+        <text style="padding: 10rpx 0rpx;" class="head_text_style">120000.0</text>
+      </view>
+      <view class="look_mingxi_style">查看明细</view>
+  </view>
+
+  <view class="right_style">
+      <block wx:for="{{dataAy}}" wx:for-index="id">
+        
+        <view class="qiye_row_style" wx:if="{{id==0}}" style="margin-top:20rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+
+        <view class="qiye_row_style" wx:elif="{{id==1}}" style="margin-top:20rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+
+        <view class="qiye_row_style" wx:elif="{{id==2}}" style="margin-top:20rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+        <view class="qiye_row_style" wx:elif="{{id==3}}" style="margin-top:0rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+        <view class="qiye_row_style" wx:elif="{{id==4}}" style="margin-top:0rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+
+        <view class="qiye_row_style" wx:elif="{{id==5}}" style="margin-top:20rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+        <view class="qiye_row_style" wx:elif="{{id==6}}" style="margin-top:0rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+        <view class="qiye_row_style" wx:elif="{{id==7}}" style="margin-top:0rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+
+
+        <view class="qiye_row_style" wx:elif="{{id==8}}" style="margin-top:20rpx;">
+              <view class="qiye_left_row_style">
+              {{item.leftstr}}
+              </view>
+              <view class="qiye_right_row_style">
+              {{item.rightstr}}
+              </view>
+        </view>
+
+
+      </block>
+      <view class="addaddress_style" bindtap="submite">
+    我要提现
+</view>
+  </view>
+</view>

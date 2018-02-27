@@ -1,0 +1,19 @@
+<view class="contain">
+
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+  <view class="forth_style" wx:for="{{products}}" wx:for-index="idx">            
+              <view class="product_single" bindtap="jumptodetail" id="{{item.productId}}">
+                              <image src="{{item.icon}}"></image>
+                              <text class="text1">{{item.name}}</text>
+                              
+                              <view class="buttom_text_style">
+          <text class="text3">¥{{item.price}}</text>
+          <text style="color: #999999;text-align: right;" class="text3">已售{{item.saleCount}}</text>
+                              </view>
+                              
+                          </view>
+  </view>
+</view>

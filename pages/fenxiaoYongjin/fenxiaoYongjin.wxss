@@ -1,0 +1,75 @@
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.right_style{
+  background: #f7f7f7;
+}
+.qiye_row_style{
+  display: flex;
+  width: 750rpx;
+  height: 100rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.addaddress_style{
+    margin: 30rpx 40rpx 30rpx 40rpx;
+    height: 80rpx;
+    background: #ff4546;
+    border-radius: 10rpx;
+    text-align: center;
+    color: white;
+    font-size: 32rpx;
+    line-height: 2;
+}
+.qiye_left_row_style{
+  width: 150rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  font-size: 25rpx;
+  color: #444444;
+}
+.qiye_right_row_style{
+  width: 580rpx;
+  /*margin-left: 20rpx;*/
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  font-size: 25rpx;
+  color: #fe5455;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.head_bg_style{
+  display: flex;
+  width: 750rpx;
+  background: #fe5455;
+}
+.left_style{
+  height: 150rpx;
+  width: 300rpx;
+  margin-right: 240rpx;
+}
+.head_text_style{
+  font-size: 30rpx;
+  color: white;
+  display: block;
+  padding: 20rpx 0rpx;
+  text-align: center;
+}
+.look_mingxi_style{
+  margin-top: 40rpx;
+  border: 1rpx solid white;
+  color: white;
+  font-size: 24rpx;
+  height: 40rpx;
+  padding: 5rpx 25rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}

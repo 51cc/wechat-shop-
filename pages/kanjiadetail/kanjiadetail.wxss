@@ -1,0 +1,107 @@
+/* pages/kajiadetail/kanjiadetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+page{
+  height: 100%;
+  background: #f5f5f5;
+}
+.cir{ 
+ display: inline-block; 
+ margin-top: 10rpx; 
+  
+}
+.contain{
+  background: #f5f5f5;
+ 
+}
+.kanjia_detail_head_style{
+  width: 710rpx;
+  padding: 20rpx;
+  background: white;
+}
+.kanjia_detail_title_style{
+  color: #444444;
+  font-size: 28rpx;
+  text-align: left;
+  line-height: 30rpx;
+  
+}
+::-webkit-scrollbar
+{
+  width: 0;
+  height: 0;
+  color: transparent;
+  
+}
+.kanjia_friend_cell_style{
+  height: 90rpx;
+  width: 710rpx;
+  border-bottom:  1px dashed #eeeeee;
+  display: flex;
+}
+.kanjia_flex_style{
+  width: 235rpx;
+  height: 90rpx;
+  display: flex;
+  
+}
+.kanjia_guize_style{
+  padding:20rpx;
+}
+.kanjia_guize_style >text{
+  text-align: left;
+  margin-top: 20rpx;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  color: #444444;
+  display: block;
+}
+
+.kanjia_share_style{
+ position: absolute;
+ left: 405rpx;
+ border-radius: 10rpx;
+ width:300rpx;
+ height:88rpx;
+ line-height:88rpx;
+ font-size:24rpx;
+ color:white;
+ background: clear;
+ opacity: 0;
+ text-align:center;
+}
+
+
+
+.friend_list_style{
+    animation:run 0.5s steps(1, start) infinite;
+}
+@keyframes run{
+0%   {background: white; left:0px; top:0px;}
+25%  {background: white; left:0px; top:360px;}
+50%  {background: white; left:0px; top:720px;}
+75%  {background: white; left:0px; top:1080px;}
+100% {background: white; left:0px; top:1440px;}
+           }
+
+
+@-webkit-keyframes run{
+      0%{
+          background-position: 0 0;
+    }
+    20%{
+        background-position: -400rpx 0;
+    }
+    40%{
+        background-position: -800rpx 0 ;
+    }
+    60%{
+        background-position: -1200rpx 0 ;
+    }
+    80%{
+        background-position: -1600rpx 0 ;
+    }
+    100%{
+        background-position: -2000rpx 0 ;
+    }
+}

@@ -1,0 +1,103 @@
+/* pages/yynewdetail/yynewdetail.wxss */
+@import '../kanjiadetail/kanjiadetail.wxss';
+@import "../../wxParse/wxParse.wxss";
+.contain{
+  margin-bottom: 150rpx;
+}
+.dianming_style{
+  width: 710rpx;
+  height: 50rpx;
+  padding: 30rpx 20rpx;
+  font-size: 28rpx;
+  color: #444444;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  position: relative;
+}
+.dianming_left_style{
+  height: 50rpx;
+  width: 550rpx;
+  display: flex;
+ 
+}
+.dianming_left_style >image{
+  margin-top: 10rpx;
+  width: 30rpx;
+  height: 30rpx; 
+}
+.dianming_right_style{
+  background: white;
+  margin-left: 10rpx;
+  width: 150rpx;
+  height: 50rpx;
+  border-left: 1px solid #eeeeee;
+}
+.dianming_right_style:active{
+  background: #eeeeee;
+}
+.dianming_right_style >image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 60rpx;
+  margin-top: 10rpx;
+}
+
+.yy_pj_style{
+  margin-top: 20rpx;
+  height: 88rpx;
+  background: white;
+  width: 710rpx;
+  padding: 0 20rpx;
+  display: flex;
+}
+.yy_pj_left{
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: left;
+  font-size: 28rpx;
+  color: #444444;
+  display: block;
+  width: 510rpx;
+}
+.yy_pj_right_style{
+  width: 200rpx;
+  height: 88rpx;
+  background: white;
+  display: flex;
+}
+.yy_pj_right_style >text{
+  display: block;
+  width: 175rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 24rpx;
+  color: #999999;
+  text-align: right;
+}
+.yy_pj_right_style >image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-top: 31.5rpx;
+}
+
+.yy_bottom_style{
+   position: fixed;
+   bottom: 0rpx;
+   left: 0rpx;
+   width: 750rpx;
+   height: 130rpx;
+   background: white;
+}
+
+.yy_btn_style{
+  margin-left: 25rpx;
+  width: 700rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  /* background: #7986cb; */
+  margin-top: 21rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}

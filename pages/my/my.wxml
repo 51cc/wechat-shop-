@@ -1,0 +1,97 @@
+<view class="contain">
+
+
+    <!-- <view class="cenert_head_bg_style">
+        <image class="my_center_head_style" style="background:{{maincolor}};"></image>
+        <image class="my_center_headicon_style" src="{{headicon}}"></image>
+        <text class="text_style">{{nickName}}</text>
+    </view> -->
+
+    <view class="cenert_sec_bg_style">
+      <image class="my_center_head_style" style="background:{{maincolor}};"></image>
+       <image class="cenert_icon_style" src="{{headicon}}"></image>
+        <text class="cenert_text_style">{{nickName}}</text>
+
+        <block wx:if="{{isOpenQianDao}}">
+          <block wx:if="{{!isQD}}">
+           <view class="qiandao_style" bindtap="qianDao">
+            <image src='../../Asset/jifen_ico.png'></image>
+            <text>签到</text>
+           </view>  
+          </block>
+
+          <block wx:else>
+            <view class="yi_qiandao_style">
+              <text>已签到</text>
+            </view>
+          </block>
+        </block>
+        
+
+    </view>
+
+
+
+
+    <view class="my_all_order_style" bindtap="jumptoorder" id="111">
+        <text class="all_left_text_style">查看订单</text>
+        <text class="all_righe_text_style">全部订单</text>
+        <image class="all_arrow_style" src="../../Asset/arrow_right.png"></image>
+    </view>
+
+    <view class="my_second_style">
+        <block wx:for="{{orders}}">
+            
+            <view class="my_second_single_style" bindtap="jumptoorder" id="{{item.id}}">
+                <image class="order_icon_style" src="{{item.icon}}"></image>
+                <text class="order_text_style">{{item.name}}</text>
+            </view>
+
+        </block>
+    </view>
+
+
+
+    <view class="line_style">
+    </view>
+
+
+
+    <block wx:for="{{rows}}" wx:for-index="idx">
+        
+       <view wx:if="{{idx==5}}" class="rows_style" bindtap="jumptodetail" id="{{item.id}}">
+
+        <image class="icon_left_style" src="{{item.img}}" ></image>
+
+        <text class="rows_style_text">{{item.name}}</text>
+         
+         <text style="color:#999999;position:absolute;left:390rpx;height:110rpx;width: 300rpx;line-height: 110rpx;font-size:24rpx;text-align:right;" wx:if="{{item.id==66}}">针对微信卡包使用</text>
+
+        <image class="arrow_style" src="../../Asset/arrow_right.png"></image>
+
+        </view>
+
+
+
+
+
+        <view wx:else class="rows_style" bindtap="jumptodetail" id="{{item.id}}">
+
+        <image class="icon_left_style" src="{{item.img}}" ></image>
+
+        <text class="rows_style_text">{{item.name}}</text>
+         
+         <text style="color:#999999;position:absolute;left:390rpx;height:110rpx;width: 300rpx;line-height: 110rpx;font-size:24rpx;text-align:right;" wx:if="{{item.id==66}}">针对微信卡包使用</text>
+         <text style="color:#ff0000;position:absolute;left:390rpx;height:110rpx;width: 300rpx;line-height: 110rpx;font-size:24rpx;text-align:right;" wx:elif="{{item.id==88}}">{{sumJiFen}}积分</text>
+
+        <image class="arrow_style" src="../../Asset/arrow_right.png"></image>
+
+        </view>
+
+
+        
+    </block>
+
+    <text class='version-style'>v1.2.6</text>
+
+</view>

@@ -1,0 +1,22 @@
+
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+
+<block wx:for="{{dataAy}}">
+    <view class="row_style" bindtap="selectTheAddress" id="{{item.addressId}}">
+        <text class="text1">{{item.name}}        {{item.phone}}</text>
+        <text class="text2">{{item.address}}</text>
+
+        <view class="line"></view>
+        
+        <!--<text class="text3">设为默认</text>                       -->
+        <!--<text class="text4">编辑</text>-->
+        
+        <text bindtap="deleteTheAddress" id="{{item.addressId}}"class="text3">删除</text>
+    </view>
+</block>
+<view class="addaddress_style" bindtap="addNewAddress">
+    添加新地址
+</view>

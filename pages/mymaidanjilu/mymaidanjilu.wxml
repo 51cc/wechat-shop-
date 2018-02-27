@@ -1,0 +1,13 @@
+<view class='contain'>
+  <block wx:for="{{dataAy}}">
+    <view class='jilu_style' id="{{item.id}}" bindtap='jumptodetail'>
+        <view class='jilu_column_style'>
+          <text class='jl_up_style'>{{item.parent_name}}</text>
+          <text  class='jl_up_style' style='font-size:28rpx;color:#999999;'>{{item.payDate}}</text>
+        </view>
+        <view class='jilu_column_style'>
+          <text style='text-align: right;height: 100rpx;line-height: 100rpx;font-weight: bold;font-size: 35rpx;'  class='jl_up_style'>{{item.total_price}}</text>
+        </view>        
+    </view>
+  </block>
+</view>

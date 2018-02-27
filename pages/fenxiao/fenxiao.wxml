@@ -1,0 +1,41 @@
+<view class="contain">
+    <view class="cenert_head_bg_style">
+          <image src="../../Asset/fen_bg.png" class="my_center_head_style"></image>
+          <image class="my_center_headicon_style" src="{{headicon}}"></image>
+
+          <view class="level_style">
+            <text style="margin-left:240rpx;" class="text_style">{{nickName}}</text>
+            <image class="dengji_style" src="../../Asset/level_moren.png"></image>
+          </view>
+
+          <text style="position: absolute;left:0rpx;width:700rpx;font-size:24rpx;top:240rpx;" class="text_style">推荐人：李雨桐</text>
+      </view>
+
+
+
+      <view class="sec_style">
+          <view class="sec_single_style">
+            <text class="sec_text_style">可提现佣金</text>
+            <text style="color:#e30c26;" class="sec_text_style">¥3600.00</text>
+            <view class="tixian_style">提现</view>
+          </view>
+          <view class="lineview_style"></view>
+
+          <view class="sec_single_style">
+            <text class="sec_text_style">已提现佣金</text>
+            <text style="color:#e30c26;" class="sec_text_style">¥600.00</text>
+          </view>
+      </view>
+
+
+
+      <view class="third_style">
+        <block wx:for="{{cateAy}}">
+           <view class="third_sigle_style" bindtap="jumptonext" id="{{item.id}}">
+              <image class="fenxiao_img_style" src="{{item.icon}}"></image>
+              <text class="fenxiao_text_style">{{item.title}}</text>
+           </view>
+        </block>
+      </view>
+
+</view>

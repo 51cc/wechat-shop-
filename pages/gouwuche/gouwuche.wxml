@@ -1,0 +1,89 @@
+<view class="contain" style="height:{{sheight}}px;">
+
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+
+
+
+    <!-- <block wx:for="{{products}}">
+        
+        <view class="shopcar_row_style">
+            <view class="shopcar_row_left_style">
+            <image src="../../Asset/shopcar_select.png" class="shopcar_selectimg_style" wx:if="{{item.select}}" bindtap="cancleTheThing" id="{{item.id}}"></image>
+                <image src="../../Asset/shopcar_unselect.png" class="shopcar_selectimg_style" wx:else bindtap="selectTheThing" id="{{item.id}}"></image>
+                <image class="shopcar_proimg_style" src="{{item.imgUrl}}"></image>
+            </view>
+
+            <view class="shopcar_row_middle_style">
+                <text style="overflow:hidden;white-space: nowrap;width:200rpx;height:40rpx;">{{item.title}}</text>
+                                <text  style="overflow:hidden;white-space: nowrap;width:200rpx;height:40rpx; margin-top:15rpx;font-size: 28rpx;color:#999999;">{{item.standName}}</text>
+
+                <text  style="overflow:hidden;white-space: nowrap;margin-top:7.5rpx;width:200rpx;height:40rpx;font-size: 28rpx;color:#444444;">¥{{item.price}}</text>
+
+            </view>
+            
+            <view class="shopcar_row_right_style">
+                <image class="shopcar_delete_img_style" src="../../Asset/shopcar_delete.png" bindtap="deleteTheData" id="{{item.id}}"></image>
+
+                <view class="addstyle">
+                            <image class="plus" src="../../Asset/plus.png" bindtap="plus" id="{{item.id}}"></image>
+                            <text class="numstyle">{{item.num}}</text>
+                            <image class="add" src="../../Asset/add.png" bindtap="add" id="{{item.id}}"></image>
+                        </view>
+
+            </view>
+        </view>
+    </block> -->
+
+
+
+
+     <block wx:for="{{clients}}">
+        <view style="margin-top:20rpx;">
+        <text class="client_text_style">{{item.clientName}}</text>
+          <block wx:for="{{item.ay}}">
+            <view class="shopcar_row_style">
+                <view class="shopcar_row_left_style">
+                    <image src="../../Asset/shopcar_select.png" class="shopcar_selectimg_style" wx:if="{{item.select}}" bindtap="cancleTheThing" id="{{item.id}}"></image>
+                    <image src="../../Asset/shopcar_unselect.png" class="shopcar_selectimg_style" wx:else bindtap="selectTheThing" id="{{item.id}}"></image>
+                    <image class="shopcar_proimg_style" src="{{item.imgUrl}}"></image>
+                </view>
+                <view class="shop_right_style">
+                    <view style="padding-top: 20rpx;"  class="shop_right_up_style">
+                        <text  style="margin-top:20rpx;" class="name_style">{{item.title}}</text>
+                        <image class="shopcar_delete_img_style" src="../../Asset/shopcar_delete.png" bindtap="deleteTheData" id="{{item.id}}"></image>
+                    </view>
+                    <text style="color:#999;display:block;height:40rpx;" class="name_style">{{item.standName}}</text>
+                    <view style="height:50rpx;" class="shop_right_up_style">
+                        <text style="margin-top:0rpx;width:200rpx;" class="name_style">¥{{item.price}}</text>
+                        <view style="margin-left:70rpx;" class="addstyle">
+                            <image class="plus" src="../../Asset/plus.png" bindtap="plus" id="{{item.id}}"></image>
+                            <text class="numstyle">{{item.num}}</text>
+                            <image class="add" src="../../Asset/add.png" bindtap="add" id="{{item.id}}"></image>
+                        </view>
+
+                    </view>
+                </view>
+
+            </view>
+          </block>
+          </view>
+
+     </block> 
+    
+
+
+</view>
+
+
+
+
+<view class="bottom_view_style" hidden="{{!hasContent}}">
+     <text class="bottom_text_select_style">合计:¥{{sumMoney}}</text> 
+    <view bindtap="jiesuan" class="shopcar_jiesuan_style">结算</view>
+</view>
+
+
+

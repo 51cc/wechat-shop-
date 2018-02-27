@@ -1,0 +1,57 @@
+<view class="contain">
+ 
+   <view class="b_style">
+      
+      <view class="head_style">
+        <text class="head_left_style">累计佣金</text>
+        <text style="text-align: right;" class="head_left_style">1222元</text>
+      </view>
+      <view class="line_style"></view>
+      <view class="category_view_style">
+      <block wx:for="{{categorys}}">
+          <view class="order_single_style" wx:if="{{item.select}}" id="{{item.id}}">
+          {{item.name}}
+          </view>
+
+          <view class="order_single_unselect_style" wx:else bindtap="changetotrue" id="{{item.id}}">
+          {{item.name}}
+          </view>
+      </block>
+      </view>
+  </view>
+
+
+  <view class="order_style">
+    <block wx:for="{{orders}}">
+      <view class="order_sec_single_style">
+        <image class="head_icon_style"></image>
+        
+        <view class="middle_style">
+            <view class="middle_up_style">
+              <text class="middle_up_text_style">我是昵称我是昵称</text>
+              <image class="middle_up_img_style" src="../../Asset/level_second.png"></image>
+            </view>
+
+            <view class="middle_up_style">
+                <text style="font-size: 24rpx;color:#999999;" class="middle_up_text_style">2017.07.16 待付款</text>
+            </view>
+        </view>
+
+
+        <view class="middle_style">
+            <view class="middle_up_style">
+              <text style="font-size: 24rpx;width: 280rpx;text-align:right;" class="middle_up_text_style">订单金额¥12356.00</text>
+            </view>            
+            <view class="middle_up_style">
+                <text style="font-size: 24rpx;width: 280rpx;color:#ff0000;text-align:right;" class="middle_up_text_style">佣金金额¥18.00</text>
+            </view>
+        </view>
+
+
+
+      </view>
+    </block>
+  </view>
+
+
+</view>

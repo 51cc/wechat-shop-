@@ -1,0 +1,10 @@
+<view class="contain">
+
+  <text class="title_style">{{title}}</text>
+  <text class="time_style">{{time}}</text>
+  <view class="line_style"></view>
+  <import src="../../wxParse/wxParse.wxml"/> 
+          <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+          </view>
+</view>

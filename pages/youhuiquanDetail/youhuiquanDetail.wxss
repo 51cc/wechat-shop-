@@ -1,0 +1,43 @@
+page{
+  height: 100%;
+  background: #f5f5f5;
+}
+.contain{
+
+}
+.bg_style{
+  margin-left: 75rpx;
+  margin-top: 80rpx;
+  width: 600rpx;
+  min-height: 800rpx;
+  background: white;
+  border-radius: 10rpx;
+}
+.head_title_style{
+  width: 600rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: bolder;
+  font-size: 24rpx;
+  color: #444444;
+  display: block;
+  text-align: center;
+ 
+}
+.line{
+  width: 600rpx;
+  height: 80rpx;
+  border-bottom: 1px dashed #eeeeee;
+}
+.btn_style{
+  margin-top: 80rpx;
+  margin-left: 100rpx;
+  width: 400rpx;
+  height: 88rpx;
+  color: #ffffff;
+  background: #fc544b;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}

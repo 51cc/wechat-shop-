@@ -1,0 +1,10 @@
+<view class="contain">
+  <view class="head_text_style">点击预览可保存二维码</view>
+  <image class="erweoma_style"></image>
+  
+  <view class="text_style">如何赚钱</view>
+  <view class="text_style">分享小程序到微信好友或微信群或点击二维码预览转发到朋友圈及朋友</view>
+  <view class="text_style">从你分销的小程序进入商城的好友，系统将自动锁定为您的客户，他们在微信商城购买任何产品你都可以获得分销佣金。</view>
+  <view class="text_style">你可以在分销中心查看【我的下线】和【分销订单】，好友确认收货后佣金可提现。</view>
+
+</view>

@@ -1,0 +1,96 @@
+<!--team-detail.wxml-->
+<!-- <view class="topimage">
+  <image src="{{product.icon}}"></image>
+</view> -->
+<swiper style="width:750rpx;height:562rpx;" indicator-dots="{{indicatorDots}}"
+                autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <block  wx:for="{{imgUrls}}">
+                    <swiper-item>
+                    <image src="{{item.img}}" class="slide-image" mode="aspectFit" style="width:100%;height:100%;"/>
+                    </swiper-item>
+                </block>
+  </swiper>
+
+<view class="title">
+    <view class="toptitle">{{product.name}}</view>
+    <view class="bottomtitle">
+      <view class="left">
+        <text style="font-size:30rpx;color:#EE3E40;">￥{{product.teamprice}}</text>
+        <text style="font-size:24rpx;color:#9A9A9A;"> \r\r 原价:￥{{product.oldPrice}}</text>
+      </view>
+      <view class="right">
+        <image style="width:30rpx;height:30rpx;margin-top:10rpx;" src="../../Asset/addteam.png"></image>
+          {{product.teamnum}}人团
+      </view>
+    </view>
+</view>
+
+
+<view class="blank"></view>
+<view class="title-name" wx:if="{{teams.length>0}}">凑团</view>
+<view class="team-list" hidden="{{!isHidden}}">
+  <block wx:for="{{teams}}" wx:for-index="idx">
+    <view wx:if="{{idx<=1}}" class="row">
+      <view class="left">
+        <image src="{{item.teamOrders[0].userIcon}}"></image>
+      </view>
+      <view class="center">
+        <view class="top">{{item.teamOrders[0].linkMan}}\r\n开团</view>
+        <view class="bottom">
+          剩余
+          <text style="color:#FE0002;">{{item.daojishi}}</text> 
+          结束，仅差
+          <text style="color:#FE0002;">{{item.teamNum-item.payCount}}</text> 
+          人
+        </view>
+      </view>
+      <view class="rigtht">
+        <!-- 状态 0 -->
+        <button wx:if="{{item.teamNum > item.payCount}}" id="{{item.id}}" bindtap="appointGroup">去凑团</button>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="team-list" hidden="{{isHidden}}">
+  <block wx:for="{{teams}}">
+    <view class="row">
+      <view class="left">
+        <image src="{{item.teamOrders[0].userIcon}}"></image>
+      </view>
+      <view class="center">
+        <view class="top">{{item.teamOrders[0].linkMan}}\r\n开团</view>
+        <view class="bottom">
+          剩余
+          <text style="color:#FE0002;">{{item.daojishi}}</text> 
+          结束，仅差
+          <text style="color:#FE0002;">{{item.teamNum-item.payCount}}</text> 
+          人
+        </view>
+      </view>
+      <view class="rigtht">
+        <!-- 状态 0 -->
+        <button id="{{item.id}}"  bindtap="appointGroup">去凑团</button>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:if="{{teams.length>0}}" class="title-name center" hidden="{{!isHidden}}" bindtap="lookAll">查看全部凑团</view>
+<view class="blank"></view>
+
+
+<!-- 图文详情 -->
+<view class="title-name border" style='margin-top:20rpx;'>图文详情</view>
+<!-- <import src="../../wxParse/wxParse.wxml" /> -->
+<view style="background: #fff;margin-bottom:120rpx;">
+  <import src="../../wxParse/wxParse.wxml"/> 
+  <view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+
+
+<!-- 底部按钮 -->
+<view class="btn">
+  <view class="left" bindtap="buynowbuttom">￥{{product.price}}单独购买</view>
+  <view class="right" bindtap="openGroup">￥{{product.teamprice}}一键拼单</view>
+</view>

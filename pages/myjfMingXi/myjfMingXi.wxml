@@ -1,0 +1,14 @@
+<block wx:for="{{dataAy}}">
+
+  <view class='mingxi_style'>
+      <view class='mingxi_up'>
+        <text >{{item.decs}}</text>
+        <text style='text-align: right;'>{{item.integraldec}}</text>
+      </view>
+      <view class='mingxi_up'>
+        <text style='color: #999999;font-size:24rpx;'>{{item.time}}</text>
+      </view>
+  
+  </view>
+
+</block>

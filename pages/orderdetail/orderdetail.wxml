@@ -1,0 +1,55 @@
+<view class="contain">
+    <view class="head_style" style='background:{{maincolor}};'>
+        <text class="head_up_text_style">
+         {{dic.stateShow}}
+        </text>
+        <text style="margin-top:20rpx;font-size:24rpx;" class="head_up_text_style">
+        订单编号：{{dic.ordernum}}
+        </text>
+        <text style="margin-top:10rpx;font-size:24rpx;" class="head_up_text_style">
+        下单时间：{{dic.createtime}}
+        </text>
+    </view>
+
+    <view class="sec_head">
+        <view class="sec_up_style">
+          <text style="line-height: 29rpx;height: 59rpx;padding-left: 0rpx;color:#999999;" class="head_up_text_style">
+          收货人：{{userDic.name}} {{userDic.mobile}}
+          </text>
+          <text style="line-height: 29rpx;height: 59rpx;padding-left: 0rpx;font-size:24rpx;color:#999999;" class="head_up_text_style">
+          收货地址：{{userDic.address}}
+          </text>
+        </view>
+        <view class="sec_down_style">
+            <text class="sec_down_left_style">
+            快递公司:{{dic.sendCompany}}
+            </text>
+            <text style="text-alight:right;" class="sec_down_left_style">
+            {{dic.sendNum}}
+            </text>
+        </view>
+    </view>
+
+
+    <view class="third_style">
+         <view class="sec_style" wx:for="{{dataAy}}">
+                <image src="{{item.productIcon}}" class="sec_image_style"></image>
+
+                <view>
+                  <text class="sec_text_style">{{item.productTitle}}</text>
+                  <text class="sec_text_num">x{{item.num}}  {{item.standName}}</text>
+                  <text style="margin-top: 10rpx;" class="sec_text_style">¥{{item.unitPrice}}</text>
+                </view>
+          </view>
+
+
+
+
+        <view class="third_style1">
+          <text class="third_text_style">共{{dic.total}}件商品 实付款：{{dic.payMoney}}元</text>
+        </view>
+    </view>
+    
+
+
+</view>

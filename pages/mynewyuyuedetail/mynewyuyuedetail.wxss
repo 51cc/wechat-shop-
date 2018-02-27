@@ -1,0 +1,26 @@
+/* pages/mynewyuyuedetail/mynewyuyuedetail.wxss */
+@import "../orderdetail/orderdetail.wxss";
+@import "../aaafirst/aaafirst.wxss";
+@import "../yynewdetail/yynewdetail.wxss";
+@import "../yysuccess/yysuccess.wxss";
+@import "../yysubmite/yysubmite.wxss";
+
+.bottom_style{
+  height: 100rpx;
+  width: 750rpx;
+  position: relative;
+}
+.bottom_right_btn{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  height: 60rpx;
+  width: 230rpx;
+  background:#ec0000;
+  text-align: center;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+}
+

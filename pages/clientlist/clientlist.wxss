@@ -1,0 +1,120 @@
+page{
+  height: 100%;
+  background: #f4f4f4;
+}
+.contain{
+    width: 100%;
+    background: #f4f4f4;
+}
+.client_row_style{
+    display: flex;
+    width: 750rpx;
+    height: 165rpx;
+    background: white;
+    border-bottom: 0.5rpx solid #eeeeee;
+}
+.client_icon_style{
+    display: block;
+    margin: 15rpx 0rpx 15rpx 15rpx;
+    height: 135rpx;
+    width: 135rpx;
+}
+.text_style{
+    margin: 20rpx 15rpx 20rpx 15rpx;
+    width: 600rpx;
+    height: 125rpx;
+}
+.client_row_style:active{
+  background: #eeeeee;
+}
+.client_title_style{
+    display: flex;
+    color: #444444;
+    font-size: 35rpx;
+    line-height: 40rpx;
+    text-align: left;
+
+}
+.client_address_style{
+    line-height: 40rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    display: flex;
+    color: #999999;
+    font-size: 32rpx;
+
+}
+.quesheng_text_style{
+  display: block;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #999999;
+  width: 750rpx;
+}
+.quesheng_image_style{
+  width: 454rpx;
+  height: 326rpx;
+  margin: 200rpx 150rpx 50rpx 150rpx;
+}
+
+
+
+
+
+
+.second{
+   height:  120rpx;
+   width: 100%;
+   background: #f1f1ef;
+   display: flex;
+}
+.second button{
+    color: red;
+    font-size: 35rpx;
+    margin: 20rpx auto;
+}
+.sec_left{
+    margin: 25rpx;
+    height: 70rpx;
+    width: 160rpx;
+    background: #f1f1ef;
+    border-radius: 10rpx;
+    display: flex;
+}
+.sec_left image{
+    width: 35rpx;
+    height: 35rpx;
+    margin-top: 17.5rpx;
+    margin-left: 12.5rpx;
+}
+.sec_left text{
+    font-size: 30rpx;
+    color: 0x444444;
+    margin-top: 17.5rpx;
+    width: 120rpx;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.sec_right{
+    margin:25rpx 15rpx 25rpx 25rpx;
+    height: 70rpx;
+    /* width: 370rpx; */
+    border-radius: 10rpx;
+    /* border: 1rpx solid #d6d2d1; */
+    display: flex;
+    background: white;
+
+}
+.sec_right image{
+    width: 35rpx;
+    height: 35rpx;
+    margin-top: 17.5rpx;
+    margin-left: 12.5rpx;
+}
+
+.sec_right input{
+    font-size: 35rpx;
+    margin-top: 10rpx;
+    width: 480rpx;
+}

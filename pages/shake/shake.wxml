@@ -1,0 +1,97 @@
+
+<view style="position: fixed;top:0;left:0;height:{{sheight}}px;width:{{swidth}}px;background:#f9ba7d;">
+
+  <view class="di_first_style">
+    <view class="di_first_left_style">
+      <image src='{{mDic.icon}}' style='width:100%;height:100%;background:white;'></image>
+    </view>
+    <view class="di_first_right_style">
+      <text class="di_first_right_up_text">{{mDic.name}}</text>
+      <text class="di_first_right_down_text">底价：¥{{mDic.lowestPrice}}</text>
+    </view>
+  </view>
+
+  <text class="di_title_text">好友{{friendName}}邀请你帮ta砍价</text>
+
+  <image class="di_title_style" src='../../pages/shake/title.png'>
+  </image>
+
+  <image class="di_quan_style" src='../../pages/shake/quan.png'>
+  </image>
+
+  <import src="../../components/shake/shake.wxml" />
+  <view class="fz_style">
+    <template is = "shake"  data = "{{anim}}"></template> 
+  </view>
+
+  <view class="di_bottom_style">
+    
+      <view bindtap='woyewan' style='background:#ff4d4d;' class="di_bottom_left_style">
+      我也要玩
+      </view>
+  </view>
+
+</view>
+
+
+<!--查看砍价金额  -->
+<block wx:if="{{kanjiatishi}}">
+  <view bindtap='hiddenTheMask'style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style'>
+      <image class='lingqu_bg_style'></image> 
+      <text style='top:360rpx;' class='lingqu_title_style'>砍价成功</text>
+     <view bindtap='chakan' class='lingqu_style'>查看金额</view>
+  </view>
+</block>
+
+<block wx:else>
+<!--帮助好友砍了多少   YES    已经帮好友砍过 NO  -->
+  <block wx:if="{{isKanGuo}}">
+      <view bindtap='hiddenTheMask' style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style'>
+        <image class='lingqu_bg_style'></image> 
+        <text style='top:320rpx;' class='lingqu_title_style'>您太棒了</text>
+         <text class='lingqu_content_style'>成功帮好友砍掉{{kMDic.bargainPrice
+}}元</text>
+        <view bindtap='woyewan' class='lingqu_style'>我也要玩</view>
+      </view>
+  </block>
+
+    <block wx:if="{{hasKanGuo}}">
+     <view bindtap='hiddenTheMask' style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style'>
+         <image class='lingqu_bg_style'></image> 
+
+         <text style='font-size: 32rpx;top: 360rpx;' class='lingqu_title_style'>您已经帮好友砍过了
+</text>
+         <text style='font-size: 32rpx;top: 420rpx;' class='lingqu_content_style'>自己玩玩看吧！</text>
+        <view bindtap='woyewan' class='lingqu_style'>我也要玩</view>
+
+      </view>
+    </block>
+
+
+<!--好友已经砍到低价  -->
+    <block wx:if="{{cgkddj}}">
+      <view bindtap='hiddenTheMask' hidden='{{showMask}}' style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style'>
+        <image class='lingqu_bg_style'></image> 
+         <text style='top:320rpx;' class='lingqu_title_style'>谢谢您</text>
+         <text class='lingqu_content_style'>好友已经砍价成功啦！</text>
+        <view bindtap='woyewan' class='lingqu_style'>我也要玩</view>
+       </view>
+    </block>
+
+
+<!--快点去邀请好友帮您砍价吧！（自己给自己砍）  -->
+    <block wx:if="{{isSelf}}">
+      <view bindtap='hiddenTheMask' hidden='{{showMask}}' style="height:{{sheight}}px;width:{{swidth}}px" class='mask_style'>
+        <image class='lingqu_bg_style'></image> 
+   
+          <text style='font-size: 32rpx;top: 360rpx;' class='lingqu_title_style'>不能给自己砍价哦～
+</text>
+         <text style='font-size: 32rpx;top: 420rpx;' class='lingqu_content_style'>快点去邀请好友帮您砍价吧！</text>
+         <!-- <text style='font-size: 32rpx;' class='lingqu_title_style'></text> -->
+        <view bindtap='woyewan' class='lingqu_style'>继续邀请好友</view>
+        <button style=' background: clear;opacity: 0;' class='lingqu_style' open-type="share"></button>
+       </view>
+    </block>
+
+
+</block>

@@ -1,0 +1,693 @@
+<!-- <view>
+        <image bindtap="jumptohuati" src='../../Asset/huati.png' class="kanjia_style"></image>
+      </view>  -->
+
+<!--是否有新人优惠券  -->
+  <block wx:if="{{show}}">
+    <view bindtap='close' class='mask_style' style='height:{{sheight}}px;width:{{swidth}}px;'>
+          <image class='close_img_style' bindtap='close' src='../../Asset/close.png'></image>
+          <image bindtap='lingquyouhuiquan'  src='{{newCounponDic.img}}' mode='aspectFit' class='yhq_xr_style'></image>
+    </view>
+</block> 
+
+
+<block wx:for="{{uiAy}}">
+  <block wx:if="{{item.styleName == 'dingweisousuo' }}">
+        <!--搜索 1 带城市定位-->
+        <view class="second">
+          <view class="sec_left">
+              <image src="../../Asset/f_location.png"></image>
+              <text bindtap="changcity">{{city}}</text>
+          </view>
+
+          <view class="sec_right">
+              <image src="../../Asset/f_search.png"></image>
+              <input style="font-size:26rpx;" bindfocus="startsearch" bindinput="bindKeyInput" placeholder="请输入搜索内容"/>
+          </view>
+
+          <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="jumptosearchPro" style="color:#444444;background:#eeeeee;line-height:68rpx;font-size:26rpx;margin-top:25rpx;height:68rpx;"hover-class="other-button-hover">搜索</button>
+      </view> 
+  </block>
+<!--砍价  -->
+     <block wx:elif="{{item.styleName == 'kanjia'}}">  
+      <view>
+            <image bindtap="jumptokanjia" src='../../Asset/kj_rk.png' class="kanjia_style"></image>
+        </view> 
+     </block>  
+<!--邀请  -->
+     <block wx:elif="{{item.styleName == 'yaoqing'}}">  
+        <view>
+            <image bindtap="jumptoyaoqing" src='../../Asset/yq_rk.png' class="kanjia_style"></image>
+        </view>   
+     </block>  
+
+   <block wx:elif="{{item.styleName == 'sousuo'}}"> 
+  
+      <!--搜索 2 不带城市定位-->
+        <view class="second">
+            <view class="sec_right" style="margin:25rpx 15rpx 25rpx 25rpx;width:560rpx;">
+                <image src="../../Asset/f_search.png"></image>
+                <input style="font-size:26rpx;" bindfocus="startsearch"  bindinput="bindKeyInput" placeholder="请输入搜索内容"/>
+            </view>
+
+            <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="jumptosearchPro" hover-class="other-button-hover" style="color:#444444;background:#eeeeee;line-height:68rpx;font-size:26rpx;margin-top:25rpx;height:68rpx;">搜索</button>
+      </view>  
+   </block>
+
+     <block wx:elif="{{item.styleName == 'fangxinglunbotu'}}"> 
+        <!--轮播图  1:1  -->
+          <swiper style="width:750rpx;height:750rpx;"  indicator-dots="{{indicatorDots}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{lbtAy}}">
+              <swiper-item>
+                  <image id="{{item.targetId}}" data-id="{{item.category}}" bindtap="jumpToLBTDetail" src="{{item.img}}" mode="aspectFit" style="width:100%;height:100%;"/>
+              </swiper-item>
+            </block>
+        </swiper>  
+    </block>
+
+     <block wx:elif="{{item.styleName == 'changxinglunbotu'}}"> 
+        <!--轮播图  2:1  -->
+          <swiper style="width:750rpx;height:375rpx;"    indicator-dots="{{indicatorDots}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{lbtAy}}">
+              <swiper-item>
+                  <image id="{{item.targetId}}" data-id="{{item.category}}" bindtap="jumpToLBTDetail" src="{{item.img}}" mode="aspectFit" style="width:100%;height:100%;"/>
+              </swiper-item>
+            </block>
+        </swiper>  
+
+    </block>
+
+
+
+  <block wx:elif="{{item.styleName == 'kuaijierukou'}}"> 
+    <!--快捷入口  -->
+      <view class="grid-wraper" style="margin-top:20rpx;">
+        <block wx:for="{{kjAy}}">
+          <view  class="grid-wraper-item" id="{{item.id}}" bindtap="jumptoWraper">
+              <image src="{{item.icon}}"></image>
+              <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>   
+   </block>
+
+
+
+   <block wx:elif="{{item.styleName == 'fenleituijian1'}}"> 
+        <!--推荐分类1  -->
+      <view style="margin-top:20rpx;background:#ffffff;"  wx:if="{{flAy.length>0}}">
+        <text class="grid-wraper-header-title" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+        <view class="grid-wraper">
+          <block wx:for="{{flAy}}">
+            <view  class="grid-wraper-item" id="{{item.id}}" bindtap="jumptoFenlei">
+                <image src="{{item.image}}"></image>
+                <text>{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+    </view>   
+   </block>
+  
+  <block wx:elif="{{item.styleName == 'fenleituijian2'}}"> 
+        <!--推荐分类2  -->    
+        <view style="margin-top:20rpx;background:#ffffff;"  wx:if="{{flAy.length>0}}">
+        <text class="grid-wraper-header-title" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+        <view class="grid-wraper">
+          <block wx:for="{{flAy}}" wx:for-index="idx">
+            <view style="position:relative;" class="grid-wraper-item" id="{{item.id}}" bindtap="jumptoFenlei">
+                <image style='background:{{flAy2[idx]}};border-radius:50rpx;'></image>
+                <text style="color:white;position:absolute;top:32rpx;left:20rpx;width:80%;">{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+    </view>      
+  </block>
+
+    <block wx:elif="{{item.styleName == 'fenleituijian3'}}"> 
+        <!--推荐分类3  -->
+          <view style="margin-top:20rpx;background:#ffffff;"  wx:if="{{flAy.length>0}}">
+          <text class="grid-wraper-header-title" style="text-align: {       {item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+          <view class="grid-sec-wraper">
+            <block wx:for="{{flAy}}">
+              <view class="grid-wraper-sec-item" id="{{item.id}}" bindtap="jumptoFenlei">
+                  <text>{{item.name}}</text>
+                  <image src="{{item.image}}"></image>
+              </view>
+            </block>
+          </view>
+      </view>     
+
+    </block>
+
+
+    <block wx:elif="{{item.styleName == 'fenleituijian4'}}"> 
+      <!--推荐分类4  -->
+          <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{flAy.length>0}}">
+          <text class="grid-wraper-header-title" style="padding-bottom:0;text-align:{{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+          <view class="grid-third-wraper" style="margin-top:0rpx;">
+            <block wx:for="{{flAy}}">
+              <view class="grid-wraper-third-item" id="{{item.id}}" bindtap="jumptoFenlei">
+                  <image src="{{item.image}}"></image>
+                  <text>{{item.name}}</text>
+              </view>
+            </block>
+          </view>
+      </view>    
+    </block>
+
+
+   <block wx:elif="{{item.styleName == 'tuijianshangpin1'}}">
+      <!--推荐商品1  -->
+   <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{products.length>0}}">
+<text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+    <view class="product-wraper">
+        <block wx:for="{{products}}">
+            <view class="product-wraper-item" id="{{item.id}}" bindtap="jumptoproductdetail">
+              <image  src="{{item.icon}}"></image>
+              <text class="product-wraper-item-title">{{item.name}}</text>
+              <view class="product-wraper-item-bottom">
+                  <text class="product-wraper-item-bottom-price">¥{{item.price}}</text>
+                  <text class="product-wraper-item-bottom-olprice">¥{{item.oldPrice}}</text>
+                  <text class="product-wraper-item-bottom-sell">销量{{item.saleCount}}</text>
+              </view>
+            </view>
+        </block>
+    </view>
+    <text bindtap="jumptoallproduct"  class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+</view>   
+    </block>
+
+
+<block wx:elif="{{item.styleName == 'tuijianshangpin2'}}">
+      <!--推荐商品2  -->
+   <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{products.length>0}}">
+<text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+    <view class="product-wraper">
+         <block wx:for="{{products}}">
+            <view class="product-sec-wraper-item" id="{{item.id}}" bindtap="jumptoproductdetail">
+              <image  src="{{item.icon}}"></image>
+              <view class="product-sec-wraper-right">
+                <text class="product-sec-wraper-item-title">{{item.name}}</text>
+                <view class="product-sec-wraper-item-bottom">
+                    <text class="product-sec-wraper-item-bottom-price">¥{{item.price}}</text>
+                    <text class="product-sec-wraper-item-bottom-olprice">¥{{item.oldPrice}}</text>
+                    <text class="product-sec-wraper-item-bottom-sell">销量{{item.saleCount}}</text>
+                </view>
+                <text  class="product-sec-wraper-item-bottom-fav">{{item.collectCount}}人已收藏</text>
+              </view>
+            </view>
+        </block>
+
+    </view>
+    <text bindtap="jumptoallproduct"  class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+</view>   
+    </block>
+
+
+
+
+<block wx:elif="{{item.styleName == 'tuijianshangpin3'}}">
+      <!--推荐商品3  -->
+   <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{products.length>0}}">
+<text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+    <view class="product-wraper">
+          <block wx:for="{{products}}">
+            <view style="background:white;height:358rpx;" class="product-wraper-item" id="{{item.id}}" bindtap="jumptoproductdetail">
+              <image  src="{{item.icon}}"></image>
+            </view>
+        </block>
+    </view>
+    <text bindtap="jumptoallproduct"  class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+</view>   
+    </block>
+
+   
+    <block wx:elif="{{item.styleName == 'pintuanhuodong'}}"> 
+          <!--拼团活动  -->
+         <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{ptAy.length>0}}"> 
+        <text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+        <block wx:for="{{ptAy}}">
+            <view class="xsq_single_style">
+                <image src="{{item.icon}}" class="xsq_img_style"></image>
+                <view class="xsq_right_style">
+                    <text class="xsq_up_text_style">{{item.name}}</text>
+                    <view class="xsq_middle_style">
+                        <text class="xsq_up_text_style" style="display:block;margin-top:5rpx;line-height: 26rpx;width:220rpx;text-aligh:left;color:#969ea9;">{{item.teamnum}}人团</text>
+                    </view>
+                    <view style="position:relative;padding-top:0rpx;" class="xsq_middle_style">
+                        <text class="xsq_up_text_style" style="display:block;margin-top:0rpx;line-height: 26rpx;text-aligh:left;color:rgb(255,77,77);">¥{{item.teamprice}}</text>
+                        <text class="xsq_up_text_style" style="text-decoration:line-through;margin-top:0rpx;margin-left:10rpx;line-height: 26rpx;text-align:left;color:rgb(150,158,169);" >¥{{item.oldPrice}}</text>
+                        <view bindtap="lookTeamDetail" id="{{item.id}}" style="position:absolute;right:0;" class="xsq_btn_style">去开团</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <text bindtap="jumptopintuan"  class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+    </view>    
+    </block> 
+
+
+
+   <block wx:elif="{{item.styleName == 'xianshiqianggou'}}">
+          <!--限时抢购  -->
+        <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{xsAy.length>0}}">
+        <text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+        <block wx:for="{{xsAy}}">
+            <view class="xsq_single_style">
+                    <image src="{{item.icon}}" class="xsq_img_style"></image>
+                    <view class="xsq_right_style">
+                        <text class="xsq_up_text_style">{{item.name}}</text>
+                        <view class="xsq_middle_style" style="position:relative;">
+                            <text wx:if="{{item.isStart==1}}" class="xsq_up_text_style" style="display:block;margin-top:5rpx;line-height: 26rpx;width:220rpx;text-aligh:left;color:rgb(255,77,77);">仅剩 {{item.time}}</text>
+                            <text wx:else class="xsq_up_text_style" style="display:block;margin-top:5rpx;line-height: 26rpx;width:220rpx;text-aligh:left;color:rgb(255,77,77);">{{item.startDate}}开抢</text>
+
+                            <text wx:if="{{item.isStart==1}}" class="xsq_up_text_style" style="display:block;margin-top:0rpx;position:absolute;right:0;line-height: 26rpx;width:160rpx;text-align: center;color:rgb(150,158,169);" >{{item.buyNum}}人抢购</text>
+                        </view>
+                        <view style="position:relative;padding-top:0rpx;" class="xsq_middle_style">
+                            <text class="xsq_up_text_style" style="margin-top:0rpx;line-height: 26rpx;text-aligh:left;color:rgb(255,77,77);">¥{{item.price}}</text>
+                            <text class="xsq_up_text_style" style="text-decoration:line-through;margin-top:0rpx;margin-left:10rpx;line-height: 26rpx;text-align:left;color:rgb(150,158,169);" >¥{{item.oldPrice}}</text>
+                            <view  wx:if="{{item.isStart==1}}" id="{{item.productId}}" bindtap="jumptoxsqgDetail" style="position:absolute;right:0;top:0;" class="xsq_btn_style">立即抢购</view>
+                            <view  wx:else id="{{item.productId}}"  style="position:absolute;right:0;background:#eeeeee;top:0;" class="xsq_btn_style">未开始</view>
+                        </view>
+                    </view>
+                </view>
+        </block>
+        <text bindtap="jumptoxsqg"   class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+</view>    
+
+    </block>
+
+
+    <block wx:elif="{{item.styleName == 'dianpujie1'}}">
+        <!--店铺街1  -->
+          <view style="margin-top:20rpx;background:#ffffff;"  wx:if="{{tjAy1.length>0}}">
+          <view style="display:flex;" bindtap="jumptodpj">
+              <text style="width:650rpx;text-align:left;" class="grid-wraper-header-title">{{item.topPropModel.textName}}</text>
+              <image style="margin-right:0rpx;margin-top:22rpx;height:35rpx;width:35rpx;" src="../../Asset/arrow_right.png"></image>
+          </view>
+          <view class="dpj-wraper" style="width:750rpx;">
+              <view class="dpj-wraper-item" style='width:375rpx;'>
+                  <image id="{{tjAy1[0].id}}" bindtap="jumptoclientdetail" style="display:block;width:375rpx;height:375rpx;" src="{{tjAy1[0].img}}"></image>
+              </view>
+
+              <view class="dpj-wraper-item" style='width:375rpx;'>
+                    <image id="{{tjAy1[1].id}}" bindtap="jumptoclientdetail" style="display:block;width:375rpx;height:187.5rpx;" src="{{tjAy1[1].img}}"></image>
+                    <image id="{{tjAy1[2].id}}" bindtap="jumptoclientdetail" style="display:block;width:375rpx;height:187.5rpx;" src="{{tjAy1[2].img}}"></image>
+              </view>
+          </view>
+      </view>    
+    </block>
+
+    <block wx:elif="{{item.styleName == 'dianpujie2'}}">
+          <!--店铺街2  -->
+          <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{tjAy.length>0}}">
+          <view style="display:flex;border-bottom:1rpx solid #eeeeee;" bindtap="jumptodpj">
+              <text style="width:650rpx;text-align:left;" class="grid-wraper-header-title">{{item.topPropModel.textName}}</text>
+              <image style="margin-right:0rpx;margin-top:22rpx;height:35rpx;width:35rpx;" src="../../Asset/arrow_right.png"></image>
+          </view>
+          <view class="dpj-sec-wraper">
+            <block wx:for="{{tjAy}}">
+              <view class="dpj-wraper-sec-item" id="{{item.id}}" bindtap="jumptoclientdetail">
+                  <text>{{item.title}}</text>
+                  <image src="{{item.img}}"></image>
+              </view>
+            </block>
+          </view>
+      </view>     
+    </block>
+
+
+    <block wx:elif="{{item.styleName == 'dianpujie3'}}">
+        <!--店铺街3  -->
+     <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{tjAy.length>0}}">
+    <view style="display:flex;border-bottom:1rpx solid #eeeeee;" bindtap="jumptodpj">
+        <text style="width:650rpx;text-align:left;" class="grid-wraper-header-title">{{item.topPropModel.textName}}</text>
+        <image style="margin-right:0rpx;margin-top:22rpx;height:35rpx;width:35rpx;" src="../../Asset/arrow_right.png"></image>
+    </view>
+    <view class="dpj-third-wraper">
+      <block wx:for="{{tjAy}}">
+        <view class="dpj-wraper-third-item" id="{{item.id}}" bindtap="jumptoclientdetail">
+            <image src="{{item.img}}"></image>
+            <text style='text-align:center;'>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+</view>
+    </block>
+
+
+    <block wx:elif="{{item.styleName == 'dianpujie4'}}">
+        <!--店铺街4  -->
+        <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{tjAy.length>0}}">
+        <view style="display:flex;border-bottom:1rpx solid #eeeeee;" bindtap="jumptodpj">
+            <text style="width:650rpx;text-align:left;" class="grid-wraper-header-title">{{item.topPropModel.textName}}</text>
+            <image style="margin-right:0rpx;margin-top:22rpx;height:35rpx;width:35rpx;" src="../../Asset/arrow_right.png"></image>
+        </view>
+        <view class="dpj-four-wraper">
+          <block wx:for="{{tjAy}}">
+            <image class="dpj-four-img" src="{{item.img}}" id="{{item.id}}" bindtap="jumptoclientdetail"></image>
+          </block>
+        </view>
+    </view>      
+    </block>
+
+    <block wx:elif="{{item.styleName == 'youhuiquan1'}}">
+        <!--优惠券1  -->
+        <view class="youhuiquan_style">
+          <block wx:for="{{yhqAy}}">
+            <view class="youhuiquan_single_style" bindtap="jumptoyouhuiquancenter">
+              <image class="youhuiquan_img_style" src="../../Asset/ico_youhuiquan_sec.png">
+              </image>
+              <view class="youhuiquan_text_bg_style">
+                <view class="youhuiquan_text_up_style">
+                    <view class="youhuiquan_text_up_left_style">
+                    <text class="youhuiquan_text_up_left_text_style">{{item.money}}</text>
+                    </view>
+
+
+                    <view class="youhuiquan_text_up_right_style">
+                    <text class="youhuiquan_text_up_right_text_up_style">满{{item.full}}元可用</text>
+                    <text class="youhuiquan_text_up_right_text_down_style">元优惠券</text>
+                    </view>
+                </view>
+                
+                <view class="youhuiquan_text_down_style">
+                CLICK TO RECEIVE COUPONS
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>     
+    </block>
+
+    <block wx:elif="{{item.styleName == 'youhuiquan2'}}">
+        <!--优惠券2  -->
+        <view class="youhuiquan_sec_style">
+        <block wx:for="{{yhqAy}}">
+         
+          <view class="youhuiquan_single_sec_style" bindtap="jumptoyouhuiquancenter">
+          
+              <image src="../../Asset/ico_youhuiquan_first_bg.png" class="youhuiquan_img_sec_style">
+              </image>
+
+            <view class="yhq_up_sec_style">
+              ¥{{item.money}}
+            </view>
+            <view class="yhq_down_sec_style">
+              <view class="yhq_down_bg_sec_style">
+                  <text class="yhq_down_bg_text_sec_style">
+                  购物满{{item.full}}可用
+                  </text>
+                  <image src="../../Asset/ico_yhq_right.png" class="yhq_down_bg_image_sec_style"></image>
+              </view>
+            </view>
+
+          </view> 
+        </block>
+    </view>     
+    </block>
+
+    <block wx:elif="{{item.styleName == 'youhuiquan3'}}">
+            <!--优惠券3  -->
+      <view class="youhuiquan_sec_style" style='width:727.5rpx;'>
+          <block wx:for="{{yhqAy}}">
+              <view class="yhq_new_1_style" bindtap="jumptoyouhuiquancenter">
+                <image src='../../Asset/yhq_1.png'></image>
+                <text class='yhq_new_1_left'>{{item.money}}</text>
+                <text class='yhq_new_1_right_up'>优惠券</text>
+                <text class='yhq_new_1_right_down'>满{{item.full}}可用</text>
+              </view>
+          </block>
+      </view>
+    </block>
+
+    <block wx:elif="{{item.styleName == 'youhuiquan4'}}">
+            <!--优惠券4  -->
+      <view class="youhuiquan_sec_style" style='width:728rpx;'>
+          <block wx:for="{{yhqAy}}">
+              <view class="yhq_new_2_style" bindtap="jumptoyouhuiquancenter">
+                <image src='../../Asset/yhq_2.png'></image>
+                <text class='yhq_new_2_left'>{{item.money}}</text>
+                <text class='yhq_new_2_right_down'>满{{item.full}}可用</text>
+                <text class='yhq_new_2_right_up'>优惠券</text>
+              </view>
+          </block>
+      </view>
+    </block>
+
+    <block wx:elif="{{item.styleName == 'youhuiquan5'}}">
+            <!--优惠券5  -->
+        <view class="youhuiquan_sec_style">
+            <block wx:for="{{yhqAy}}" wx:for-index="idx">
+                <block wx:if="{{idx%2==0}}">
+                  <view class="yhq_new_3_style" bindtap="jumptoyouhuiquancenter">
+                    <image src='../../Asset/yhq_3_2.png'></image>
+                    <text class='yhq_new_3_left'>{{item.money}}</text>
+                    <text style='color:#b63fc1;' class='yhq_new_3_right_down'>满{{item.full}}可用</text>
+                  </view>
+                </block>
+                <block wx:elif="{{idx%2!=0}}">
+                  <view class="yhq_new_3_style" bindtap="jumptoyouhuiquancenter">
+                    <image src='../../Asset/yhq_3_1.png'></image>
+                    <text class='yhq_new_3_left'>{{item.money}}</text>
+                    <text style='color:#fea201;' class='yhq_new_3_right_down'>满{{item.full}}可用</text>
+                  </view>
+                </block>
+            </block>
+        </view>
+    </block>
+
+    <block wx:elif="{{item.styleName == 'zixun1'}}">
+      <!--资讯1  -->
+        <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{zxAy.length>0}}">
+        <text  class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+        <block wx:for="{{zxAy}}">
+          <view class="news_single_style" bindtap="jumptonewsdetail" id="{{item.newsId}}">
+              <image src="{{item.icon}}"></image>
+              <view class="news_single_right_style">
+                <text class="news_single_right_up_text_style">{{item.title}}</text>
+                <text class="news_single_right_down_text_style">{{item.createtime}}</text>
+              </view>
+            </view>
+        </block>
+        <text bindtap="jumptozxlist" class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+</view>    
+    </block>
+
+  <block wx:elif="{{item.styleName == 'zixun2'}}">
+        <!--资讯2  -->
+    <view style="margin-top:20rpx;width:750rpx;background:white;" wx:if="{{zxAy.length>0}}">
+    <text  class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+      <block wx:for="{{zxAy}}">
+        <view class="zx-wraper" id="{{item.newsId}}" bindtap="jumptonewsdetail">
+          <image src="../../Asset/hot.png"></image>
+          <text>{{item.title}}</text>
+        </view>
+      </block>
+      <text bindtap="jumptozxlist" class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+      </view>     
+    </block>
+
+    <block wx:elif="{{item.styleName == 'shipin2'}}">
+      <!--视频  -->
+          <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{spAy.length>0}}">
+          
+          <view style="display:flex;border-bottom:1rpx solid #eeeeee;" bindtap="jumptosp">
+              <text style="width:650rpx;text-align:left;" class="grid-wraper-header-title">{{item.topPropModel.textName}}</text>
+              <image style="margin-right:0rpx;margin-top:22rpx;height:35rpx;width:35rpx;" src="../../Asset/arrow_right.png"></image>
+          </view>
+          <view class="sp-wraper">
+            <block wx:for="{{spAy}}">
+                <view class="sp-wraper-item" bindtap="jumptovideodetail" id="{{item.id}}">
+                  <image class="sp-wraper-img" src="{{item.icon}}"></image>
+                  <text class="sp-wraper-content">{{item.title}}</text>
+                  <view class="sp-wraper-mask"></view>
+                    <image class="sp-play" src="../../Asset/bfq.png"></image>
+                </view>
+            </block>
+          </view> 
+      </view>     
+    </block>
+
+    <block wx:elif="{{item.styleName == 'shipin1'}}">
+<!--视频2  -->
+        <view style="margin-top:20rpx;width:750rpx;background:white;" wx:if="{{spAy.length>0}}">
+        <view style="display:flex;border-bottom:1rpx solid #eeeeee;" bindtap="jumptosp">
+              <text style="width:650rpx;text-align:left;" class="grid-wraper-header-title">{{item.topPropModel.textName}}</text>
+              <image style="margin-right:0rpx;margin-top:22rpx;height:35rpx;width:35rpx;" src="../../Asset/arrow_right.png"></image>
+          </view>
+        <block wx:for="{{spAy}}">
+          <view class="zx-wraper" id="{{item.id}}" bindtap="jumptovideodetail">
+            <image src="../../Asset/sp.png"></image>
+            <text>{{item.title}}</text>
+          </view>
+        </block>
+      </view>   
+    </block>
+
+
+    <block wx:elif="{{item.styleName == 'guanggaotu1'}}">
+      <!-- 广告图1  -->
+          <view style="padding:20rpx 0 0 0; display:flex;flex-wrap: wrap;">
+        
+          <block wx:for="{{ggtAy}}" wx:for-index="idx">
+            <image class="ggt-item" src="{{item.img}}" bindtap='openwebview' id="{{idx}}"></image>
+          </block>
+
+      </view>    
+    </block>
+
+      <block wx:elif="{{item.styleName == 'guanggaotu2'}}">
+      <!--广告图2  -->
+          <view style="padding:10rpx 0 0 0; display:flex;flex-wrap: wrap;">
+          <block wx:for="{{ggtAy}}" wx:for-index="idx">
+            <image style="width:710rpx;height:300rpx;margin-top:10rpx;" class="ggt-item" src="{{item.img}}" bindtap='openwebview' id="{{idx}}"></image>
+          </block>
+      </view>  
+      </block>
+      
+      <!-- 话题圈 -->
+     <block wx:elif="{{item.styleName == 'huatiquan'}}">   
+      <view>
+        <image bindtap="jumptohuati" src='../../Asset/huati.png' class="kanjia_style"></image>
+      </view> 
+     </block> 
+    <!--预约  -->
+    <block wx:elif="{{item.styleName == 'appoint1'}}">
+        <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{yuyueAy.length>0}}">
+<text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+    <view class="product-wraper">
+         <block wx:for="{{yuyueAy}}">
+           <view class='yy_cell_style' id="{{item.id}}" bindtap='jumptoyuyuedetail'>
+              <view class='yy_left_style'>
+                  <image src='{{item.img}}' class='yy_ico_style'></image>
+              </view>
+
+              <view class='yy_right_style'>
+                  <text class='yy_title_style'>{{item.title}}</text>
+                  <view style='display:flex;'>
+                      <text class='yy_price_style'>¥{{item.price}}</text>
+                      <text class='yy_renshu_style'>服务人次：{{item.basenum}}人</text>
+                  </view>
+              </view>
+           </view>
+        </block>
+
+    </view>
+    <text bindtap="jumptoallyuyue"  class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+</view> 
+    </block>
+<!--活动  -->
+     <block wx:elif="{{item.styleName == 'huodong1'}}">
+          <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{huodongAy.length>0}}">
+          <text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+              <view class="huodong-wraper">
+                  <block wx:for="{{huodongAy}}">
+                    <view class='huodong_cell_style' id="{{item.id}}" bindtap='jumptohuodongdetail'>
+                        <block wx:if="{{item.state==0}}">
+                          <view class='huodong_state_style'>即将开始</view>
+                        </block>
+                        <block wx:elif="{{item.state==1}}">
+                          <view class='huodong_state_style'>进行中</view>
+                        </block>
+                        <block wx:elif="{{item.state==2}}">
+                          <view class='huodong_state_style'>已满员</view>
+                        </block>
+                        <block wx:elif="{{item.state==3}}">
+                          <view style="background:#c7c7c7;color:#979090;" class='huodong_state_style'>已结束</view>
+                        </block>
+
+                        <image src='{{item.img}}' class='huodong_img_style'>
+                        </image>
+                        <view class='huodong_bottom_style'>
+                            <text class='huodong_title_style'>{{item.themeTitle}}</text>
+                            <view class='huodong_bottom_str_style'>
+                                <text>报名时间:{{item.startTime}}-{{item.endTime}}</text>
+                                <text style='text-align: right;'>名额：{{item.peopleNum}}人</text>
+                            </view>
+                        </view>
+                    </view>
+                  </block>
+              </view>
+              <text bindtap="jumptoallhuodong"  class="grid-wraper-header-title grid-font-normal" style='margin-top: 25rpx;'>{{item.bootomPropModel.textName}}</text>
+          </view>
+    </block>
+
+    <block wx:elif="{{item.styleName == 'maidan1'}}">
+        <view style="padding:0; display:flex;flex-wrap: wrap;">
+            <image style="width:750rpx;height:150rpx;margin:10rpx 0;" src ="../../Asset/maidan.png" bindtap='jumptomaidan'></image>
+        </view>
+    </block>
+
+    <block wx:elif="{{item.styleName == 'kajuan'}}">
+      <!--卡券  -->
+          <view style="margin-top:20rpx;background:#ffffff;" wx:if="{{kqAy.length>0}}">
+          <text class="grid-wraper-header-title grid-border-bottom" style="text-align: {{item.topPropModel.styleName}};">{{item.topPropModel.textName}}</text>
+          <block wx:for="{{kqAy}}" wx:for-index="idx">
+            <view class="rows_style">
+              <image src="{{item.logo}}" class="row_left_img_style">
+              </image>
+
+              <view class="row_middle_style">
+                  <text class="row_middle_uptext_style">
+                  {{item.title}}
+                  </text>
+                  
+                  <view class="row_middle_down_style">
+                      <view id="{{idx}}" bindtap="openMap" class="row_middle_down_left_style">
+                          <image src="../../Asset/f_location.png" class="m_img_style">
+                          
+                          </image>
+                          <text class="m_text_style">
+                          商家位置
+                          </text>
+                      </view>
+                      
+                      <view id="{{item.phone}}" bindtap="callTheClient" class="row_middle_down_left_style">
+                          <image src="../../Asset/k_link.png" class="m_img_style">
+                          
+                          </image>
+                          <text class="m_text_style">
+                          联系商家
+                          </text>
+                      </view>
+
+                  </view>
+              </view>
+              <view id="{{item.cardId}}" bindtap="jumptolingqu" class="row_right_style">
+              领取
+              </view>
+            </view>
+          </block>
+          <text bindtap="jumptokq" class="grid-wraper-header-title grid-font-normal">{{item.bootomPropModel.textName}}</text>
+      </view>     
+
+    </block>
+
+    <block wx:elif="{{item.styleName == 'kefu'}}">
+      <view class="fix_top_bottom_style" style="background:{{item.color}};">
+        <image class="top-img" src="../../Asset/kf.png"></image>
+      </view>
+      <button class="kefu_contact_style" open-type="contact"></button>
+    </block>
+
+    <block wx:elif="{{item.styleName == 'fanhuidingbu'}}">
+      <view class="fix_top_bottom_style fix_kefu" style="background:{{item.color}};" bindtap="jumptotop">
+        <image class="top-img" src="../../Asset/kb.png"></image>
+      </view>    
+    </block>
+
+
+
+
+
+
+    
+
+
+
+
+
+</block>

@@ -1,0 +1,25 @@
+  
+
+<view class="contain">
+
+    <view class="news_single_right_style">
+        <text class="news_single_right_up_text_style">{{dic.name}}</text>
+        <view class="single_bottom_style">
+            <text class="news_single_right_down_text_style">{{dic.createTime}}</text>
+            <text style="text-align: right;" class="news_single_right_down_text_style">浏览{{dic.lookNum}}</text>
+        </view>
+      </view>
+
+  <!-- <view class="video_bg_style"> -->
+
+    <video id="wgqvideo" poster="{{dic.img}}" style="width:700rpx;height:400rpx;margin:25rpx;" id="myVideo" src="{{dic.videoUrl}}" danmu-list="{{danmuList}}"  enable-danmu danmu-btn controls="{{show}}">
+      
+    
+    </video>
+
+    <!-- <view class="full" bindtap="changeFull">
+    全屏
+    </view> -->
+  <!-- </view> -->
+
+</view>

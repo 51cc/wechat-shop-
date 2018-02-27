@@ -1,0 +1,41 @@
+<view class="contain">
+
+  <view class="head_style">
+    <image src='{{imgpath}}' class="pro_ico_style"></image>
+    <view class='head_right'>
+        <text class='up_text'>{{showStatus}}</text>
+        <text class='down_text'>物流公司：{{expressName}}</text>
+        <text class='down_text'>物流单号：{{orderNum}}</text>
+    </view>
+  </view>
+
+  <view class='shunxun_style'>
+    <block wx:for="{{dataAy}}" wx:for-index="idx">
+        <block wx:if="{{idx==0}}">
+          <view style='padding:0rpx 0;display:flex;min-height:150rpx;'>
+              <view style='position: relative;'>
+                <view style='top:60rpx;' class='xian_style'></view>
+                <image style='left: 27rpx;' class='dian_style' src='../../Asset/w_ps.png'></image>
+              </view>
+              <view>
+                <text style='line-height: 50rpx;color:#ff8726;font-size: 28rpx;' class='shunxun_up_text'>{{item.status}}</text>
+                <text style='line-height:30rpx; color:#ff8726;font-size: 24rpx;' class='shunxun_up_text'>{{item.time}}</text>
+              </view>
+          </view>
+        </block>
+
+        <block wx:else>
+          <view style='padding:0rpx 0;display:flex;min-height:150rpx;'>
+              <view style='position: relative;'>
+                <view style='left:40rpx;' class='xian_style'></view>
+                <image style='width:20rpx;height:20rpx;' class='dian_style' src='../../Asset/w_wc.png'></image>
+              </view>
+              <view>
+                <text style='line-height: 50rpx;color:#aaaaaa;font-size: 28rpx;' class='shunxun_up_text'>{{item.status}}</text>
+                <text style='line-height: 30rpx;color:#aaaaaa;font-size: 24rpx;' class='shunxun_up_text'>{{item.time}}</text>
+              </view>
+          </view>
+        </block>
+    </block>
+  </view>
+</view>

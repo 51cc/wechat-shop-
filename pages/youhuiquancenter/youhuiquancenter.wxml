@@ -1,0 +1,40 @@
+<view class="contain">
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+  <block wx:for="{{dataAy}}">
+    <view class="row_style">
+        <image wx:if="{{item.used>0}}" class="youhuiquan_bg_style" src="../../Asset/ico_youhuiquan_yiling.png">
+        </image>
+        <image wx:else class="youhuiquan_bg_style" src="../../Asset/ico_lingqu.png">
+        </image>
+
+
+        <view class="left_price_style">
+          <text class="rmb_style">¥</text>
+          <text class="price_style">{{item.money}}</text>
+        </view>
+
+        <!-- <view class="middle_style"> -->
+        <view class="middle_style" bindtap="jumptodetail" id="{{item.id}}">
+          <text class="youhuiquan_title_style">{{item.title}}</text>
+          <text class="instr_style">{{item.isAll}}</text>
+          <text class="time_style">{{item.startDate}}-{{item.endDate}}</text>
+        </view>
+
+
+        <view class="right_style">
+          <view wx:if="{{item.used>0}}" class="lingqu_btn" >
+          已领取
+          </view>
+
+          <view wx:else class="lingqu_btn" bindtap="lingqu" id="{{item.id}}">
+          立即领取
+          </view>
+
+        </view>
+    </view>
+  </block>
+
+</view>

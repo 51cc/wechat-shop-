@@ -1,0 +1,25 @@
+@import "/wxParse/wxParse.wxss";
+page{
+  height: 100%;
+    background: white;
+}
+.title_style{
+  display: block;
+  font-size: 40rpx;
+  margin: 10px;
+  color: #444444;
+  text-align: left;
+}
+.time_style{
+    display: block;
+  padding-bottom: 10rpx;
+  font-size: 24rpx;
+  margin: 10px;
+  color: #999999;
+  text-align: left;
+}
+.line_style{
+  width: 750rpx;
+  height: 1rpx;
+  background: #eeeeee;
+}

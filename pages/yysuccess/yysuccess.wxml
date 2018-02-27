@@ -1,0 +1,26 @@
+<view class='contain'>
+  <view class='yy_success'>
+    <image src='../../Asset/yy_success.png'></image>
+    <text class='yy_success_text_style'>预约成功</text>
+    <text style='text-align:center;color:#aaaaaa;margin-top:30rpx;' class='order_num'>恭喜您预约成功，请您及时到店消费，以免过期。</text>  
+  </view>
+  <view class='yy_cell_style'>
+        <view class='yy_left_style'>
+            <image src='{{mDic.img}}' class='yy_ico_style'></image>
+        </view>
+
+        <view class='yy_right_style'>
+            <text class='yy_title_style'>{{mDic.serviceName}}</text>
+            <view style='display:flex;'>
+                <text class='yy_price_style'>¥{{mDic.servicePrice}}</text>
+                <text class='yy_renshu_style'>预约数量：{{mDic.serviceNum}}人</text>
+            </view>
+        </view>
+    </view>
+    <view style='background:white;padding:30rpx 0;'>
+      <text class='order_num'>订单编号:{{mDic.orderNo}}</text>
+      <text class='order_num'>预约时间:{{mDic.assessDate}}</text>    
+    </view>
+    <text style='color:#aaaaaa;margin-top:30rpx;' class='order_num'>*如果有需要请您线下联系商家工作人员。</text>    
+
+</view>

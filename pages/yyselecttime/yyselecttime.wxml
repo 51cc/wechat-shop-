@@ -1,0 +1,64 @@
+<view class="flex box box-tb box-align-center" style='background:#f6f6f6;'>
+  <view class="calendar pink-color box box-tb" style='background:#ffffff;'>
+        <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+            <view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">
+                <!-- <view style='color:#fc5a3f;' class="prev-handle box box-lr box-align-center box-pack-center">《</view> -->
+                <image style='width:30rpx;height:30rpx;margin-top:25rpx;' class="prev-handle box box-lr box-align-center box-pack-center" src='../../Asset/yy_left.png'></image>
+            </view>
+            <view style='color:#fc5a3f;' class="date-area box box-lr box-align-center box-pack-center">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+            <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
+                <!-- <view style='color:#fc5a3f;' class="next-handle box box-lr box-align-center box-pack-center">》</view> -->
+                <image style='width:30rpx;height:30rpx;margin-top:25rpx;' class="next-handle box box-lr box-align-center box-pack-center" src='../../Asset/yy_right.png'></image>
+            </view>
+        </view>
+
+
+
+        <view style='padding:10rpx 0;background:#f6f6f6;' class="weeks box box-lr box-pack-center box-align-center">
+            <view style='color:#000000;' class="flex week fs28" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+        </view>
+
+
+
+
+
+        <view class="days box box-lr box-wrap">
+            <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+            </view>
+
+            <view class="grid white-color box box-align-center box-pack-center" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}">
+
+
+                  <block wx:if="{{item.kexuan}}">
+                      <block wx:if="{{item.select}}">
+                      <view id="{{item.day}}" bindtap="selectTheDay"  wx:if="{{item.dangri}}" class="day border-radius pink-bg box box-align-center box-pack-center">今天</view>
+                      <view  id="{{item.day}}" bindtap="selectTheDay" wx:else class="day border-radius pink-bg box box-align-center box-pack-center">{{item.day}}</view>
+                      </block>
+
+                        <block wx:else>
+                        <view id="{{item.day}}" bindtap="selectTheDay"  wx:if="{{item.dangri}}" class="day border-radius pink-bg box box-align-center box-pack-center" style='background:white;color:#fc5a3f;'>今天</view>
+                      <view id="{{item.day}}" bindtap="selectTheDay" wx:else class="day border-radius pink-bg box box-align-center box-pack-center" style='background:white;color:#fc5a3f;'>{{item.day}}</view>
+                      </block>
+                 </block>
+
+                 <block wx:else>
+                      <view id="{{item.daya}}" class="day box box-align-center box-pack-center" style='color:#999999;'>{{item.day}}</view> 
+                 </block>
+
+
+
+            </view>
+
+        </view>
+    </view>
+
+<view style='margin-top:40rpx;display:block;'>
+    <text class='shijianduan_style'>选择时间段</text>
+    <view style='display:flex;width:750rpx;display:flex; flex-wrap: wrap;'> 
+      <block wx:for="{{shijiandianAy}}" wx:for-index="idx">
+          <view bindtap='selectTime' id="{{idx}}" style='background:#ffffff;color:#444444;' class='shijian_style'>{{item}}</view>
+      </block>
+    </view>  
+</view>
+</view>
+

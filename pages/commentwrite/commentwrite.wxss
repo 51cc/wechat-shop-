@@ -1,0 +1,62 @@
+/* commentwrite.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.comment_write_style{
+  background: white;
+}
+.comment_head_write_style{
+  display: flex;
+}
+.comment_write_style image{
+  margin: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+  background: red;
+}
+.comment_text_right_style{
+  width: 540rpx;
+  color: #444444;
+  margin-top: 40rpx;  
+}
+.comment_title_style{
+  width: 540rpx;
+  line-height: 35rpx;
+  font-size: 24rpx;
+  color: #444444;
+}
+.textarea_style{
+  margin: 0rpx;
+  width: 710rpx;
+  height: 99rpx;
+  line-height: 99rpx;
+  font-size: 28rpx;
+}
+.rows_style{
+  padding: 20rpx 20rpx;
+  border-top: 1rpx solid #eeeeee;
+  border-bottom: 1rpx solid #eeeeee;
+  background: white;
+}
+
+.input_style{
+  margin: 0rpx;
+  width: 710rpx;
+  height: 99rpx;
+  line-height: 99rpx;
+  font-size: 28rpx;
+}
+.addaddress_style{
+    margin: 30rpx 40rpx 30rpx 40rpx;
+    height: 80rpx;
+    background: #ff4546;
+    border-radius: 10rpx;
+    text-align: center;
+    color: white;
+    font-size: 36rpx;
+    line-height: 2;
+}

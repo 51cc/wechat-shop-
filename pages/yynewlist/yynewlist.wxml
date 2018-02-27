@@ -1,0 +1,18 @@
+<view class="product-wraper">
+         <block wx:for="{{yuyueAy}}">
+           <view class='yy_cell_style' id="{{item.id}}" bindtap='jumptoyuyuedetail'>
+              <view class='yy_left_style'>
+                  <image src='{{item.img}}' class='yy_ico_style'></image>
+              </view>
+
+              <view class='yy_right_style'>
+                  <text class='yy_title_style'>{{item.title}}</text>
+                  <view style='display:flex;'>
+                      <text class='yy_price_style'>¥{{item.price}}</text>
+                      <text class='yy_renshu_style'>服务人次：{{item.basenum}}人</text>
+                  </view>
+              </view>
+           </view>
+        </block>
+
+    </view>

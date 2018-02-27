@@ -1,0 +1,124 @@
+/* pages/myjfOrder/myjfOrder.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.up_row{
+  height: 60rpx;
+  width: 710rpx;
+  padding: 20rpx;
+  display: flex;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.up_left_style{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  text-align: left;
+  display: block;
+  color: #444444;
+  width: 355rpx;
+}
+.product_row{
+  display: flex;
+  width: 750rpx;
+  height: 220rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+.product_icon{
+  margin: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
+  background: white;
+}
+.product_right{
+  width: 510rpx;
+  margin-top: 20rpx;
+  height: 180rpx;
+}
+.product_title{
+   margin-top: 20rpx; 
+  font-size: 28rpx;
+  color: #444444;
+  text-align: left;
+  height: 90rpx;
+  line-height: 45rpx;
+  display: block;
+}
+
+.product_bottom{
+  display: block;
+  height: 90rpx;
+  line-height: 70rpx;
+  margin-bottom: 0rpx;
+  font-size: 28rpx;
+  color: #444444;
+  text-align: left;
+}
+.product_bottom1{
+  width: 710rpx;
+  display: block;
+  height: 50rpx;
+  font-size: 28rpx;
+  text-align: right;
+  color: #444444;
+}
+
+.chakan-wuliu{
+  position: absolute;
+  right: 230rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 15rpx;
+  width: 200rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color: #444444;
+  border: 1rpx solid #eeeeee;
+}
+
+.quere-btn{
+  position: absolute;
+  right: 15rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 15rpx;
+  width: 200rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color: #ff0000;
+  border: 1rpx solid #ff0000;
+}
+
+
+.mask_style{
+  z-index: 99;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  right: 0rpx;
+  left: 0rpx;
+  bottom: 0rpx;
+  background: black;
+  opacity: 0.3;
+}
+
+.wuliu_bg_style{
+  z-index: 100;
+  position: fixed;
+  top: 100rpx;
+  right: 100rpx;
+  left: 100rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  background: white;
+}
+.wuliu_style{
+  display: block;
+  margin: 20rpx;
+  font-size: 30rpx;
+  color: #444444;
+}

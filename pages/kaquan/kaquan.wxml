@@ -1,0 +1,46 @@
+<view class="contain">
+
+<view hidden="{{hasContent}}">
+  <import src="../template/quesheng" />
+  <template is = "quesheng" data="{{...item}}"/> 
+</view>
+
+  <block wx:for="{{dataAy}}" wx:for-index="idx">
+      <view class="rows_style">
+        <image src="{{item.logo}}" class="row_left_img_style">
+        </image>
+
+        <view class="row_middle_style">
+            <text class="row_middle_uptext_style">
+            {{item.title}}
+            </text>
+            
+            <view class="row_middle_down_style">
+                    <view id="{{idx}}" bindtap="openMap" class="row_middle_down_left_style">
+                     <image src="../../Asset/f_location.png" class="m_img_style">
+                    
+                    </image>
+                     <text class="m_text_style">
+                    商家位置
+                    </text>
+                </view>
+
+                <view id="{{item.phone}}" bindtap="callTheClient" class="row_middle_down_left_style">
+                     <image src="../../Asset/k_link.png" class="m_img_style">
+                    
+                    </image>
+                     <text class="m_text_style">
+                    联系商家
+                    </text>
+                </view>
+
+            </view>
+        </view>
+
+
+        <view id="{{item.cardId}}" bindtap="jumptolingqu" class="row_right_style">
+        领取
+        </view>
+      </view>
+  </block>
+</view>

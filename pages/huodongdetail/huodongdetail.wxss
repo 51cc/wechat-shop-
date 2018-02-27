@@ -1,0 +1,82 @@
+/* pages/huodongdetail/huodongdetail.wxss */
+@import "../yynewdetail/yynewdetail.wxss";
+
+.contain{
+  height: 100%;
+  background: #f7f7f7;
+
+}
+.h_input{
+  
+  margin-left: 20rpx;
+  width: 255rpx;
+  height: 70rpx;
+  margin-top: 27.5rpx;
+  font-size: 24rpx;
+  text-align: left;
+  border: 1px solid #eeeeee;
+  border-radius: 10rpx;
+  background: white;
+}
+.baoming_style{
+  margin-left: 15rpx;
+  width: 160rpx;
+  margin-top: 27.5rpx;
+  height: 70rpx;
+  background: red;
+  color: white;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  text-align: center;
+  display: block;
+  line-height: 70rpx;
+}
+.mask_style{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.alter_style{
+  position: fixed;
+  top: 200rpx;
+  width: 440rpx;
+  left: 155rpx;
+  height: 530rpx;
+  background: white;
+  border-radius: 10rpx;
+}
+.close_style{
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.tishi_style{
+  display: block;
+  width: 440rpx;
+  height: 225rpx;
+}
+.bottom_style{
+  height: 255rpx;
+  width: 440rpx;
+  background: white;
+}
+.bottom_style_text1{
+  line-height: 70rpx;
+  text-align: center;
+  width: 440rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  color: #444444;
+  display: block;
+}
+.bottom_style_text2{
+  display: block;
+  line-height: 40rpx;
+  text-align: center;
+  width: 440rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #999999;
+}

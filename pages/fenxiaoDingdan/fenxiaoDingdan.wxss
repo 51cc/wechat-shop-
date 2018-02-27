@@ -1,0 +1,109 @@
+/* fenxiaoDingdan.wxss */
+page{
+  height: 100%;
+  background: #eeeeee;
+}
+.contain{
+
+}
+.b_style{
+  position: fixed;
+  top: 0;
+  height: 240rpx;
+  width: 750rpx;
+}
+
+.head_style{
+  display: flex;
+  width: 750rpx;
+  background: white;
+  height: 100rpx;
+}
+.line_style{
+  background: #f7f7f7;
+  width: 750rpx;
+  height: 20rpx;
+}
+
+.head_left_style{
+  display: block;
+  line-height: 100rpx;
+  height: 100rpx;
+  width: 335rpx;
+  padding: 0rpx 20rpx;
+  font-size: 28rpx;
+  color: #444444;
+  text-align: left;
+}
+.category_view_style{
+    width: 750rpx;
+    background: white;
+    display: flex;
+    height: 120rpx;
+    border-bottom: 0.5rpx solid #eeeeee;
+}
+
+.order_single_style{
+    width: 25%;
+    height: 120rpx;
+    font-size: 30rpx;
+    background: white;
+    text-align: center;
+    line-height: 120rpx;
+    color: red;
+}
+.order_single_unselect_style{
+    width: 25%;
+    height: 120rpx;
+    font-size: 30rpx;
+    background: white;
+    text-align: center;
+    line-height: 120rpx;
+    color: #444444;
+}
+
+.order_style{
+  width: 750rpx;
+  margin-top: 240rpx;
+}
+.order_sec_single_style{
+  display: flex;
+  height: 150rpx;
+  width: 750rpx;
+  background: white;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.head_icon_style{
+  width: 110rpx;
+  height: 110rpx;
+  margin: 20rpx;
+  background: red;
+  border-radius: 55rpx;
+}
+
+.middle_style{
+  margin: 20rpx 0rpx;
+  height: 110rpx;
+  width: 300rpx;
+}
+.middle_up_style{
+  display: flex;
+  width: 300rpx;
+  height: 55rpx;
+}
+.middle_up_img_style{
+  display: block;
+  width: 50rpx;
+  height: 24rpx;
+  margin-top: 15rpx;
+}
+
+.middle_up_text_style{
+  height: 55rpx;
+  line-height: 55rpx;
+  width: 240rpx;
+  font-size: 28rpx;
+  color: #444444;
+  white-space: nowrap;
+  overflow: hidden;
+}

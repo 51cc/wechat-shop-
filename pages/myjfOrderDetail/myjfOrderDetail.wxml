@@ -1,0 +1,99 @@
+<view class="contain">
+    <view class="head_style" style='background:{{maincolor}};'>
+          <block wx:if="{{mDic.state==1&&mDic.orderType==1}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>待开奖</text>
+          </block>
+          <block wx:elif="{{mDic.state==2&&mDic.orderType==1}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>未中奖</text>
+          </block>
+          <block wx:elif="{{mDic.state==3&&mDic.orderType==1}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>已中奖待发货</text>
+          </block>
+          <block wx:elif="{{mDic.state==4&&mDic.orderType==1}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>待收货</text>
+          </block>
+          <block wx:elif="{{mDic.state==5&&mDic.orderType==1}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>完成</text>
+          </block>
+          <block wx:elif="{{mDic.state==6&&mDic.orderType==1}}">
+              <text class='head_up_text_style' style='text-align: right;color:#ff0000;'>已中奖待领取</text>
+          </block>
+
+
+
+
+ <block wx:if="{{mDic.state==1&&mDic.orderType==0}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>待开奖</text>
+          </block>
+          <block wx:elif="{{mDic.state==2&&mDic.orderType==0}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>未中奖</text>
+          </block>
+          <block wx:elif="{{mDic.state==3&&mDic.orderType==0}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>待发货</text>
+          </block>
+          <block wx:elif="{{mDic.state==4&&mDic.orderType==0}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>待收货</text>
+          </block>
+          <block wx:elif="{{mDic.state==5&&mDic.orderType==0}}">
+              <text class='head_up_text_style' style='text-align: left;color:#ffffff;'>完成</text>
+          </block>
+          <block wx:elif="{{mDic.state==6&&mDic.orderType==0}}">
+              <text class='head_up_text_style' style='text-align: right;color:#ff0000;'>已中奖待领取</text>
+          </block>
+
+
+
+
+
+
+
+
+
+
+
+        <text style="margin-top:10rpx;font-size:24rpx;" class="head_up_text_style">
+        订单编号：{{mDic.ordernum}}
+        </text>
+        <text style="margin-top:10rpx;font-size:24rpx;" class="head_up_text_style">
+        下单时间：{{mDic.buyTimer}}
+        </text>
+    </view>
+
+    <view class="sec_head">
+        <view class="sec_up_style">
+          <text style="line-height: 29rpx;height: 59rpx;padding-left: 0rpx;color:#999999;" class="head_up_text_style">
+          收货人：{{mDic.buyerLinkman}} {{mDic.buyerMobile}}
+          </text>
+          <text style="line-height: 29rpx;height: 59rpx;padding-left: 0rpx;font-size:24rpx;color:#999999;" class="head_up_text_style">
+          收货地址：{{mDic.buyerAddress}}
+          </text>
+        </view>
+        <view class="sec_down_style">
+            <text class="sec_down_left_style">
+            快递公司:{{mDic.sendCompany}}
+            </text>
+            <text style="text-alight:right;" class="sec_down_left_style">
+            物流单号:{{mDic.sendNum}}
+            </text>
+        </view>
+    </view>
+
+
+    <view class="third_style">
+         <view class="sec_style" wx:for="{{dataAy}}">
+                <image src="{{mDic.icon}}" class="sec_image_style"></image>
+
+                <view>
+                  <text class="sec_text_style">{{mDic.name}}</text>
+                  <text class="sec_text_num">{{mDic.integral}}积分</text>
+                </view>
+          </view>
+
+        <view class="third_style1">
+          <text class="third_text_style">共{{mDic.num}}件商品 实付：{{mDic.payMoney}}积分</text>
+        </view>
+    </view>
+    
+
+
+</view>

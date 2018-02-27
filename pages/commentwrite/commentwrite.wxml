@@ -1,0 +1,23 @@
+<view class="contain">
+  <block wx:for="{{dataAy}}">
+      <view class="comment_write_style">
+          <view class="comment_head_write_style">
+              <image src="{{item.icon}}"></image>
+              <view class="comment_text_right_style">
+        <text class="comment_title_style">{{item.name}}</text>
+              <text style="margin-top: 10rpx;display:block;color:#999999;" class="comment_title_style">¥{{item.price}}</text>
+              
+              </view>
+
+          </view>
+          
+          <view class="rows_style" style="min-height:150rpx;margin-bottom:20rpx;">
+                <textarea bindinput="bindTextAreaBlur" class="textarea_style"  maxlength="-1" placeholder="您的建议很重要，来点评一下吧。" id="{{item.productId}}" auto-height="true"/>
+          </view>
+      </view>
+  </block>
+
+  <view class="addaddress_style" bindtap="submite">
+    发表评价
+</view>
+</view>
